@@ -1,0 +1,138 @@
+{
+  "scenario": "D02",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_012634qZhJEkY5hQ2arSWhiF",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1336
+      }
+    },
+    {
+      "requestDigest": "966ac1c329716540ba036fa34e2a89ff84992e341a88072f7089ee34a1b50560",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_0158Y3e61x3R72jfosLkj7s3",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 249
+        },
+        "latencyMs": 1177
+      }
+    },
+    {
+      "requestDigest": "22411a5b24bc042b9e557b400b5907e9075142b254bcdc6c7f4b17a31d009ddf",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS/QYKEAgTGAI4AUIIdGhpbmtpbmcSDPi63OOQYTd0DOTlWxoMzNXL5a1WQdVy1rqoIjDcB8hT4be0qlhb/M6l0spq4nyf0YW8FI1DLlXHAq88fjfbxHtlxw3gx0b8hzdFimAqmga/651JBwE0Xhwar20VWdrLcEpQmny9tw2iocH6L2c/IPQmOK9slldzTkxvOnjZZ54KY1h01aWEvi2AwrgUOuzh8ZVqXaViwBW2YgyeBKDOg39ob24jLnvSeU1JrYwHN5ctXfnrY4lqBvM+X3ITABSo8m04TqOdtZVbZcBlyGp1k6qCjrnSDTJpQXxLjlJh6q5JdS03XmUeWLIxtrnFpSfV4LPlvDBhdFoVNkjY8bhcF3Yg4b1R45WG989hZ7WIQGH+p6bTdD20GqK47srI1BClolpq+x27XwBh1mQ209XbPRa+r66rsAGv2OiGqMKZ71Rh5qFEpYo84JEzozphfim9xm5z3iLxQJkaoHZdRLKAdIzlW6b21fpht4dhZcuQRwBdMjp/DZB8tQcLEjPvfE8aMWbsW8IsgLW7HfNn9K7Gi9aireXC0Du8rxu6Futhv6f5ePhOj+HR5wlwLhO77cAQNBkanqNz+/7ilPXewnGnoXBddPyCtwWdqUSW2LVtNktShfvVDn8auPm7bfwvx/PdECT69xhCClLiRGTRx+yanHxU6GbJ6PCiUcM5LQn4s8wR9XKZpuKTp/mKGeVcbQ9KKE7OFo4T8VBLhdnpuE23o6VaZPIGWrSyrpC2WiSLyKXFH59xeJD/YVznZPmZXNhNeWi9OjQtMQt63l7faqgMaCx0N6YcTwUsG8SPJb8PO/qxuZ+KxSu97DsreenwJZ9fCLjqKrW9epbgdIGWgJ+n8IRPazXvU3xnD6rMDXAehhZuhsAE+/wSyiF2Aliyfq0pf5Q30OBF2qzYbNHnEYrga+AzhUCvFWlfWrB7WZg691dRFOxb4d/N33IUY6JvnpFhe+FXf46saJDvl3Fmxa0bA59SvztZQ+h9WT6m2d+IDDkx4yyqoRLswnXlHYH0yzvIl+xO7oGah+686AfPX1iBvjhLlSyyU3HzeXK4PLiZJrqpW+SBmPKAdoZ5F8wvzWnb6QyI9Rv7zNMGLx1fsyn4GW0LO0uPEqOACKpqO9EuUfVSwYJWAL3M0lx/dW4c/t7EQ/SgoxbddNuowBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0168X2r2XJDBxNoaUQeRKsRz",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "PO-120, revision 3, line 10 (KF-A-01)",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10 (KF-A-01)"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10 (KF-A-01)",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "The full quantity of 120 EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "120",
+                    "quote": "The full quantity of 120 EA",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "will be delivered to your warehouse on 22 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "Kestrel Fasteners confirms the full 120 EA on PO-120 revision 3, line 10 will be delivered to the warehouse on 22 October 2026, one day earlier than the accepted schedule of 2026-10-23."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 686,
+          "cacheReadTokens": 3985,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 7951
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+#!/bin/sh
+# s6-rc oneshot, run before every other service: records a new random boot ID
+# for this container start. /run is a tmpfs, so each start begins empty and a
+# restarted container never reuses an earlier boot's ID.
+set -eu
+dir=/run/sd
+mkdir -p "$dir"
+id=$(cat /proc/sys/kernel/random/uuid)
+printf '%s\n' "$id" >"$dir/boot-id.tmp"
+mv "$dir/boot-id.tmp" "$dir/boot-id"
+echo "sd-boot boot=$id"

@@ -1,0 +1,92 @@
+{
+  "scenario": "H07",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Rws336uJCs99zgRrMtzw5Z",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1094
+      }
+    },
+    {
+      "requestDigest": "4c2f91ed78e6237b626f046a8fd05c40184467a3196583203ee281fa80b2abdd",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01DreFnz4obAyAZVbgeM5xwc",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3850,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1828
+      }
+    },
+    {
+      "requestDigest": "82334399b87a03209ebf71e49a902d2ef22bf2f8693fc6158ac9687cebabc1b1",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSiAsKEAgTGAI4AUIIdGhpbmtpbmcSDFJoLEdjLgsRwEdrzhoMS9I5tp0wwamPiOH8IjAmrAvqGld9jVKaEQRgVHRP0jno3HvqPGrn/ryGM+Y1TcIsFXlni44saoCqVZulTiQqpQpsr3mGK3PMBTUSaRZllfpn7JFMV4zYNa+Ij98Ny9KXwGNMmsk0B5QTPCP+/DS5yKvD+vu9HvPFZKd9qNbab+TfmGLV9shcGOtt9SAwT7NH2e7DsbRedkW01t8jG96XCosoL9RaBwW7dUFq3IlU5/PZpu/Ljf/xlTBmvSjkgukYfWPE96JB9gU5fy9ZDUi17Nn+qVT+rVETZLN+/c4MHgn05BA+kTCzw4917uvIF7LJMdFBo7MqvXmvgUV2HluScemzMi6KgvVMv7c3UzUFpT0ItyG9u+TmZtUidD4ywAsjYMVW7P8cHEJKz23JNsj928wd2qMHaM0x5ltVWcXQxN7TzakGBw+Sm8aSVzbXXo6CfwL6kqzI2TCxmb2WJuAcSJe+0FX9QmBc3+iS6VfqM9YrFly5juZT13ua9EEe65dnf3u7OQxj4Puh3QHOpADrE6Xm6YyCZKz0Zd5ZHSsYfeLFE2lBawp5q09qJsDwEscUh/W4m03z/2FdHz326VEpVEJYF80JM1ov6toAF0IojIp2JVkg0t5ZlEHvYMzoduW9SfEaIvGa8jJFon34zXF0//f3OBCXBBnX4kqbpz8SrqFQ6sWQNe0NxyvHWG/6KtsqfW20IwZ7kbcV4Lukqnb/2HvnWW++PgAveHKbP2yRoWcArHUfVIGqmvUCI32vk3NUYmAcJx/NTxiXtJNNMoBpemmfBni5z78wrr0k0aYgg1jHCq0Zy5CCQ+JaTJMdYYxbX0ly798E+t8sYYS5UOoadOtLGOTX9d9pLKLPUTAx1+S6baOXMworY/FDVcTgvM6YDdROYVvFMbUXAtxGXVgxJWuKDd7rYkeuJiKgbwBYcKg+lfbED4KFu2paXsJVF4sCkHD/7wVrGw3wX40jkcEkoW2uzg+GEg0ahmLTQT4oefPxWMV64fiUUw8ge3wb8szv752v4uyBVeEpYk/0zgABM/RZpRFmSzHaAkN4M6ZHz7skG2XZh1JK2iS0IPQy+5foFo5lcRC8J3qlgv8pYd/fi2ZuxmLI4yTv3UEnlqLVVxNbbrkabTr9W643n+MV6ITb2ChjOLRuS3PFNPvq7kQbDvSs83KzmePkE0iyRRyFZDok+2q8Sn9YfXDgLG8w+9rSrAd+tzl60xTgczjvJdb6g8pIELuAXJELGxeY1Phj4AmVYt495ydkqqEEoETTf3rM23tnC0dSRSoFTE8LY4eswIPuPQmD+SsGRLDBL42hQB1O45g+QIMR19teGHUr19R2eya4bn+nq3DUWQmrzhPaxbkcnUcS1A9n07IICe7nO4iV4jsxAn91zRsww94LxPxi0dN+UwmI73tAppk9mxH0Mr1eF4yPY9eG2bKbGjbriEDseGwTtLB7vgQHG3EniT+tFnKlIs13APRSJjHkoebnNLqrkZBRqODiZLaMqRTFfTK26pdhhNdYDYs0TirgS7esguq34JprzfOxJiosbBEiReXyGJ0qFdm066lRV4z2ODwVWiW/EX6ZQJ1SJyCz/XC+GGjrlj7rxqWTZR6HrqdPZ+scNaPLdn4/NeBWvnj+SsjznvJNOfz9+1kr18Ct4k+jBOxszX/x6If2AicoAAlYvSwXvJe3f89RfXvxMCH210M/UhMFOIJ0sDDk1Uae4wxcwsGl+yj264VLW8GbDswsrtfk/C5olm0NJMMkrwcnEDTzpALoki1bbcWJkrG21idm+Gp8I3ZVtytNbbm1cTp43IKCms+7Ih8o/pKI+PvmJvbzNXZuC3YYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LPd3Gxfxrkw3jSCNydqbkb",
+            "name": "escalate",
+            "input": {
+              "reason": "contradictory_evidence",
+              "question": "The supplier email (PO-120, line 10, item KF-A-01, EA) states base revision 2 and proposes 70 EA on 22 October 2026 and 50 EA on 27 October 2026 at WH-A. PO-120 is currently at revision 3, with line 10 at 120 EA accepted for arrival 2026-10-23. The email says its delay was from a mail queue and asks to use its stated base revision. Please confirm whether the supplier's split schedule should be applied against superseded revision 2, given the current revision 3 accepted schedule differs."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 508,
+          "cacheReadTokens": 4127,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 3176
+      }
+    }
+  ]
+}

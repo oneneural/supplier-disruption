@@ -1,0 +1,39 @@
+{
+  "id": "H02",
+  "family": "Unknown backorder date",
+  "note": "Held-out H02 (de): German email retains an explicitly undated 90 EA remainder; it cannot cover the cutoff.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H02",
+    "text": "Zu PO-120, Position 10, Basisrevision 3, Artikel KF-A-01, Einheit EA: 30 EA treffen am 23.10.2026 im Lager WH-A ein. Die restlichen 90 EA bleiben im Rückstand. Für diese 90 EA ist der Ankunftstermin noch unbekannt; wir haben keinen Liefertermin zugesagt."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "30",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "90",
+          "arrival": {
+            "state": "undated"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; case escalated (unresolved_shortage)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

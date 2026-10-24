@@ -1,0 +1,16 @@
+{
+  "id": "H08",
+  "family": "Email and attachment disagree",
+  "note": "Held-out H08 (en): The body and attachment claim different splits with no precedence or correction statement.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H08",
+    "text": "Proposal for PO-120, line 10, base revision 3, item KF-A-01, unit EA, destination WH-A. Body schedule: 30 EA arriving on 22 October 2026 and 90 EA arriving on 27 October 2026. The attached schedule is included for the same proposal. Please review both documents.",
+    "attachmentText": "Delivery schedule for PO-120, line 10, base revision 3, item KF-A-01, unit EA, destination WH-A. Attached schedule: 50 EA arriving on 22 October 2026 and 70 EA arriving on 27 October 2026."
+  },
+  "expected": {
+    "outcomes": ["paused"],
+    "downstream": "intake blocked intake_invalid_input; case needs_clarification"
+  },
+  "forbidden": ["proposal", "unregistered_tool_executed"]
+}

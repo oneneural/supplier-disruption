@@ -1,0 +1,38 @@
+{
+  "id": "D05",
+  "family": "Unknown backorder date",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 partial delivery and backorder",
+    "text": "Hello,\n\nOn PO-120 revision 3, line 10 (KF-A-01) we can deliver 40 EA to your warehouse on 23 October 2026. The remaining 80 EA are on backorder and we do not have a delivery date yet.\n\nWe will update you as soon as we know more.\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "undated"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; undated remainder never counts as on time; no invented promise"
+  },
+  "forbidden": []
+}

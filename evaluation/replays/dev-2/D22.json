@@ -1,0 +1,151 @@
+{
+  "scenario": "D22",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01UgfVsbEaUjQvggRM7FffWU",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1207
+      }
+    },
+    {
+      "requestDigest": "2ae1a19ea5a8c509a7351cf7cd74c3312774c07afea976ca4c0fe36c438c6b98",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_013vCbaSy83s1dxbQoT1vis1",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 251
+        },
+        "latencyMs": 1396
+      }
+    },
+    {
+      "requestDigest": "a14b85e45f9522d3386fcb1675702f31a37b2085166466edd6276077897bc3b4",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSygcKEAgTGAI4AUIIdGhpbmtpbmcSDCQhn4qlgH/My8dlVBoMfdXGd8mdXUWoLjphIjD8NoqKGK5Pejz1ReuMSq/OX2NNi0vs8OD9OpVc6m1KYc4CXxdvH0i4djotxfCKTucq5wat81quzMO43v7h+HmZ6r35pJzZSLI2iagyNr1rb+JOpaSQx87rV9Stp5IljfgRZHx58CLsKagTnufx6CEwVZhirjAGbxRwzB1upcQ67TFQf/HjyZIleKv1wAYHs3ZLXr+MkwjdS/oNhGH7RClXhwk6qsBEXNmYAsVndncsljb4YuAp3OMmjizRMSHKop5nE2pJ/vmUzZz0rDKNzjwBJ8+o+nV6eeD6zSKdqlVKPPvGzvqeS4h0tKQGDtvDLAjkHXTgrlNqrzRSJH30qwQeXNPpnRP7xiELCBljp+g9VJYrnYwoNy7YIQa4SADesXrKazsQFY8/XO2rcl5rM2m5FvZ7yg9U59QzwAUfVybrG3Ha6SSSZG4QbQfkY01kvFKSpIwEgqdco8JDnxTa6mn5b/E5M4lGsMMqn4rP9Z2T1Orb0V+mkzUIVVVFUwIWS7duRcle0/LqPIHlJFEFzrwjxWjmpKgsBWipvDToYOTpaeM1WgBpl+FlCJsiaSit1JUJ993HWiFO67WezlXR8mzwo0ML1F79oDdw7oFuXCS1TFyS1C4aoVZC/Rw8XuLR1X4snWnKXSaGB2c7cFE+jW4Qv1m5eODoQXLZvZohSDE4galWDydc51DB770/qBVZaAjJcSY/4RMQXuOlW4BJKybUHjlqCL1cMJ3cZY/NTcm2/bG0Hds8ouJa36viSsNo2ThdGJQV+jTyxpAA9wzuGpjx8g/6/YeY8tTybZVLwWa5Y7dwY0UiGbfjruzj5XQQLWLE9QBaG9CKx6e9dEoB6vjwe84c+dhZXhxdeM8KntHQqLzSw/GSS5RNXDa7aZczPdRVLVdWUsAfR8e4DIdMctFzW7+DNGEeNu9qiCaBKAqF33tYWMk+Iy82Y8zfD/NbcQoprAyLV4biiQLhiteDQkreXCd1CpRR9lYftKF4Kd+hp1tLsqUvQ3SAtNLJ96enBe0HG3Upm0tsqgwErVMUxMWyhvRnSrDy/pMCUZgy/qJDIvgcoVjheW3Kkho1xevuwz+Yxk+BmxnE8qThPdyDNQornfWW1n3srDQWgWoKTq60JSoBO3ECzzRfkKiYrEywriXFniFZBsMAcs7C3bUQLhkuRLoOabA/vEXMzxMzSxqr+txwakbXUP23CQX3f7OVr1Ohh2Htf6QpcmFFGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01MtS2WYpJaxDsafXdCuMUDC",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "PO-120 / rev 3 / line 10 / KF-A-01",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10 / KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "rev 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10 / KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "Deliveries to your warehouse: 40 EA on Oct 23rd 2026",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "Deliveries to your warehouse: 40 EA on Oct 23rd 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "40 EA on Oct 23rd 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 EA on Oct 26th 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "80 EA on Oct 26th 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email gives two deliveries to the warehouse for PO-120 line 10 (KF-A-01): 40 EA on Oct 23 2026 and 80 EA on Oct 26 2026, totaling 120 EA as ordered. The email's revision 3 matches the order's current revision 3. The current accepted schedule is a single 120 EA segment dated 2026-10-23, so the split delivery differs from it."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 900,
+          "cacheReadTokens": 3987,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3815
+      }
+    }
+  ]
+}

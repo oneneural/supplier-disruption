@@ -1,0 +1,92 @@
+{
+  "scenario": "H05",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01YJ1z2hTUMEBjkn9fmjAvD7",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1101
+      }
+    },
+    {
+      "requestDigest": "282b1d5958ecbfe2f7c13a0a4dcc6cea9f06d9d9f9da39e1a2cf18994e2d671e",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01RE2QyaTFrqFxp7Yc1qPnKt",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 269
+        },
+        "latencyMs": 1035
+      }
+    },
+    {
+      "requestDigest": "6560dcff97843e646c14200debf03bd02849bacaa514fa7b8d1de378b52aa38b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS0QcKEAgTGAI4AUIIdGhpbmtpbmcSDEnG7t2sE8dAELtyLxoMiXrr54a4nkyafohnIjDsP17YSP04HKG6CaBB2Y7bwaDXTSrv8XB4ZSrBa+NIIqb0KSlpmJJduJTUoWd2yAUq7gY3jF9Kd/S9nzAqN33PSxd/b33w7z88rIr5tpUKJqn7cs/KunAbb0nOMHEUmoUezI/3lULC5a1teHQpwrdgZKZ7AX/eTHpNv1Cc/4XCv/GKTG1vSE1G6XVjj9NV9B1QYRHB510XNGVjn53EjerqfvkCk0RO4+Xl3iG91o61HFeyiNfO4F2BCqWZtITOpOVNOCh45YCce5PopbEluiRdO6UAQkniFpzKdhuiC7f22rilLAiqQ71CuicmMoWCXlcco9tqnKeW6yAIunJgDEo3F+Uj8mFNFw5c+IFcjDJ9ClnrXfRfvPaLcJUIbJjsOo/ctEbOrMO67HChlsp06p/9nNjSZgIo1FmN5SWEfFHZIlqgmFELLXj5NTomCFpQxhSE7M/KzCbsUv2vEHBnZTYOrBvFN5VwPr0bBxkziN9jUIMrB1lfRaFgLFAmRdJlv44zk/LUiwAPywoJf8S85edm4yYgaizPLVskg8A2Aio/YWrfAprlgEfTnsIu9k61GJoQfGq8vaB4wPiqDU+yAW40PjsBjMlSoGahyy+DScyjHPDHk3/w5fZy0aoXu9HMIBoqiIbnzEf7DtLAG+LVWwdRtrVT20jx3gehofG0YxNYkX2A4UEQRlIgxMgeQUM7YfyW9d1O29rJaB2stMgcK0lKUeM0M5xErXgG+B57gzl8Mp0om2QXHlibFjcHNez1RwWqC8HtYay1KewuJXdmmwR92kFEWsDsfnFHBzmr8Xg8OBkkxQ4KcLvnFrUVzGnoLp8f3meLXewrq0ZIBd/REUe0GZwNJW0xVkV9Xc1d4YMYabG5kFxkcJhQbi+y3y9ttUiCMkwsunGKsF9cf5qF4azwFPvXDcPNSyeV0yETwojdYQT1t7SsX5IpA9Jw/z3D/UPt5njFSj9Ts57PPgf+n24HRXwjU45Pd+CU2fD7SNOK/aJDFTxlmDMW4/0Rf1HFcy91lYqGpJ0ME92gmi5JnugheWvSdpeJmQ3y12BO3qgL3Wg/Fn8jX7lqYEdbch32qW8/Z7WJkIhV7VY5loPuO14a4bW2AM2cKPs4U4DDmrli1tSPEWDfhbNdOIqttLz8xnIyIvu6Nh00zGM331romtPC2ASWBObZ4DLqLeeYnibRrHkRNmRbCKi+3E/JH6KsRdzoVTPPrx3lLJ7ts7Cy5oOWqRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NL7M2MB8c8Y1kPNv7uJKAT",
+            "name": "escalate",
+            "input": {
+              "reason": "unknown_order_or_line",
+              "question": "I could not read PO-120: the system returned \"not_permitted\" because the sender (sales@kestrel-fasteners.example) is not a registered vendor contact. The email asks for PO-120 line 10, base revision 3, item KF-A-01, EA, with 55 EA arriving at WH-A on 23 October 2026 and 65 EA arriving on 29 October 2026, and says the company name should be enough to identify the proposal. Please confirm that Kestrel Fasteners is the vendor on PO-120, that the sender is authorised, and that revision 3 and line 10 are correct before I submit this proposal."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 396,
+          "cacheReadTokens": 3860,
+          "cacheWriteTokens": 92
+        },
+        "latencyMs": 2528
+      }
+    }
+  ]
+}

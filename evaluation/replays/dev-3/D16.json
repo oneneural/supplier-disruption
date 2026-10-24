@@ -1,0 +1,146 @@
+{
+  "scenario": "D16",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_014k16VHvzKiFPbmcxT47mwP",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1106
+      }
+    },
+    {
+      "requestDigest": "c9d982bc616707b38e5b42ce39f036bce97a032c476d34ea5de67950161ad84d",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_012sPJCrMyMqT98uz7tczJi9",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 250
+        },
+        "latencyMs": 1397
+      }
+    },
+    {
+      "requestDigest": "1d5dbaa31980c296a22029a00bf0e079d74f43cf4742c2181a5ded99688e4375",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01AtDxYRmnGagigZkdHyZbFr",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "We confirm the split for PO-120 (revision 3)",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "40 EA delivered to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 EA delivered to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "delivered to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "then the remaining 80 EA delivered on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "then the remaining 80 EA delivered on 26 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email confirms a split of PO-120 line 10 (KF-A-01): 40 EA arriving 23 October 2026 and 80 EA arriving 26 October 2026. The stated revision 3 matches the order's current revision. The 120 EA total matches the ordered quantity."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 677,
+          "cacheReadTokens": 4106,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 2857
+      }
+    }
+  ]
+}

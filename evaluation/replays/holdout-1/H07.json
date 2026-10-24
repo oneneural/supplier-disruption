@@ -1,0 +1,92 @@
+{
+  "scenario": "H07",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01EZNvtKJiXL2mhDq3zm7Ah9",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1619
+      }
+    },
+    {
+      "requestDigest": "725135877c852db95b290df2c0ed152e53b5b741f220c6331a0d45ee67d4470a",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01CgJgxAuyRWYikAQZS5BCC8",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 259
+        },
+        "latencyMs": 1436
+      }
+    },
+    {
+      "requestDigest": "1df388ad450b3c57a437e5d59179607931b06dea69d2fcdf0aa8077c98a5967f",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018mvsiw1dpdQ7jLsCoYHSjF",
+            "name": "escalate",
+            "input": {
+              "reason": "contradictory_evidence",
+              "question": "The supplier email for PO-120 line 10 states base revision 2 and proposes 70 EA arriving 22 October 2026 and 50 EA arriving 27 October 2026 at WH-A. PO-120 is currently at revision 3, with a single accepted segment of 120 EA arriving 2026-10-23. Please confirm whether the proposal should be made against the stale revision 2 the email cites, or whether the supplier should re-confirm against revision 3. Also confirm that vendor item KF-A-01 corresponds to PO line SKU PART-A."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 584,
+          "cacheReadTokens": 3850,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3924
+      }
+    }
+  ]
+}

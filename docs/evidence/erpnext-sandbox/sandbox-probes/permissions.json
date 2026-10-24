@@ -1,0 +1,51 @@
+{
+  "SD35 Connector Reader": {
+    "Company": ["read"],
+    "Supplier": ["read"],
+    "Customer": ["read"],
+    "Warehouse": ["read"],
+    "Item": ["read"],
+    "UOM": ["read"],
+    "Purchase Order": ["read"],
+    "Purchase Receipt": ["read"],
+    "Sales Order": ["read"],
+    "Bin": ["read"],
+    "Stock Reservation Entry": ["read"],
+    "Stock Entry": ["read"]
+  },
+  "SD35 Probe Writer": {
+    "Company": ["read"],
+    "Supplier": ["read"],
+    "Customer": ["read"],
+    "Warehouse": ["read"],
+    "Item": ["read"],
+    "UOM": ["read"],
+    "Purchase Order": ["read", "write", "create", "submit", "cancel", "amend"],
+    "Purchase Receipt": ["read"],
+    "Sales Order": ["read"],
+    "Bin": ["read"],
+    "Stock Reservation Entry": ["read", "write", "create", "submit"],
+    "Stock Entry": ["read", "write", "create"],
+    "Account": ["select"]
+  },
+  "sd35-reader@example.invalid": [
+    {
+      "user": "sd35-reader@example.invalid",
+      "allow": "Company",
+      "for_value": "Nordlund Distribution (fictional)",
+      "apply_to_all_doctypes": 1
+    }
+  ],
+  "sd35-reader@example.invalid roles": ["SD35 Connector Reader"],
+  "sd35-reader@example.invalid user_type": "System User",
+  "sd35-prober@example.invalid": [
+    {
+      "user": "sd35-prober@example.invalid",
+      "allow": "Company",
+      "for_value": "Nordlund Distribution (fictional)",
+      "apply_to_all_doctypes": 1
+    }
+  ],
+  "sd35-prober@example.invalid roles": ["SD35 Probe Writer"],
+  "sd35-prober@example.invalid user_type": "System User"
+}

@@ -1,0 +1,151 @@
+{
+  "scenario": "D12",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01NTiDCPhUijys8y2sq6DphW",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1170
+      }
+    },
+    {
+      "requestDigest": "1259175f79d5dd01135d908499c4f14158f51f127b32649e2fbfbdfa07ff03e3",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01SRD717oSYMXRszcGiUXKih",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 251
+        },
+        "latencyMs": 2707
+      }
+    },
+    {
+      "requestDigest": "462f7db2d6423758918fdc51f1c500d4933d5fb17b190149527be6a5515b91c8",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS2AkKEAgTGAI4AUIIdGhpbmtpbmcSDHAp4rrmX7xeKM4GNRoM5T7rspowk0/xNXo9IjCRjRZf7vxtHAFVSCChwyQ2UBfLwyrshE9VJGROnbLLECQe6hOlMbzV+jjnqjbA79sq9QiTH+meoat3Msq1WgE8mZ8P0jpGqZHColmPB6eCN97qpCJWmSlvskga94GAnyP5Vm+w9NV9uaVspDvIuhUzOGqRNDehmbwEiDz6BTClo4wIj5idirQ44fRp+e0LmEGwMT2+W1CnU5J/NvCgPk811T22E6N4Sw3hf6Npm1l9XppbIzcW99nHUmqboKjftbLu0AELpyzIsCbgRIYB+dl1Fx6pAgRAWC1WJpd+UPPKi+bUQXP4UJYtEyhW9bNhghnsv0MLidSLRLhQjwqaL7Nv15nAdjm+b2+yGBqyTYDMuhifAuWCAycPE75gZFVDIArxbWH1vDesQOMa4EpphNAmKMBEBCQf/xfhbvWwNaiiYTQZmVSo67rdArm2wZxVVKibCARSaSWwTVq/JO4MG4ThenWYxzz25TAnbW9seNTxpzLMGEtFTZr3h3Tmv2lPvZLB312F6ZwPU/BBgLAJrCWUadXD1+phAkwO1DUpY7rNY8HoxhN/C3zp62Ef+RE50N274X1St5Hk3ZQwnW8ocPAza3MPLiTVDX4usIBB7VVNQmGo6QziaMy98539Jp70d7noDDky8RfFzmrK1OQbZAzezZAiTELNzlOfe7QwGZeA7Af/FPq5hemVCiV4TOj7lDK3U7YOninW8pmTWkO2NTXpSHbq6v8pA6HCx8Row0u/77AhiPEMinB5ACrlKcz1Q/D2Mim7UMVB8Nbl9SbKFJ2F/jnao/EL0SllSymL8yroqc1eWvIfTmLBhwlD1b/i2j3agJ1YxT1Cay0E2o9Y4TtXO5F2ycmVo0UwqTyWosjuC3/TvGQxklCiprPXRzmCXrVFrEy9WdaoDd10xC3Myeay9Pw63nnD+/8X2SjB95X8URjevLQ3FHZujokMNPbhUBxJ36ZhSdO8ZuI9D9Um1A6nbW69opd1HR7G2HZ+8QCa/LSwJqmzvNYhPa56W4vYhf4D9pT2E60pwMnJuKnWlL1Nab9g1/iPqakKL4/E24rUoL+pDlLf7BhmnHAQQg8JMQT37Hy3DVNSFGLJQfYFzGq0yvFKIqbd3gP2KDQjFBNE3YSkSRcNpex5ScxIOSnWJCZtvarB5eZb2+7oKMBYuLxpb8HihjczUJATvImCFFxYDgx2QSBSQIWfATluVTWDUyiGutrEIv0UJoXYwVhqw4wyuU0+ZcZgwMt1ql8cxCaJ3aFbo+HJy4TwWgLUMI9v5wYK4dRDBiBMxclYi0UDcQFa2DBkxOQUFs3Z3MHs+iyqDHbI0/Lzc41WqTDKPmNbnsN9w7AnmP54PeRSfqBh7DCgEs772n21fkfOC/cE1++TWyQAl5G6pq1bIRCT+q/BypEgN8cCMGU8D53Q1GTAGnHhWSkW1Aa0vrG5M2JZsQqvKxo4qA7+QNljBCUF04vMlQprlXwKC90P11tkxMlP2UQazed7BujLBEXFJm8U/Df6FGHtaioC1mgBYzkWXMhsV85OgasJfA5DeXIWLa04v4pN96K/9aLznKE9v5lfX/Cyjm7sD2RUNE2FGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BAJLjDgW9S3Jb4RqMdq6mf",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "purchase order PO-120 (revision 3)",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "our item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "we will deliver 40 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA will arrive on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "the remaining 80 EA will arrive on 26 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10, item KF-A-01, with 40 EA arriving 23 October 2026 and the remaining 80 EA arriving 26 October 2026. The sender's vendor standing was not readable from the PO lookup (not_permitted); software should decide that. The stated base revision is 3, which may differ from the order's current revision."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 949,
+          "cacheReadTokens": 4107,
+          "cacheWriteTokens": 89
+        },
+        "latencyMs": 6042
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Development override: publishes the database on loopback for host-side
+# migrations and integration tests only. Never use it for a shared host.
+# SD_DB_HOST_PORT exists so the fresh-volume test can run a disposable second
+# project beside this one; leave it unset otherwise.
+services:
+  db:
+    ports:
+      - "127.0.0.1:${SD_DB_HOST_PORT:-55102}:5432"

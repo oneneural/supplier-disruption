@@ -1,0 +1,22 @@
+{
+  "step": "L03-refusals",
+  "principal": "sd35-reader@example.invalid",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Company/SD35%20Out%20Of%20Scope%20(fictional)",
+    "body": null,
+    "bodySha256": null
+  },
+  "startedAt": "2026-10-22T11:22:15.330Z",
+  "elapsedMs": 4,
+  "response": {
+    "status": 403,
+    "body": {
+      "exception": "frappe.exceptions.PermissionError",
+      "exc_type": "PermissionError",
+      "exc": "[traceback omitted by the recorder]",
+      "_server_messages": "[\"{\\\"message\\\":\\\"Not allowed for Company: SD35 Out Of Scope (fictional)\\\",\\\"as_table\\\":false,\\\"title\\\":\\\"Message\\\"}\"]",
+      "_error_message": "You need the 'read' permission on <strong>Company</strong> SD35 Out Of Scope (fictional) to perform this action."
+    }
+  }
+}

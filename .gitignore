@@ -1,0 +1,22 @@
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.env*
+!.env.example
+dist/
+build/
+.coverage
+.pytest_cache/
+.DS_Store
+
+# Local secrets and generated output
+.secrets/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+coverage/
+
+# Extraction evaluation spend ledger (metered live calls, local only)
+evaluation/.spend-ledger.json
+

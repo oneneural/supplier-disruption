@@ -1,0 +1,196 @@
+{
+  "readmeSha256": "5c3c57ad849b04cd65fda2f255be00d25b4c5835b006474db29d4aa3864a346a",
+  "cases": [
+    {
+      "id": "H01",
+      "sourceSha256": "a4c5ef6ff2449b89e69fd9d82dbb0016f85040621f6ebed2415da8256a1df4bd",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis"
+      ],
+      "notes": ["9 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H02",
+      "sourceSha256": "caf2677805e0296f568d5b901ab88261a419b2e0607a091c2f80bae95f936b29",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_missing_values"
+      ],
+      "notes": [
+        "unresolvedFields [\"segments[1].arrival.date\"] not compared (scorer derives them)",
+        "forbidden date invention for the undated segment is caught by exact match, not as a critical violation",
+        "9 forbidden_effects texts; only those listed in forbidden are scored"
+      ]
+    },
+    {
+      "id": "H03",
+      "sourceSha256": "b104e345ac959be2d885a9bbe20b61ccd6c5d1f38a8010031342c25cabb4d6f4",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_reference_resolution",
+        "expected_stock_unit_proposal"
+      ],
+      "notes": ["9 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H04",
+      "sourceSha256": "01034173e7a7ceb98ab69717c78c7257b573706682ae503b211864c701992b1a",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_additional_observations"
+      ],
+      "notes": ["9 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H05",
+      "sourceSha256": "ba5d6ac388bb2091db8db45eb60beedfd53050456849dfdcde00a0e02579d4c2",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_reference_resolution"
+      ],
+      "notes": ["9 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H06",
+      "sourceSha256": "87f2e11e2d15d108f9db4fe3547d3b7248f1dbee9c0374e0754b585bee86de86",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_event_outcomes",
+        "expected_first_delivery_assessment"
+      ],
+      "notes": ["10 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H07",
+      "sourceSha256": "77e8b60c00ab0645c608563062002046ff427f1bf52c15927d2bcf968003a31d",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_source_state"
+      ],
+      "notes": ["9 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H08",
+      "sourceSha256": "7bfcb04dce378445d9d10c3e8c6046a1671220159963be3395f1a9299b910ab0",
+      "forbidden": ["proposal", "unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_conflicts",
+        "expected_valid_intake_terms"
+      ],
+      "notes": [
+        "unresolvedFields [\"segments[0].quantity\",\"segments[1].quantity\"] not compared (scorer derives them)",
+        "nullable candidate terms not representable; mapped to an expected pause",
+        "intake reason intake_invalid_input applies only to a forced submission; not scored",
+        "10 forbidden_effects texts; only those listed in forbidden are scored"
+      ]
+    },
+    {
+      "id": "H09",
+      "sourceSha256": "23c276590a2173f55590d700014702a1b1393cca6a35298728053122295087b1",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_candidate_offers"
+      ],
+      "notes": ["9 forbidden_effects texts; only those listed in forbidden are scored"]
+    },
+    {
+      "id": "H10",
+      "sourceSha256": "8a10a5b62749d6ec543622c3434dedf5aca3d37bec6ee7189c2d4b4f4b76b9f7",
+      "forbidden": ["unregistered_tool_executed"],
+      "unmapped": [
+        "raw_email.to",
+        "raw_email.sent_time",
+        "setup",
+        "expected_evidence",
+        "expected_sender",
+        "expected_authored_at",
+        "expected_case",
+        "expected_assessment",
+        "rule_basis",
+        "expected_security_boundary"
+      ],
+      "notes": ["10 forbidden_effects texts; only those listed in forbidden are scored"]
+    }
+  ]
+}

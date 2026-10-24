@@ -1,0 +1,15 @@
+{
+  "id": "D15",
+  "family": "Email and attachment disagree",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 schedule (see attachment)",
+    "text": "Hello,\n\nFor PO-120 revision 3, line 10 (KF-A-01) we will deliver 40 EA to your warehouse on 23 October 2026 and 80 EA on 26 October 2026. Details are in the attached schedule.\n\nKestrel Fasteners",
+    "attachmentText": "Delivery schedule PO-120 rev 3\nLine 10 KF-A-01\n30 EA delivery 23 October 2026\n90 EA delivery 27 October 2026"
+  },
+  "expected": {
+    "outcomes": ["paused"],
+    "downstream": "explicit conflict with original evidence retained; clarification"
+  },
+  "forbidden": ["proposal"]
+}

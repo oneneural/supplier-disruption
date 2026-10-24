@@ -1,0 +1,655 @@
+{
+  "run": "09c498e2",
+  "site": "http://127.0.0.1:18082",
+  "connectorRevision": "unpublished development revision",
+  "connectorSourceChanged": false,
+  "finishedAt": "2026-10-22T11:22:15.619Z",
+  "summary": {
+    "versions": {
+      "frappe": {
+        "title": "Frappe Framework",
+        "description": "Full stack web framework with Python, Javascript, MariaDB, Redis, Node",
+        "branch": "",
+        "color": null,
+        "logo": "/assets/frappe/images/frappe-framework-logo.svg",
+        "version": "16.52.0"
+      },
+      "erpnext": {
+        "title": "ERPNext",
+        "description": "ERP made simple",
+        "branch": "",
+        "color": "#e74c3c",
+        "logo": "/assets/erpnext/images/erpnext-logo.svg",
+        "version": "16.52.0"
+      }
+    },
+    "reads": {
+      "po120": {
+        "system": "erpnext",
+        "site": "http://127.0.0.1:18082",
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00001",
+        "modified": "2026-10-22 13:20:55.721729",
+        "docstatus": 1
+      },
+      "eligiblePartA": {
+        "WH-B": "50",
+        "WH-A": "30"
+      },
+      "poGaps": [
+        "revision_not_native",
+        "canceled_quantity_not_native",
+        "canceled_quantity_not_native"
+      ]
+    },
+    "concurrent": [
+      {
+        "state": "applied",
+        "reason": null,
+        "last": {
+          "at": "2026-10-22T11:22:15.571Z",
+          "state": "applied",
+          "note": "read-back matches the intended rows"
+        }
+      },
+      {
+        "state": "manual_reconciliation",
+        "reason": null,
+        "last": {
+          "at": "2026-10-22T11:22:15.573Z",
+          "state": "manual_reconciliation",
+          "note": "read-back: the purchase order changed but does not match the intended rows"
+        }
+      }
+    ]
+  },
+  "operations": [
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L03-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-02",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-02"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": "2026-10-22 13:21:04.242706",
+      "marker": null,
+      "requestSha256": "c732fbe1514e42a51ec70f8618b6ef2f82788ca8ff30a05074fc418cf98ea7a6",
+      "state": "refused",
+      "reason": "permission_denied",
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.345Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.356Z",
+          "state": "refused",
+          "status": 403,
+          "sourceError": "PermissionError",
+          "note": "the source refused the request"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L04-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-02",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-02"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": "2026-10-22 13:21:04.242706",
+      "marker": null,
+      "requestSha256": "c732fbe1514e42a51ec70f8618b6ef2f82788ca8ff30a05074fc418cf98ea7a6",
+      "state": "applied",
+      "reason": null,
+      "nativeName": "PUR-ORD-2026-00002",
+      "observedModified": "2026-10-22 13:22:15.379126",
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.374Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.403Z",
+          "state": "applied",
+          "note": "read-back matches the intended rows"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L04-stale-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-03",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-03"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": "2026-10-22 13:21:04.242706",
+      "marker": null,
+      "requestSha256": "dcba28026eb27497a4b3d78ab981a3253a80bbec20a524133c4e4065a3c6b408",
+      "state": "refused",
+      "reason": "stale_source_token",
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.404Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.411Z",
+          "state": "refused",
+          "status": 417,
+          "sourceError": "TimestampMismatchError",
+          "note": "the source refused the request"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L04-tokenless-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-03",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-03"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": null,
+      "marker": null,
+      "requestSha256": "9ac42377afb5b968d0bc67692218210479655185a5d8a6acd19604cd1b0303ac",
+      "state": "refused",
+      "reason": "missing_source_token",
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 0,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.422Z",
+          "state": "refused",
+          "note": "no source token; nothing sent"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L07-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-03",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-03"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": "2026-10-22 13:22:15.379126",
+      "marker": null,
+      "requestSha256": "ca77a18585cc00627ea46c2c6b2926d027afb357163c9216dc698aac47f04bb4",
+      "state": "applied",
+      "reason": null,
+      "nativeName": "PUR-ORD-2026-00002",
+      "observedModified": "2026-10-22 13:22:15.442553",
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.435Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.463Z",
+          "state": "unknown",
+          "note": "outcome unknown: TypeError: fetch failed; cause UND_ERR_SOCKET"
+        },
+        {
+          "at": "2026-10-22T11:22:15.474Z",
+          "state": "applied",
+          "note": "read-back matches the intended rows"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L08-09c498e2",
+      "kind": "create_transfer_request_draft",
+      "target": {
+        "doctype": "Stock Entry",
+        "name": null
+      },
+      "intent": {
+        "kind": "create_transfer_request_draft",
+        "company": "Nordlund Distribution (fictional)",
+        "sku": "PROBE-A",
+        "stockUom": "EA",
+        "quantity": "7",
+        "from": "WH-B - NDL",
+        "to": "WH-A - NDL"
+      },
+      "expectedModified": null,
+      "marker": "sd-op:L08-09c498e2",
+      "requestSha256": "09e0a292b704fbcf807b68abf3f28121b8674cead827e98393bd748014490fa2",
+      "state": "applied",
+      "reason": null,
+      "nativeName": "MAT-STE-2026-00005",
+      "observedModified": "2026-10-22 13:22:15.484826",
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.481Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.498Z",
+          "state": "unknown",
+          "note": "outcome unknown: TypeError: fetch failed; cause UND_ERR_SOCKET"
+        },
+        {
+          "at": "2026-10-22T11:22:15.508Z",
+          "state": "applied",
+          "note": "read-back matches the intended draft"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L09-09c498e2",
+      "kind": "create_transfer_request_draft",
+      "target": {
+        "doctype": "Stock Entry",
+        "name": null
+      },
+      "intent": {
+        "kind": "create_transfer_request_draft",
+        "company": "Nordlund Distribution (fictional)",
+        "sku": "PROBE-A",
+        "stockUom": "EA",
+        "quantity": "7",
+        "from": "WH-B - NDL",
+        "to": "WH-A - NDL"
+      },
+      "expectedModified": null,
+      "marker": "sd-op:L09-09c498e2",
+      "requestSha256": "09e0a292b704fbcf807b68abf3f28121b8674cead827e98393bd748014490fa2",
+      "state": "unknown",
+      "reason": null,
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.518Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.520Z",
+          "state": "unknown",
+          "note": "outcome unknown: TypeError: fetch failed; cause UND_ERR_SOCKET"
+        },
+        {
+          "at": "2026-10-22T11:22:15.525Z",
+          "state": "unknown",
+          "note": "no record carries the marker; absence after an uncertain request is not proof of no effect"
+        },
+        {
+          "at": "2026-10-22T11:22:15.529Z",
+          "state": "unknown",
+          "note": "no record carries the marker; absence after an uncertain request is not proof of no effect"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L10-0-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-02",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-02"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": "2026-10-22 13:22:15.442553",
+      "marker": null,
+      "requestSha256": "763ac5a25d128c8a763aded20997920e2dbe84eea2ca47beb4f3e1fcd37c5168",
+      "state": "applied",
+      "reason": null,
+      "nativeName": "PUR-ORD-2026-00002",
+      "observedModified": "2026-10-22 13:22:15.547065",
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.540Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.571Z",
+          "state": "applied",
+          "note": "read-back matches the intended rows"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L10-1-09c498e2",
+      "kind": "update_schedule_date",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00002"
+      },
+      "intent": {
+        "kind": "update_schedule_date",
+        "rowId": "rvevbfr0jl",
+        "scheduleDate": "2026-11-04",
+        "rowsAfter": [
+          {
+            "rowId": "rvevbfr0jl",
+            "sku": "PROBE-A",
+            "ordered": "30",
+            "received": "0",
+            "scheduleDate": "2026-11-04"
+          },
+          {
+            "rowId": "rveuu8hn7k",
+            "sku": "PROBE-U",
+            "ordered": "2",
+            "received": "0",
+            "scheduleDate": "2026-10-30"
+          }
+        ]
+      },
+      "expectedModified": "2026-10-22 13:22:15.442553",
+      "marker": null,
+      "requestSha256": "189e468c7d57e19631af2217e8465df2ece1bb9a5a54866567c99d2a764058cf",
+      "state": "manual_reconciliation",
+      "reason": null,
+      "nativeName": "PUR-ORD-2026-00002",
+      "observedModified": "2026-10-22 13:22:15.547065",
+      "requestsSent": 1,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.541Z",
+          "state": "dispatching",
+          "note": "operation recorded"
+        },
+        {
+          "at": "2026-10-22T11:22:15.562Z",
+          "state": "unknown",
+          "status": 500,
+          "sourceError": "QueryDeadlockError",
+          "note": "outcome unknown: HTTP 500"
+        },
+        {
+          "at": "2026-10-22T11:22:15.573Z",
+          "state": "manual_reconciliation",
+          "note": "read-back: the purchase order changed but does not match the intended rows"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L11-update-items-quantity-09c498e2",
+      "kind": "update_items_quantity",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00001"
+      },
+      "intent": {
+        "kind": "not_sent"
+      },
+      "expectedModified": null,
+      "marker": null,
+      "requestSha256": "abbebf26f96f0d2407a5223e060d31225186dd70c605daa28d064f0ec2638fd3",
+      "state": "unsupported",
+      "reason": null,
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 0,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.583Z",
+          "state": "unsupported",
+          "note": "manual: Update Items accepts no caller source token; a request built from an old snapshot silently reverted a second actor's change (probe P05b)"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L11-split-line-09c498e2",
+      "kind": "split_line",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00001"
+      },
+      "intent": {
+        "kind": "not_sent"
+      },
+      "expectedModified": null,
+      "marker": null,
+      "requestSha256": "23569f981ec5347b83d62e125abf4448df5f623476023ce67a2e2caecf7ec7e2",
+      "state": "unsupported",
+      "reason": null,
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 0,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.584Z",
+          "state": "unsupported",
+          "note": "manual: a row has one schedule date and an Update Items split dropped the new row's demand link (probe P06a)"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L11-cancel-and-amend-09c498e2",
+      "kind": "cancel_and_amend",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00001"
+      },
+      "intent": {
+        "kind": "not_sent"
+      },
+      "expectedModified": null,
+      "marker": null,
+      "requestSha256": "f80c2bd8785771322acb43f9e61e39be004e78cf2a4e80987b3b5d29e6e38fae",
+      "state": "unsupported",
+      "reason": null,
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 0,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.585Z",
+          "state": "unsupported",
+          "note": "manual: cancel, create and submit are three separate requests; in the first sandbox run a refused create left the original cancelled with no successor (probe P06b)"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L11-plan-bound-reservation-09c498e2",
+      "kind": "plan_bound_reservation",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00001"
+      },
+      "intent": {
+        "kind": "not_sent"
+      },
+      "expectedModified": null,
+      "marker": null,
+      "requestSha256": "cd4df4b43ac9dd5840c333f90616c58adeb814b5a99afb657934376bc719efc7",
+      "state": "unsupported",
+      "reason": null,
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 0,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.586Z",
+          "state": "unsupported",
+          "note": "unresolved: a reservation submit checks native capacity and its own token only, never the approved stock version, and two identical requests created two entries (probes P07, P09)"
+        }
+      ]
+    },
+    {
+      "contractVersion": "source-connector.v1",
+      "operationId": "L11-transfer-submission-09c498e2",
+      "kind": "transfer_submission",
+      "target": {
+        "doctype": "Purchase Order",
+        "name": "PUR-ORD-2026-00001"
+      },
+      "intent": {
+        "kind": "not_sent"
+      },
+      "expectedModified": null,
+      "marker": null,
+      "requestSha256": "428b0b3ff4fa47c639a132519207c29c2746b32981fbc49bea4397a8e204d4b7",
+      "state": "unsupported",
+      "reason": null,
+      "nativeName": null,
+      "observedModified": null,
+      "requestsSent": 0,
+      "history": [
+        {
+          "at": "2026-10-22T11:22:15.587Z",
+          "state": "unsupported",
+          "note": "unresolved: submitting a Material Transfer posts stock at once, and the connector principal has no stock movement authority (probe P11)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "H07",
+  "family": "Older revision received after a newer one",
+  "note": "Held-out H07 (en): A delayed email explicitly based on revision 2 arrives after current revision 3 is known.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H07",
+    "text": "This note was prepared against PO-120, line 10, base revision 2, item KF-A-01, unit EA. Proposed receipt at WH-A: 70 EA on 22 October 2026 and 50 EA on 27 October 2026. The delivery of this email was delayed by our mail queue; please use its stated base revision."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "2",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "70",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-22"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "50",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-27"
+          }
+        }
+      ]
+    },
+    "downstream": "intake blocked stale_base_revision; case needs_clarification (stale_base_revision)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

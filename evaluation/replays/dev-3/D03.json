@@ -1,0 +1,151 @@
+{
+  "scenario": "D03",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01V8rdfzvqwx1oYkbzWJH7JR",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1941
+      }
+    },
+    {
+      "requestDigest": "47d730baedb4478374132073d48fe2b80cad65cd32268a6da5d99bc2e161ad76",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01BfttyCKJmFe9VoLVnwehcA",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 259
+        },
+        "latencyMs": 1158
+      }
+    },
+    {
+      "requestDigest": "d7dc3463512d3db3f0dbedd5243fe9e82e1b35e904859662d452452cb1baa695",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS0AgKEAgTGAI4AUIIdGhpbmtpbmcSDEFJ3Asg5zzSy+QnhxoMMA+gmSATZ7gy1kIsIjBrr/tmnfjqtgkcCF2ebLZbYXZobL3AntFfHWMwkLgx/++zKzBHBDOLqEy1i9uiT8cq7Qf4dyNHd9atooFa4yCJrPhb4v9AvrlZ1INgOlRuynZSe9SiqwD7+c0PZZfIKaFHzJNAe5wD9mLRebHyZll9rK6JK/EY107KjQtnWPvC9juW197xQBQ4ZodVhI41qh8k+9r4cr9slw7rXKHL75WjvjKmXcgVw2koa5qjto4CiuVa5vN/KPXL2KG4AkgEpDQ+THD9NJng/5YluKiiXIJ1Bbkw6lqIPwwSCTpb5R5AtBSK/v9UmASLafHAGWkghByorFTDhuZjknwCdzIghFa8bVacIAgdy6eck57e7eGP/2DLz/6AbSJ6+tGRR1Odf8G/NcwYnd9B7iCVg3gkbRnEyh5O74au9oWswgKoJKoD5Y8KjS5erbawNvHf/WxJEeX/FbYLNB0IdAeDzqIzbALzvmEzD5FEhjDOTS4FgAoaTsedqkCMlGGitqfW5GIsnVXXBdks9lQcV+9d7cEq1GniKzxi4YfBKjOcGIcU4rD12qVTJD6fd/A7LEsCLWP8fQCDTiZVlPfqXCWGXtxYlHPkpilo0VqKVZ6JsLf5fcVK2NRm2GSs81O5NKHu9YXja5Pm3ie0dodwXP2hTrGJaxe5v0EEAyGCgJ9ROeaDSUono9t23TfNvoTOpm/W4B7G7LCl8pZ1UYyVbaV2JSJmKTdAMMU+s35jrOYAJsE8Xf2j4JQ84rvo8LqPVA1FTInoZFvunqXHfceYBFEqXmlIEhQPeV1NKDN7x7F5er1FdEwWP3nU9vr1G4TKYYle/Dqd+Llhdkxd/WgKr8PpNSYXQE6wbfqjoYfY0s1uAYBz4lvxUdW3u5SorhsAS7u12+mYYUO4MwEXQonovB+HHclcwEEML4ZLp+tDzmDfc7J6gDkWsCAJQbXj1Fi/NAQNPch7MfS0/WNmpdiyZ+2z9GBQqSqJk9VYYg7A5H9UDgwQXMW3S9GjCXz2XKhc8+RiloorB9oBj9TobhuJZ4SD40R/P8/hMmGkiSwMRRS8MH2fAvwsK8sUpx2g147UjVMT3n7bjInJINXJQcboK5AmNdYw89oY/5fudwhXfU3BkyyC1SNFuINhUfB0NX8hhx7BES1uYgvGWN7qeSZqIb1WgD3RKFA4QOyBZC7KcmXxvOHEt9F0sZ7YwtCIiNl/Y9seMmAMqljxihpMgDQwCERMTtJAPNWc85AvYK5xP9jh8jJIcKm67y0O2bhAnUsxUCDmdHFPCya2W3LnugOo1ZRdm3S6NeAnVPFTEjJ7C2AkJFig7uwWB1OtGhBzJTY99HwqDwODqgnPP81r9s4SQNCss8G72BBCnstA4TNnhpyw0JHTDf0EapqIm5rMJ05DvWg0lY9sgnkYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Ct1yp99G8J7c8yonqziQY3",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "For PO-120 rev. 3 line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 rev. 3 line 10"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "60 pcs",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "60",
+                    "quote": "we will deliver 60 pcs",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "60",
+                    "quote": "the balance of 60 pcs",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "will arrive on 28 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 rev. 3 line 10, item KF-A-01, with a split delivery: 60 pcs arriving 23 October 2026 and the balance of 60 pcs arriving 28 October 2026. The stated unit is pcs, mapped to EA as each/pieces."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 856,
+          "cacheReadTokens": 4115,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4040
+      }
+    }
+  ]
+}

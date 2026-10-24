@@ -1,0 +1,6 @@
+#!/command/with-contenv sh
+# Startup bound and hang watchdog. It needs no secrets or application settings.
+exec env -i \
+  PATH="$PATH" \
+  NODE_ENV="$NODE_ENV" \
+  node /opt/sd/bin/watchdog.mjs

@@ -1,0 +1,39 @@
+{
+  "id": "D09",
+  "family": "Already partially received PO",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "Remaining quantity on PO-121",
+    "text": "Hi,\n\nYou already received 50 EA on PO-121 (revision 2), line 10, item KF-C-07. For the remaining 150 EA, we will deliver 100 EA to your warehouse on 24 October 2026 and 50 EA on 27 October 2026.\n\nBest,\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-121",
+      "poLine": "10",
+      "baseRevision": "2",
+      "vendorItem": "KF-C-07",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "100",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-24"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "50",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-27"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; only the outstanding 150 EA are rescheduled; received 50 untouched"
+  },
+  "forbidden": []
+}

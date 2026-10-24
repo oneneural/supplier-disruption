@@ -1,0 +1,146 @@
+{
+  "scenario": "J07",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Hhjs31btvw14wfA4J6Bpiw",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1082
+      }
+    },
+    {
+      "requestDigest": "af64419590f6398be2e83ca5a51bb3c544f4415dfc5220783825b43572d43ae5",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_014uJMVii9H4iJ3VCiMP99A8",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-123"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 317
+        },
+        "latencyMs": 1138
+      }
+    },
+    {
+      "requestDigest": "88a62179d9e0102c6e2f4c01e68ca0435c40ac2133b9af98a4976881268cea66",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01ViLSntJztH1k8ZneKexQZM",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-123",
+                "quote": "PO-123 revision 4, line 10, item KF-D-12.",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-123 revision 4, line 10, item KF-D-12."
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "4",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-123 revision 4, line 10"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-D-12",
+                "quote": "item KF-D-12",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "CTN",
+                "quote": "Proposed schedule unit: CTN.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "4",
+                    "quote": "4 CTN will arrive at WH-A on 28 October 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "4 CTN will arrive at WH-A on 28 October 2026.",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "6",
+                    "quote": "6 CTN will arrive at WH-A on 3 November 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-11-03",
+                    "quote": "6 CTN will arrive at WH-A on 3 November 2026.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "Email states PO-123 revision 4, line 10, item KF-D-12, with two lots in CTN arriving at WH-A on 28 October and 3 November 2026. The order record shows unit EA and revision 4; the supplier's CTN unit differs from the order's EA unit and is reported as stated for software conversion checks. The reused 12 EA per carton label is not a conversion record and was not used."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 751,
+          "cacheReadTokens": 4173,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3299
+      }
+    }
+  ]
+}

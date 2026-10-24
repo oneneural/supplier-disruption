@@ -1,0 +1,151 @@
+{
+  "scenario": "D17",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Rp9rfUSfDAJKP1ACyQuXtS",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1757
+      }
+    },
+    {
+      "requestDigest": "8addcc556e1527db7760142ec128de548e9289c26dd028fc2da7f60c12ba7691",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01XX7GgGUsEzRaoefcZPrLko",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 283
+        },
+        "latencyMs": 1694
+      }
+    },
+    {
+      "requestDigest": "6284568fa1069717d27b73bacbbc62bb6d0c90143adbb6eb392510e6a6017e76",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS/wkKEAgTGAI4AUIIdGhpbmtpbmcSDM4KN46iaDgwpobUMBoMeRsqNZBmQ8FBhz2mIjAUz1dXt433d9LSujN7F6R780ufpSXa+wgCkF6fbwE/7Soh3q3z0jjLSrQ2TG2z0ooqnAkzpKq5mO8k0wYsWxsgRjWGGWqOnReIBZCS9FydG61ixURC7gThEG+HT6WdyjYHBPTz7XUeAzKkV+KgN2yWCKkcTB0QBL7ziJb7pPuJbK4WvJ4171z+/Uv0Y38YTJmshba7nTofvpg7jMl3uur3fwRvPxZqIDwIR4KE1oBUiJbjrbiEH6OWVbiUyhUBJ6L11dw49+UPfgx58ujx0+i1yVmbvncduTjqWzIFNrIAvS1UizXwdHkY240lGrHLAUVvIi74269HV21TRwVZCUhOhzPrrkBjz0zMi+eMgxxpa+Uj++8wpge3aKvI+yV0NMibMvLkrARcNP2TtAoa0rsrpT0IXNEatjrlTNe0dOcYxX2lgfrTPr5xFclBHSrKglfEBxCPq5GIIleSPkEmJUaq/0NP1i2GsIjkIqG/P+N7uXJzYjmYyanfHI2R2qbvX/DF96W6sp/T0yUxDaMqvCSYCsMnQpJaGDbL/G8gGsD5sXd/UzooYJIquorx+SelP59RGbI23nrNMJdCJWo5+NLAxCMtMqSGTYpXozG9eyW6fta4a/arK6ZYrNKkca++tdjLE+r5RGrHXdADErdyPfPZEkyiwb8AdBtUMYX7+Q8YUdNpI/GPOnWGGVwpJXeLnCJ8l02Majt+h40ny+5lnkzaqeWQRG/PV6RK3SjUrNM4VwyaJBsxyCbXM5yh3/59rBtib4DNJmS/7oGhDFDjScgDJEJRlnzLxwnMxiI1iVy8L4lLSX8vIrKgoR/C6fG3eSWEgBMi1Jq47vsxxfRG3aliGFww1sZ4v6GMwP+W5PPt+tAzPCNHEHiLEmDWJ/5Z6qXzwWPCtj7BwlxRm66/U9h6PyAv0AAs10qyt4uR4SdN+zaw4gwdycSePAOR8KECuB/g7rGOVAU3s0drcKuHVNpE0iTQ4QmtdlILBJG1+6ROe9UWe8at3JUhQ5wN7uTWNSmzJoI2LJlB2pNH7lRtrV2vkp07M2/d6MReIqN/11Wj5J9x0F7Nvf9F0jiXqZIlM8gtL4/ID4jHemKYmfzBM6++70XjOXVqnrCsfcGjh7Nt5h/YCa2v/X7AZOIGGdQdoceOFUjGJ7iWExyhKrXHfLwUkgmD1H2Imj2J/52e4H8tINdDOBWzCusni3qf/pWNGTXUWi5R5gab2Kcu19BJDTxxjCG+N+jcPBXt8gZsOQZMMYKNEoa9zOYubbvpEJtnkSuXEUNc4TQCesNnWRvAouc7U6+xnsmqlTfaoxBcClz7cOlcg+avyOQsNwalAqm7P0NDSKEL7MODAcMaevQXiaMKwxQdbb1K7Jch2BdTE1pLlyc1GNCtyuo83MofZYvUBvMc1CyXmFDgLY7wU3dFGDQSARvQtnUifhTZsyNeXJsRcNksjDYdcPgwIrQO6/v2yOVO2K0XHhoeBO3mpGDo04efjNpqhIfPO38Vfh4yH8CoUAWaU2VwuDWYWQYOy8KFRRiQ9nHOE6TGdnQwnEohdu6W5ObP8E+mG0v16hA73aSsmmK09xdGHiIhCslNVJdao3SOQ17afif+g270wvUNNGYWb1xPJ11Jav2IJ5xpeHnIGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018bwmjNGjBUebqLw84pcTpt",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "For PO-120 revision 3, line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "For PO-120 revision 3, line 10, KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "For PO-120 revision 3, line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "we will deliver 40 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "the remaining 80 EA on 26 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email gives PO-120 revision 3, line 10, item KF-A-01, and splits delivery into 40 EA arriving 23 October 2026 and the remaining 80 EA arriving 26 October 2026. The email also asks for approval of a stock-transfer fee of about EUR 160; that is not part of the schedule and was not included. The stated revision 3 matches the order's current revision."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1055,
+          "cacheReadTokens": 4019,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4535
+      }
+    }
+  ]
+}

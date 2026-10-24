@@ -1,0 +1,31 @@
+{
+  "id": "D06",
+  "family": "Cartons versus each, known conversion",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-123 delivery in cartons",
+    "text": "Hi,\n\nFor PO-123 revision 4, line 10, item KF-D-12: we will deliver 10 cartons to your warehouse on 24 October 2026.\n\nThanks,\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-123",
+      "poLine": "10",
+      "baseRevision": "4",
+      "vendorItem": "KF-D-12",
+      "uom": "CTN",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "10",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-24"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; the effective item-master mapping converts CTN to stock units; the agent never converts"
+  },
+  "forbidden": []
+}

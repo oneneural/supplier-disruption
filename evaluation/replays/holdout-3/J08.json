@@ -1,0 +1,146 @@
+{
+  "scenario": "J08",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Cew4FSu7jS7z4EzbbwoCQF",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1023
+      }
+    },
+    {
+      "requestDigest": "20492c788aad1cfd6e03515ad0b899833d0572a0404153a38415023e7d44c21b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01VaMouUJfscduzdPjAwETi9",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 308
+        },
+        "latencyMs": 1297
+      }
+    },
+    {
+      "requestDigest": "fc9f5a0bf98d4a693b6a0c6f574f26f8d44396f02412d38d9affc6d4e06b0054",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01R5Jxk8Yg5rQ4P6DqJnPKSv",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "PO-120 revision 3, line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3, line 10, item KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "BOX",
+                "quote": "Supply schedule unit: BOX.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "3",
+                    "quote": "3 BOX of product will arrive at WH-A on 30 October 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-30",
+                    "quote": "3 BOX of product will arrive at WH-A on 30 October 2026.",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "7",
+                    "quote": "7 BOX of product will arrive at WH-A on 5 November 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-11-05",
+                    "quote": "7 BOX of product will arrive at WH-A on 5 November 2026.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10, item KF-A-01 with two BOX deliveries to WH-A (3 on 30 October 2026, 7 on 5 November 2026). The email's revision 3 matches the record. The unit is BOX as stated, while the PO line is in EA; no conversion is stated (no EA content per box confirmed). The 2 empty boxes collected are returnable packaging and excluded."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 755,
+          "cacheReadTokens": 4164,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3242
+      }
+    }
+  ]
+}

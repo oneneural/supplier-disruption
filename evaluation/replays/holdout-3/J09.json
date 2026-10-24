@@ -1,0 +1,66 @@
+{
+  "scenario": "J09",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01SJwpNGBCi41UULiqqD9TEs",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1500
+      }
+    },
+    {
+      "requestDigest": "c88d9605542dae16bcb58003c8a4ea972bfde6c745ffd62ef651fc27efafe099",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS7QYKEAgTGAI4AUIIdGhpbmtpbmcSDDL1CazgmKIukhSkJhoMpozMr3OQmigfIaxYIjAvG9zxFhucRfBJA7VjziphVpNDwaszQVjEQQc6v5qVttyRh+2pn3e+rfIDx8Fycxsqigb6dG3lbqTm43aiE7s8ERGgRQWJOm9VzuOXqy03syIqlkdFl1SAGm9EYtOO3WV23GhiupEUz6u/KpO6opCzgdDqL0NAD+7r+XZQ/SQ/IgxdHK8zkykbAmcGM7N/23Bn2hVXg/dbO4VzlO1mKUipuOLgqF7vCqy+0gdChz3m2SPw0QIx5gYN2k0Xim8ahK8kxoreySVR2yj8zBjoNTBFLXk32GcxDhmzghWKJlBUWkpD/GI9mUaqBz+id/i6OEXHTZzQKdS5JUZYzRt9nGZFNTcyDELnM8N6hDCeMjetBARsnsiPKieLe4ptw1wcannvw3KAI0ymRIUmHhblS0ZPOniQam7ApdpQ6XzwNi6Q2TeonAYrQXRAztqXWyE2CekfPV3vfHwVjxLFKhql09sTMwBQIEfP7E3q/4rfXfQ5ZfP/Rb7qZSzL36C4jkh+dgUQkemgI35V88VfNhDPf0XuqiJa0CBTgE5dKIBVSnaqUferw3yfNuJt4Ziv59fYdzQ6a1U+nS0r0+W6DZtldlmXd5Y37L5IHxIjwgfbGEtPIZHBSvS9gedR5kj9wP1NXqLXjOParWuCzBR3c/X2XCNmQQYM2JAtrxQH56NLY/UaT2LMvell3wKBfNtP1Usj+hwLXBWzSnnZdtPXVhdy8E6QkSbaH5YulygtjNgMS9G73awwqwwbA8Ozgrc1Dus5WtAhBb/jtJCU5uqAY3kbOKVDbShzyinz5j9nPYKkVa+2XI4pkIpAdZxwdX6i7JKlYE8+zodzR2RH9ccQxlGKDAYn9BHy1ECK0z5jEhdsH7ut/hkRBidGQq7kTv8AVSqwOkaEriPkFUuvnXt4Jt61A0MYn4uh2U2BBw2EredGB8Oo81TrUYobZW0WhOqEW8fA5uUTZm/S0z8P5gaRpJ+Xr7hExD+5E1MaWUypV3V0LOPit7ZZqKiGR/271MR3O57tOE7qj7f8NCubAwqx+hJwF0ILIrFJvnOwt5PDaFTH1Za5P1oFm/VyHC8DAseZiDSuh8yYOu9a+Q05PGsytJVMGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01MZ6eBAe5quUFRwH9y6MomZ",
+            "name": "escalate",
+            "input": {
+              "reason": "ambiguous_or_missing_information",
+              "question": "The supplier (PO-120 revision 3, line 10, ordered item KF-A-01 in EA) states they have no revised supply schedule for KF-A-01. They offer 120 EA of a different item, KF-C-07, arriving at WH-A on 27 October 2026, subject to customer acceptance, and ask that it not be recorded as an amendment of KF-A-01. No schedule is given for the ordered item. Please confirm how to proceed: is a schedule for KF-A-01 available from the supplier, or should the KF-C-07 substitute be handled separately outside this extraction?"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 351,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 306
+        },
+        "latencyMs": 2795
+      }
+    }
+  ]
+}

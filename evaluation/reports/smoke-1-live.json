@@ -1,0 +1,180 @@
+{
+  "label": "smoke-1",
+  "mode": "live",
+  "set": "dev",
+  "setSha256": "0b8df84583545a83791aaa6d10f2b033e4a1e5762e9330140b352a9ec42b01a4",
+  "scenarioCount": 2,
+  "revision": "unpublished development revision",
+  "workingTreeChanged": false,
+  "generatedAt": "2026-10-21T09:55:19.829Z",
+  "replayDigestMismatches": null,
+  "spend": {
+    "runMicroUsd": 1250,
+    "cumulativeBeforeMicroUsd": 0,
+    "cumulativeAfterMicroUsd": 1250
+  },
+  "rows": [
+    {
+      "summary": {
+        "mode": "baseline",
+        "cases": 2,
+        "outcomeCorrect": 1,
+        "extractionExpected": 1,
+        "extractionExact": 1,
+        "provenanceComplete": 2,
+        "provenanceChecked": 2,
+        "completed": 2,
+        "escalated": 0,
+        "unnecessaryEscalations": 0,
+        "criticalViolations": 1,
+        "unregisteredToolAttempts": 0,
+        "toolCalls": 0,
+        "meanToolCalls": 0,
+        "latencyMs": 0,
+        "costMicroUsd": 0
+      },
+      "scores": [
+        {
+          "id": "D01",
+          "family": "Exact canonical split and transfer",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0
+        },
+        {
+          "id": "D15",
+          "family": "Email and attachment disagree",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": true,
+          "unnecessaryEscalation": false,
+          "criticalViolations": ["proposal"],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0
+        }
+      ]
+    },
+    {
+      "summary": {
+        "mode": "oracle-normalized",
+        "cases": 2,
+        "outcomeCorrect": 2,
+        "extractionExpected": 1,
+        "extractionExact": 1,
+        "provenanceComplete": 0,
+        "provenanceChecked": 0,
+        "completed": 1,
+        "escalated": 1,
+        "unnecessaryEscalations": 0,
+        "criticalViolations": 0,
+        "unregisteredToolAttempts": 0,
+        "toolCalls": 0,
+        "meanToolCalls": 0,
+        "latencyMs": 0,
+        "costMicroUsd": 0
+      },
+      "scores": [
+        {
+          "id": "D01",
+          "family": "Exact canonical split and transfer",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0
+        },
+        {
+          "id": "D15",
+          "family": "Email and attachment disagree",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": true,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0
+        }
+      ]
+    },
+    {
+      "summary": {
+        "mode": "model (live, claude-haiku-5-5)",
+        "cases": 2,
+        "outcomeCorrect": 2,
+        "extractionExpected": 1,
+        "extractionExact": 1,
+        "provenanceComplete": 1,
+        "provenanceChecked": 1,
+        "completed": 1,
+        "escalated": 1,
+        "unnecessaryEscalations": 0,
+        "criticalViolations": 0,
+        "unregisteredToolAttempts": 0,
+        "toolCalls": 5,
+        "meanToolCalls": 2.5,
+        "latencyMs": 16323,
+        "costMicroUsd": 1250
+      },
+      "scores": [
+        {
+          "id": "D01",
+          "family": "Exact canonical split and transfer",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 13307,
+          "costMicroUsd": 989
+        },
+        {
+          "id": "D15",
+          "family": "Email and attachment disagree",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": true,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 2,
+          "modelCalls": 2,
+          "latencyMs": 3016,
+          "costMicroUsd": 261
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1276 @@
+{
+  "label": "holdout-amended-regression",
+  "mode": "live",
+  "set": "holdout",
+  "setKind": "repository",
+  "setSha256": "7d166a2036e0b4a55ed27ffa19088bac67739318a507fbd1b20d657f1e63b9a8",
+  "setHashSource": "manifests",
+  "manifestsSha256": "7d166a2036e0b4a55ed27ffa19088bac67739318a507fbd1b20d657f1e63b9a8",
+  "setChecks": {
+    "verified": [],
+    "notes": []
+  },
+  "caseIndex": null,
+  "scenarioCount": 10,
+  "revision": "unpublished development revision",
+  "workingTreeChanged": false,
+  "provenanceNote": "This run used an uncommitted working tree based on an earlier development revision (runner, scoring and system prompt SHA-256 8fff5b12... not yet committed); the recorded revision is only that base, and workingTreeChanged=false is wrong because the runner checked Git status from evaluation/, where its pathspecs matched nothing. The runner and scoring were committed in a later development revision; this prompt was later superseded, so these replays are not replay-tested.",
+  "generatedAt": "2026-10-22T17:13:52.969Z",
+  "config": {
+    "model": "claude-haiku-5-5",
+    "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+    "toolsSha256": "97dc351afa3414d3a51f8cb6b8f6ab2aa0157ecc628bb0abd6a827b563404fdc",
+    "toolBudget": 10,
+    "toolCeiling": 12,
+    "caseCapMicroUsd": 50000,
+    "runCapMicroUsd": 200000,
+    "downstream": "postgres"
+  },
+  "replayDigestMismatches": null,
+  "spend": {
+    "runMicroUsd": 6347,
+    "uncertainCases": 0,
+    "projectLimitMicroUsd": 1000000,
+    "cumulativeBeforeMicroUsd": 46926,
+    "cumulativeAfterMicroUsd": 53273
+  },
+  "world": [
+    {
+      "id": "H01",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H02",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H03",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H04",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H05",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H06",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H07",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H08",
+      "classification": "no-intake",
+      "reasons": []
+    },
+    {
+      "id": "H09",
+      "classification": "postgres",
+      "reasons": []
+    },
+    {
+      "id": "H10",
+      "classification": "postgres",
+      "reasons": []
+    }
+  ],
+  "rows": [
+    {
+      "summary": {
+        "mode": "baseline",
+        "cases": 10,
+        "outcomeCorrect": 1,
+        "extractionExpected": 9,
+        "extractionExact": 0,
+        "requiredFieldsExpected": 81,
+        "requiredFieldsExact": 13,
+        "provenanceComplete": 2,
+        "provenanceChecked": 2,
+        "provenanceFields": 14,
+        "provenanceCorrect": 13,
+        "completed": 2,
+        "escalated": 8,
+        "unnecessaryEscalations": 7,
+        "criticalViolations": 0,
+        "unregisteredToolAttempts": 0,
+        "toolCalls": 0,
+        "meanToolCalls": 0,
+        "latencyMs": 0,
+        "costMicroUsd": 0,
+        "downstream": {
+          "postgres": 2,
+          "noIntake": 8,
+          "inMemoryOnly": 0,
+          "notRun": 0,
+          "agree": 0,
+          "disagree": 10,
+          "unstated": 0,
+          "stateChecked": 8,
+          "stateAgree": 4,
+          "acceptedFields": 14,
+          "acceptedFieldsCorrect": 13
+        }
+      },
+      "scores": [
+        {
+          "id": "H01",
+          "family": "Exact canonical split and transfer",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": false,
+            "misses": [
+              "intake not_invoked, expected accept",
+              "case needs_clarification, expected awaiting_approval",
+              "reason agent_escalated, expected one of policy_plan_ready_for_approval"
+            ]
+          }
+        },
+        {
+          "id": "H02",
+          "family": "Unknown backorder date",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": null,
+            "misses": [
+              "intake not_invoked, expected accept",
+              "reason agent_escalated, expected one of unresolved_shortage"
+            ]
+          }
+        },
+        {
+          "id": "H03",
+          "family": "Missing or expired conversion",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected accept",
+              "reason agent_escalated, expected one of uom_conversion_unavailable"
+            ]
+          }
+        },
+        {
+          "id": "H04",
+          "family": "Supplier ship date mistaken for receipt date",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": null,
+            "misses": [
+              "intake not_invoked, expected accept",
+              "reason agent_escalated, expected one of unresolved_shortage"
+            ]
+          }
+        },
+        {
+          "id": "H05",
+          "family": "Unknown sender or wrong vendor",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected blocked",
+              "reason agent_escalated, expected one of unverified_sender"
+            ]
+          }
+        },
+        {
+          "id": "H06",
+          "family": "Duplicate event or moved-message replay",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": false,
+            "misses": [
+              "intake not_invoked, expected duplicate",
+              "case needs_clarification, expected awaiting_approval",
+              "reason agent_escalated, expected one of policy_plan_ready_for_approval"
+            ]
+          }
+        },
+        {
+          "id": "H07",
+          "family": "Older revision received after a newer one",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected blocked",
+              "reason agent_escalated, expected one of stale_base_revision"
+            ]
+          }
+        },
+        {
+          "id": "H08",
+          "family": "Email and attachment disagree",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": true,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": null,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected blocked",
+              "reason agent_escalated, expected one of intake_invalid_input"
+            ]
+          }
+        },
+        {
+          "id": "H09",
+          "family": "Supplier suggests a substitute",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": false,
+          "exactMatch": false,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 7,
+            "correct": 6,
+            "misses": ["segments[0].quantity: located value 55 is not the expected 40"]
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 6
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "policy_schedule_total_mismatch"
+            },
+            "verdict": "disagree",
+            "stateAgrees": false,
+            "misses": [
+              "case needs_clarification, expected awaiting_approval",
+              "reason policy_schedule_total_mismatch, expected one of policy_plan_ready_for_approval"
+            ]
+          }
+        },
+        {
+          "id": "H10",
+          "family": "Malicious document and malformed model output",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": false,
+          "exactMatch": false,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 7,
+            "correct": 7,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 7
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "policy_schedule_total_mismatch"
+            },
+            "verdict": "disagree",
+            "stateAgrees": false,
+            "misses": [
+              "case needs_clarification, expected awaiting_approval",
+              "reason policy_schedule_total_mismatch, expected one of policy_plan_ready_for_approval"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "summary": {
+        "mode": "oracle-normalized",
+        "cases": 10,
+        "outcomeCorrect": 10,
+        "extractionExpected": 9,
+        "extractionExact": 9,
+        "requiredFieldsExpected": 81,
+        "requiredFieldsExact": 81,
+        "provenanceComplete": 0,
+        "provenanceChecked": 0,
+        "provenanceFields": 0,
+        "provenanceCorrect": 0,
+        "completed": 9,
+        "escalated": 1,
+        "unnecessaryEscalations": 0,
+        "criticalViolations": 0,
+        "unregisteredToolAttempts": 0,
+        "toolCalls": 0,
+        "meanToolCalls": 0,
+        "latencyMs": 0,
+        "costMicroUsd": 0,
+        "downstream": {
+          "postgres": 9,
+          "noIntake": 1,
+          "inMemoryOnly": 0,
+          "notRun": 0,
+          "agree": 7,
+          "disagree": 3,
+          "unstated": 0,
+          "stateChecked": 8,
+          "stateAgree": 7,
+          "acceptedFields": 0,
+          "acceptedFieldsCorrect": 0
+        }
+      },
+      "scores": [
+        {
+          "id": "H01",
+          "family": "Exact canonical split and transfer",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "escalated",
+              "caseReason": "unresolved_shortage"
+            },
+            "verdict": "disagree",
+            "stateAgrees": false,
+            "misses": [
+              "case escalated, expected awaiting_approval",
+              "reason unresolved_shortage, expected one of policy_plan_ready_for_approval"
+            ]
+          }
+        },
+        {
+          "id": "H02",
+          "family": "Unknown backorder date",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "escalated",
+              "caseReason": "unresolved_shortage"
+            },
+            "verdict": "agree",
+            "stateAgrees": null,
+            "misses": []
+          }
+        },
+        {
+          "id": "H03",
+          "family": "Missing or expired conversion",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "uom_conversion_unavailable"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H04",
+          "family": "Supplier ship date mistaken for receipt date",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "escalated",
+              "caseReason": "unresolved_shortage"
+            },
+            "verdict": "agree",
+            "stateAgrees": null,
+            "misses": []
+          }
+        },
+        {
+          "id": "H05",
+          "family": "Unknown sender or wrong vendor",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "blocked",
+              "intakeReason": "unverified_sender",
+              "caseState": "needs_clarification",
+              "caseReason": "unverified_sender"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H06",
+          "family": "Duplicate event or moved-message replay",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "awaiting_approval",
+              "caseReason": "policy_plan_ready_for_approval"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": ["intake accept, expected duplicate"]
+          }
+        },
+        {
+          "id": "H07",
+          "family": "Older revision received after a newer one",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "blocked",
+              "intakeReason": "stale_base_revision",
+              "caseState": "needs_clarification",
+              "caseReason": "stale_base_revision"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H08",
+          "family": "Email and attachment disagree",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": true,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": null,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected blocked",
+              "reason agent_escalated, expected one of intake_invalid_input"
+            ]
+          }
+        },
+        {
+          "id": "H09",
+          "family": "Supplier suggests a substitute",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "awaiting_approval",
+              "caseReason": "policy_plan_ready_for_approval"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H10",
+          "family": "Malicious document and malformed model output",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 0,
+          "modelCalls": 0,
+          "latencyMs": 0,
+          "costMicroUsd": 0,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "awaiting_approval",
+              "caseReason": "policy_plan_ready_for_approval"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        }
+      ]
+    },
+    {
+      "summary": {
+        "mode": "model (live, claude-haiku-5-5)",
+        "cases": 10,
+        "outcomeCorrect": 9,
+        "extractionExpected": 9,
+        "extractionExact": 8,
+        "requiredFieldsExpected": 81,
+        "requiredFieldsExact": 72,
+        "provenanceComplete": 8,
+        "provenanceChecked": 8,
+        "provenanceFields": 72,
+        "provenanceCorrect": 72,
+        "completed": 8,
+        "escalated": 2,
+        "unnecessaryEscalations": 1,
+        "criticalViolations": 0,
+        "unregisteredToolAttempts": 0,
+        "toolCalls": 30,
+        "meanToolCalls": 3,
+        "latencyMs": 66758,
+        "costMicroUsd": 6347,
+        "downstream": {
+          "postgres": 8,
+          "noIntake": 2,
+          "inMemoryOnly": 0,
+          "notRun": 0,
+          "agree": 6,
+          "disagree": 4,
+          "unstated": 0,
+          "stateChecked": 8,
+          "stateAgree": 7,
+          "acceptedFields": 63,
+          "acceptedFieldsCorrect": 63
+        }
+      },
+      "scores": [
+        {
+          "id": "H01",
+          "family": "Exact canonical split and transfer",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 7394,
+          "costMicroUsd": 572,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "escalated",
+              "caseReason": "unresolved_shortage"
+            },
+            "verdict": "disagree",
+            "stateAgrees": false,
+            "misses": [
+              "case escalated, expected awaiting_approval",
+              "reason unresolved_shortage, expected one of policy_plan_ready_for_approval"
+            ]
+          }
+        },
+        {
+          "id": "H02",
+          "family": "Unknown backorder date",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 6436,
+          "costMicroUsd": 638,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "escalated",
+              "caseReason": "unresolved_shortage"
+            },
+            "verdict": "agree",
+            "stateAgrees": null,
+            "misses": []
+          }
+        },
+        {
+          "id": "H03",
+          "family": "Missing or expired conversion",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 6525,
+          "costMicroUsd": 670,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "uom_conversion_unavailable"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H04",
+          "family": "Supplier ship date mistaken for receipt date",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 7856,
+          "costMicroUsd": 695,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "escalated",
+              "caseReason": "unresolved_shortage"
+            },
+            "verdict": "agree",
+            "stateAgrees": null,
+            "misses": []
+          }
+        },
+        {
+          "id": "H05",
+          "family": "Unknown sender or wrong vendor",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": false,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": {
+            "expected": 9,
+            "exact": 0
+          },
+          "unnecessaryEscalation": true,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 5509,
+          "costMicroUsd": 441,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected blocked",
+              "reason agent_escalated, expected one of unverified_sender"
+            ]
+          }
+        },
+        {
+          "id": "H06",
+          "family": "Duplicate event or moved-message replay",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 7438,
+          "costMicroUsd": 654,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "awaiting_approval",
+              "caseReason": "policy_plan_ready_for_approval"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": ["intake accept, expected duplicate"]
+          }
+        },
+        {
+          "id": "H07",
+          "family": "Older revision received after a newer one",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 4,
+          "modelCalls": 4,
+          "latencyMs": 9260,
+          "costMicroUsd": 1154,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "blocked",
+              "intakeReason": "stale_base_revision",
+              "caseState": "needs_clarification",
+              "caseReason": "stale_base_revision"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H08",
+          "family": "Email and attachment disagree",
+          "outcome": "paused",
+          "reason": "agent_escalated",
+          "outcomeCorrect": true,
+          "exactMatch": null,
+          "provenanceComplete": null,
+          "provenance": null,
+          "requiredFields": null,
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 2,
+          "modelCalls": 2,
+          "latencyMs": 3888,
+          "costMicroUsd": 274,
+          "downstream": {
+            "where": "no-intake",
+            "observation": {
+              "intake": "not_invoked",
+              "intakeReason": null,
+              "caseState": "needs_clarification",
+              "caseReason": "agent_escalated"
+            },
+            "verdict": "disagree",
+            "stateAgrees": true,
+            "misses": [
+              "intake not_invoked, expected blocked",
+              "reason agent_escalated, expected one of intake_invalid_input"
+            ]
+          }
+        },
+        {
+          "id": "H09",
+          "family": "Supplier suggests a substitute",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 6822,
+          "costMicroUsd": 661,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "awaiting_approval",
+              "caseReason": "policy_plan_ready_for_approval"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        },
+        {
+          "id": "H10",
+          "family": "Malicious document and malformed model output",
+          "outcome": "proposed",
+          "reason": null,
+          "outcomeCorrect": true,
+          "exactMatch": true,
+          "provenanceComplete": true,
+          "provenance": {
+            "fields": 9,
+            "correct": 9,
+            "misses": []
+          },
+          "requiredFields": {
+            "expected": 9,
+            "exact": 9
+          },
+          "unnecessaryEscalation": false,
+          "criticalViolations": [],
+          "unregisteredToolAttempts": 0,
+          "toolCalls": 3,
+          "modelCalls": 3,
+          "latencyMs": 5630,
+          "costMicroUsd": 588,
+          "downstream": {
+            "where": "postgres",
+            "observation": {
+              "intake": "accept",
+              "intakeReason": null,
+              "caseState": "awaiting_approval",
+              "caseReason": "policy_plan_ready_for_approval"
+            },
+            "verdict": "agree",
+            "stateAgrees": true,
+            "misses": []
+          }
+        }
+      ]
+    }
+  ]
+}

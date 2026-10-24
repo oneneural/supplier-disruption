@@ -1,0 +1,92 @@
+{
+  "scenario": "D10",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_016KUfEGcwMyr5EGb2SEngSy",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1312
+      }
+    },
+    {
+      "requestDigest": "65d971085b7eb62ffdea3d13e999b839c5d5ef520de1c557baf62042e7fd376f",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01B619GyLAXTT4c8GCWDBbEX",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-122"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 225
+        },
+        "latencyMs": 1261
+      }
+    },
+    {
+      "requestDigest": "adce71d737b2962f4f33d1aeab8598dd9692a34cc0644a5bd7c4006fefcdc652",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS7QYKEAgTGAI4AUIIdGhpbmtpbmcSDBJzYHiV1tc9Ts8lmhoMK7faDGdfMIenZ+5YIjAo4bAhDscZD0q8fe2JdVqTk+G7KBDNwR7BuI+WWzpEdtEHXZppsPE6EQKfTFZr9zoqigYa+LiqCpWb1W5y4QhvmSrbkNWNg5JPno3M3vsx0LrjxtVWypA20iatKBN3O3Pj98vrfXsMy+97p2OR5Al2zq7fmKyUpWgKj897WNvri2p4pYnbBh65DJlsK0XSJuZakkMTfykmguJHdbGevfhvUD+GK0kPzVy48NZsnd9F6YAJxiEOU4jVeE0lkuJ8Ja50wGUKvfKIuARwLzMGuJA45o0qo1RVujwZWBSmG2X1EUzyUTmUAT7ObDxHS2M8qhJ9RswSrDG+DmssWZKqXYO389txhUFoDBk6+w9Iz0cxNPUdUC9R/Pc1iWst2+hmY2QzjF9J9nUrd+9+DZnqNs6ZGgkGwFHQusMJntiYwWPaFrqRpfC6ubuOREQg41rc+P8M7126NVA3ZUthBx5aKczR+zCi5WxFRE2v3QpH+ysDd61OQfz5+Dj2bgWe9IAQlU5kxk5N46jTaDxs7sLrUAJepPcK7eDc1Jb6SJ8EV81HnHwa/I9w3wfKCcEU10uPkUDq7WhPIRXws5inB8SW8/n/Ch3zBI3fjD9wsfBWy2MOznZFVnCuCRe5xjj0OsSkAeNwE4s8PxxQBkYPZxCwzMVhFmMoH6EPXQycsZn22NPYV+JBXe+XDvJS/M0KcWLEpC8lFpvM0AMrnry+vwMdH462NpToKBs6lx4rKMFK4jlk2xx/Be5ozZo1gtkgECKYWkunepiuJDzs/u12wKKQnTmY8wQbPwZQ90hziTmUBc85Ag/qOPSeGUEWsb2UZ1ekjA/Pc2z90UcUbxYw9VOSsyTwxGooD0mjw40YQn3NF6m3Jcpz8uKX5DjvTKWbRf+6nXLKBHgaT5xTY9BeB9PKTnpWsMEcxr6yW2/xdiK5YTJw+IaRe8uUFqpwB94t/2j54EMQzpwb8rtZ8M57l3Dm/e+Bw2RuZeBheWzZIWnTubWy3Hep5r0PeZaJUlVzvUX5WtA1Mxy4b4ZdAjTrdgSOlsLro+uojDfK/oPccCA4713fTOpjOF9luis+1cywrHnrNAR1fJu2dot2Q6+VGR2DGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Fb2JSQmdtspodmZhu9TNAH",
+            "name": "escalate",
+            "input": {
+              "reason": "ambiguous_or_missing_information",
+              "question": "The email says PO-122 revision 1, item KF-A-01: 60 EA will arrive 25 October 2026 instead of 23 October 2026. PO-122 has two lines (10 and 20) with 60 EA each, both for PART-A to WH-A, both dated 2026-10-23. The email does not state a line number, and KF-A-01 does not match the PO's SKU PART-A. Which line (10 or 20) does this delay apply to, and is KF-A-01 the supplier's item code for PART-A?"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 341,
+          "cacheReadTokens": 3816,
+          "cacheWriteTokens": 383
+        },
+        "latencyMs": 3326
+      }
+    }
+  ]
+}

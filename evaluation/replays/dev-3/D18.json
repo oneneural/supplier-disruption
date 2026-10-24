@@ -1,0 +1,151 @@
+{
+  "scenario": "D18",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01M1E2N2uM7pfgCAX1k7LCRi",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1669
+      }
+    },
+    {
+      "requestDigest": "1ceb357db2f9bd669601e5d0b69c90b745b95fd9f03258720d0dc06100ad3a8a",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01D7utjtAnMu8atgFPohZoS1",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 283
+        },
+        "latencyMs": 1969
+      }
+    },
+    {
+      "requestDigest": "01108d1b4a65c62d84aa29f83abcd86f15bad2a5a02601fa6a0a474533ebf3be",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQStQoKEAgTGAI4AUIIdGhpbmtpbmcSDC86sf2bYedKMqms3RoMTJF6aZjJ721U2s8fIjCPSwK5XO+PJV4nnUfTzMeSpgYnZJsMIzxEgksh3uVXlXddktXH+lbwmxdQhUfO7JQq0gmHw6y4IAY0nFIfQbtMtqtcwHvpAblyv5ouzyCaLpndbMbZkqEO97PY4TG/tuQH+2xmOfbU8n7SbPRiKEKNh92Hv9KeFHg+LzqzHrnoNCKmTO5JqtSWG/PbPPgVWzSBNFkAXdqqpso8fjz7Nkxbj5K9LRqJIhx9XSAb8aoZp+AlU1QDPvkIcOqQi40wRMXjbXgml0Arx3FBYDs1+RzI0PwG2aU2ANynkuoGzQG8QK/FTBddCwGJINwD83rmbbjoKDGZ70+t2goVrtK3jIXHUSRgovgoOY4XP8sjn+/7zgA2jiqA/qH3E3td8APIgbHWFkzDALts2lZWHkkdgL3asSrSnf6Qup7WjAPIo3NrYuRKs6ZNO4g8cBaElwUc392YwAv+OFoeC8VuCibr+88ib89zq79W0FnTSiRkvhKOskyZzPrvHlHstQVJJ9XjqxFk0N9/C7FU1XnMkEFhJlhlRVg69qiGhQCX9gQidLbbQ2Q+6V7Z2Oi2amf9RF/K8r2PvwxVqCjkV1HjNYrHuF+i/JP/VAaxLggrlVUoRxO6KXEySeQuKHs3p7pb5jLbaeus25Pkujq6JXNTyXwxba0GQVPM80yBpFmJjI0Gkx3jFlauZv+1waCJCqUmipInZVlJitVD5ByqIcWaGe3txYQqG8LDBBZ7eAXQBy9bs9hFJDo9Z8iN29MTS1LdIu9wc3y/9SBjGAb5bBNAuzPzDRwlenmnan+S0NpDXBZ4F2qRTvluzIBdn9tCJvTmxoskn31IHsSZtXMjSYSinU7L9hM7kS7fdjnwIXC2ExXAIHcju+ZDvi78fs+VtfXuiXrS6UhljrzdIzSNISoJHdrtIOPM1z1pi31fgyzkRMsX9eiThIkOOjnRqg+RO0xNXGWfLrBKuMMBlM0u0suCJ8vQSo0I63tN4AkvUG73bPmO0hAK0gcebcf9Gqpq4dH5CacJ6RphCLpLM9MddHHfQKbLIMdQAx7oQlj4rzB91P0LR/onHkolUTL0Tqdxc83xWW9t1nQkKrXty7aCqi4KVchTgOCi8Hx54aIyITfKyz0NgY2C5D/l82/2nu/GqbRTVSZvPKbKJ/6J7OSN0Fd6oFORzSGC9e8xamE9+uSNUtidvXVXijYbFlVcczZ8vAsT2qYXclg2eHX3K2jcud2Xr9wd3B0lrIMQJhG316b2H4vPu2pGDZgNv8JKZ3IdVaJCuzBfWjAldPWPHVeNqXngv/lT07k9ZUZeeEcR1vngli2vjwQmhOTk8ty5mZzYP2PswcMKV6gtv86rK5RoV62yeOn+G52UhU2gq8cq+m1y9kTmjEK1lTtNe3DM5+DKzXKVEXTW24J8QrZRzomSYTqMTXH+LVaTfUsh2LItq+ASNC7VLdb5SUsN37gkMv3jQ9dN0LCJ1LFaD8+vxl9AN1XP/868ZEEvUFZFjndHdog926x4XS6ttiMM2LjfaQTL0iiiPMIr8snaQ/tlfRpr13vy6XKWj/yb89yHblfEbtRE9/V5x7fAXr9R39Xbtk5ASHNeLj9Axz+6VhEuP1buyVfKcrQmE/D+lFk+aQoVk2+EmBCf33VOHtjZ2houHlpOWJ3+uteLuKkaHaerrFnT17P4TSaB02NRN567yME6ElXU4Iurj6d3v8R3Wj01GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01DCyumSnVfUS6YKjTwCG3XY",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "For PO-120 (revision 3), line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 (revision 3)"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "we will deliver 40 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "the remaining 80 EA on 26 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10 (KF-A-01) will be delivered as 40 EA on 23 October 2026 and the remaining 80 EA on 26 October 2026 to the warehouse. The alternative KF-A-02 offer (50 EA on 22 October 2026) is a substitute and is not proposed; the order's stated item is PART-A, so the vendor item code KF-A-01 is taken from the email as stated. The email's base revision 3 matches the record's revision. The second segment's date differs from the single accepted schedule date on record (2026-10-23 for 120 EA); software should check this."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1117,
+          "cacheReadTokens": 4139,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 6029
+      }
+    }
+  ]
+}

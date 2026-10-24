@@ -1,0 +1,11 @@
+{
+  "source": "live sandbox run 09c498e2 on 2026-10-22, committed exchange docs/evidence/erpnext-sandbox/L03-refusals-02-get.json, redacted by FileRecorder",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Purchase%20Order/PUR-ORD-2026-00001"
+  },
+  "status": 401,
+  "body": {
+    "exc_type": "AuthenticationError"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "scenario": "D08",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Snudm5gY54m62np1EEkXEj",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1356
+      }
+    },
+    {
+      "requestDigest": "5baac6235035426e987f3529433f92b6bc279d91a6add85e80f5daa0f3cf6352",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS3AcKEAgTGAI4AUIIdGhpbmtpbmcSDE94kG5qFjEWK9WL1hoMyxHFBTY1MAjSB0hrIjDhiDi3V2FA3AkurMd729bKrt/R+b5/hKNa2SKAR8MeFPtVeJZawweBA5uVhg/sNvwq+QYuncDDjlrYL3uMUpLWSHgUkN/euUXS3UPfXSX+SxB32Bl96FlroCdtbv3jVwzUL2rQDxCAqZ77WLU0r7JkEc/ebOX7IZ9MwxDgiDwjU0f+n+j8Go0SOM1oUUfR4kpDWY7mhedyXF9pyaYKx6WpQXODS/fB0dGJKih3hMTvFMvfx7AuWgFN3v+yR1WuCMfX3VjYJ3vAnpPJXj19t+3xknzBLp5Qry7T1+vU5mv4E0OaAw/3w1tBn1yJ7hVXWAaTYeogw+Pabg6sDZoib5w2pDn6Yd8Kw71XzB1XvmKwuQPmP9TJgXXU7wbfzJFesUUTIYcBOwI1vZFjLfxfPY4DnpM/csfZAejpmH2SwZMrsrUY25BedLRjsTfFRHyMyvzdosRQPZ4ajdZgQWFdFusRy321Oy/OHo/lJYUCb3ehZ6SprldAk/InwSZ+ZvRYDlBl95yH9u/92WHb7RG8/wn/kqOaC1Iiki3rhtp8e82M2kGPpOHjonaWGVPAtKEKtvVLSovAgrBlYfKktAWtGmX5MhvNMUA8o+u3nE1o/0QoykIwZij8jLwMOh6Ui+trB2rp7SVDvZUjkq3Jb0urfRpTCgoFQVrKB8iVy/V7vLcRlH6FdYz3ta3IFQhNfao8l/ZhhOx//b89Y0QT/SbxQQhLS5WzON/6ASFTkcMb3ua753vLQc9Lk2umv8P7CzjwBoEWYTY5E99fPT3TBdLwZ3gC9syw6JunTat9UponpaO7hjqXL+XFe2alImDCm71lEVWFQVvu7qYkPiQDJNSDs4ONlbJp2dYUiXkMcwO27raPD2zO8DmB7l7WrWqXCk05hTv0j0+y+NutAHD7y7ladoeBoVPSYkxAPTMRNxRZdAugfSwXEp+fxNC20fimrH3DKwXbqkqkaeIE0GkZulxeqKvaCHTBLfWEEOQOsFTrSx9w2rCC5JeOB2djJOHZdGPSFfdwinrR+0tiQYDSPzqSiW7+JgeAXQgDXBGZgdKWJPwPQXPj74wI3rVaLaDZfzYy1+Sb2XrdOb/721Ho6cYF6Ld5IbRHtCecsmn/4tcUxVkrm/w/7iQNhlUCY/2/YnfRMxkp05em6lByn31bf2O4NAqYpbbeEDZnGzm/LmxAAWywnoduaYodVyYCorUg+EAdcsgupUEfE4xDDOkOIScevH8b8OlhPtHI+h1QeYseGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Pb8wxsRYTtaQv3tGFsn1SA",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 183,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 244
+        },
+        "latencyMs": 1843
+      }
+    },
+    {
+      "requestDigest": "76e212d74109e176b3eb9608f175970ee652d25736103fa9dc17480eb4c8faa6",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS1QkKEAgTGAI4AUIIdGhpbmtpbmcSDFCLFG6kEuh7pHk6IBoMzBFIycs59oQw9BiHIjCXP/u1dod7lcUDk+P64aIZuGLYtw0JP5ZVuu9uSba2O/JPFjoixaGdlzyd2pkv49wq8ggDWt5Ne2yX1Sn9OGwQf1UFhd0nsQltI66N1hRQkLtgYvn5d+u2L1ffmGtqRoHvbW64Fhbah4xpvDEoc+eR7HgVxQo6S2SjOy6Vdx1wSfRQPW1V1QO71Jfi0ehfewsAWlgHw9u5RxiKbCuVx8FG2hLp3VwpYVoRMxAtOpAYrIQlYJcRlWxBg7Ge0SRghpqxvSuHY6/Jxc587/4MUu2MOUYS82XC6MPPWNYiaNuj3W3d25sgtJ64Tiz1gCOb790ZwH+Kbg5atpEQsPFBFtAgmau6wlw9udDkS4MXTPCq6CvQFFO0s4V7oHW8DYaLRFnohFj2s1NTfLu5QOJqMyCirZiaPg+1aGiAt6NhOoV2i4qkBzeQCE6kMQIu5zcOunPN9bkaFmDyUKJK7hA9CyM7CtsK/rjOGTXiUTf6vAGptv18MKQA8oyUdpX71pk+oY7afdbTGdeMYUokW2te2NH3VfHLBun731J1mRPQ/CeQjJ0keS2ruNWJwGTmbWNJHxkymzDPW+Q4KlajkKN0rN6j4Uc8VuP1kgKiNwTYyqRR2cAb3z66XYa2P2YpIMl0omu7nI1w8I1z8h9yBUl1XUHHN8AgK57bJwrzGBOJRqqgFxp6+2X2F4oHof/NwZqC6urxR+OWdeyXTttaQ4Y6DGvBnxBCuUEb8l1at7truD8yKQaOH/gK8DnjsqNL3Sc0UdrKAXQHj6f65GB6nUPYLAATx57+R1plnr1HPnOIyana0kZz8XzaCI58e9lUFCbuJOcO8NOBkPct6RDYhAZdR4R3x7bsCNNPYdyYdQz+5aKns9lvawNXHEA8lsvAUrY3HHToS70cnqW9UJ5NrUOg7rdv3DIzF9EkQ/jkl6KxRkfWBH/A//BYmJKqfojQdCjnI7jFNgjf9EfeYYHf6KcEQsMXTS62CpMzInoacVuY94KNVL1oSaiHEceH1N6QseZ6VUKWE/0sp673GNMiboG5CKQvQVhqXDQNCih0Q0s87hPiMVSnKC+oRtDlosiH5PoGrJERgNGBywP4tRSCj6wPgRHxVlfOCn8x2DLb8S22C9hHCEJPD+SpAFC4+YHhTBdrKdzMLHds4aJJdes/CxacC5wq/KG/qlFCc5ER5uPqW5Jr48nHGkca6VeSbyPuSlRxiVcgjYUKba13c/t8R2BZxc5miK4mgenyIqJdIQ3Ki9CvaJOwWMr1hLR4lYp/vpquSGnPOyRodZ8T3KTlxtHrJ6y+31fr33M84l7/t/w7jEHP5AZnEpqd/XQ107WDJwawYD4/iufBDcglZ460rMDbVCn9aGcam8NQnckodUlk6qI1nQyFTHg5/I0fcpMaPaucOAYqdl50BTmKZxhjEAc3BznDucrvm+D017CZfnFBQnZOQgZa3xbZSpoG65sFEOIW8WhycfJm1YHB+10ffwo/4cTomDtrVO9EqJoY/8OuEWbyzuKsR9xj64kMGTgqbc0SJdYha+MhzWU+Ehc/bWLebrZDPKB+OMiTxJVFaS8hhg8vHKtOHhhrGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016bNjZhGX7K5B7jpkTzPVby",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Regarding PO-120, revision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10 (KF-A-01)"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10 (KF-A-01)",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "40 EA will ship from our plant",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 EA will ship from our plant on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "40 EA will ship from our plant on 22 October 2026 - the email gives only a shipping date, no arrival date at the warehouse",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA will ship on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "the remaining 80 EA will ship on 26 October 2026 - the email gives only a shipping date, no arrival date at the warehouse",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10 (KF-A-01), with 40 EA and 80 EA. It gives only ship dates (22 and 26 October 2026), which are not arrival dates, so both segments are undated. The PO record shows revision 3 and a single dated accepted segment of 120 EA arriving 2026-10-23, which the supplier's shipping dates do not confirm."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 946,
+          "cacheReadTokens": 4100,
+          "cacheWriteTokens": 403
+        },
+        "latencyMs": 5580
+      }
+    },
+    {
+      "requestDigest": "218779f288071b7a21c625ffb01797eac128a6613fcc2584a88d9a0ab131b3aa",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSlAgKEAgTGAI4AUIIdGhpbmtpbmcSDFS8y9859fi0MjIRThoMfiianUjC1ewYAZZgIjAKRKZTv//r5B7XOGCX6gqWrCGZQT35HOZvZ2wcv8d1vq/xSWjdvAbCuBuLVlXoiBQqsQfs5bSdB70QwVGvnhdarHabPWAIQqedCXQf4epKmAgilEhEF1F7FXTJ6zTDmb+Tmk/yCBf/fFRCQ5DEWCR6Oq9yw39R+OU/wfwkwtiXm/Kw9SkB2okKAcFgwvD9kc8ASto0t8+Sft1ysopoRNJZAKvADMXGgeEbRL5me6H2bEyKwuNUZ1qNq2NCA3veGpHOn9q5+dOx26fnLKzOAZ3mAZ4kDVFrRxW7Qz+hck7FbomfEDa58+QgGK2bx9DA50iX+Hmxj4QL9gaGWHLKTttCm82SwC8IVrToGLx+EZPxIhC3oO5d+Y7PEpPwjE4tMDfu1fBM7vhVQrNBAK4YULorohElF4x9BdxeQlRIkhcxq0jBKAWFU9Bz3q38Kpxwm8Yub0rsvvCA2p9Nr7EfwPi6Jht+QCxs9H5AwZfZlyfHhCARjvN4waU/MyHftWa5QRGeK8NeLthJxE5YNPFFwvQ4GTSi+srUxdeuAqwYe7l2QtrD95JLnr+yMW6lYxd0zMBLN7dUkkkhI+Av1UnkELmjEtf/qlAx3NdLmamEQZSJ/y/PVXqXwAGJL3ZHOqb5GK/vHI7+cAgJAIhtfFnKMk1HCrdkM5MFMG8zX4qh6qu5i+ayzb5pvahDTiFaKxCquDNjhMl1WO/aItWdcHIbkKAuUt1zEKbpbP3URjNkcPbTvfVTNgVSr41YOt+CSC2fyykePH5sT+b9W24Edm/tfzuITNIaIXFYXQ6DrAtdtDxtyA22Kq8YVoiAeCDcqUbyZQ83CflkGNuB514zRkSc3nj2w9jKusDpZkwBj8du9h4KMkBX1b1VufzbAhGtSakNR2eylCPwQgUzJqVccwB7dCLT3IO9LXoUFqijWuwWDGiLyUCECdQT4s0AkbmeCima2qFuVPi2HLcQjWqROgIwzDlzpZrF+uJgk7MFKUHHT7sxyOOvv3Heo+BsWYFPRhcC3ggL+6+5gHJ0EGUYUkhFLB1kSHXTs9hPj48XKs3EIeGyvtX2gOktb7C14YNAjoRcQf7mF0unZJ3rRrdgbP0pdIm/2NOEBkDpbyWnOa0y9qg4TdNfEbZ2a6C+V9HzmLEs8QuZR0ry+xiqAgFyWCi82SkIkKYAkwIr0wOT1zv5p4WzQMes9wfOVabu2hTynF8LpuxmYVmudv6WeBKZU9qzMahhez2amDdO0ewq0gqTPCAZQKf35I2i28GDD8E8nIAapbanuOsrxrZUezhksjdwjCtiKdZPkbQKOZofFRCKK8sZCw+izkMYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01KWsPG7WxjV9LfAdaVAUpUQ",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Regarding PO-120, revision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10 (KF-A-01)"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10 (KF-A-01)",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "40 EA will ship from our plant",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 EA will ship from our plant on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "will ship from our plant on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA will ship on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "the remaining 80 EA will ship on 26 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10 (KF-A-01), with 40 EA and 80 EA. It gives only ship dates (22 and 26 October 2026), which are not arrival dates, so both segments are undated. The PO record shows revision 3 and a single accepted segment of 120 EA arriving 2026-10-23; the supplier's shipping plan does not confirm that arrival."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 829,
+          "cacheReadTokens": 4503,
+          "cacheWriteTokens": 1046
+        },
+        "latencyMs": 4107
+      }
+    }
+  ]
+}

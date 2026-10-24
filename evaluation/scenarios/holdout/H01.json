@@ -1,0 +1,40 @@
+{
+  "id": "H01",
+  "family": "Exact canonical split and transfer",
+  "note": "Held-out H01 (en): Changed split, arrival dates and linked demand preserve an exact 50 EA transfer requirement.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H01",
+    "text": "For PO-120, line 10, base revision 3, item KF-A-01, unit EA: our revised receipt schedule at WH-A is 35 EA arriving on 22 October 2026 and the remaining 85 EA arriving on 27 October 2026. This replaces the outstanding schedule; it is a proposal for your review."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "35",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-22"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "85",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-27"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; case awaiting_approval (policy_plan_ready_for_approval)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

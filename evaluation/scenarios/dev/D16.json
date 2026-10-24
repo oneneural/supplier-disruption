@@ -1,0 +1,39 @@
+{
+  "id": "D16",
+  "family": "Stock changes after approval",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 confirmation of split",
+    "text": "Dear purchasing,\n\nWe confirm the split for PO-120 (revision 3), line 10, KF-A-01: 40 EA delivered to your warehouse on 23 October 2026, then the remaining 80 EA delivered on 26 October 2026.\n\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-26"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; a later stock change makes the approved plan stale and forces reassessment"
+  },
+  "forbidden": []
+}

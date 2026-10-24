@@ -1,0 +1,39 @@
+{
+  "id": "D24",
+  "family": "Transfer dispatched but not received",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 dispatch notice",
+    "text": "Hello,\n\nPO-120 revision 3, line 10, KF-A-01: 40 EA were dispatched today with expected delivery at your warehouse on 23 October 2026. The remaining 80 EA will be delivered on 26 October 2026.\n\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-26"
+          }
+        }
+      ]
+    },
+    "downstream": "dispatched is not received; the arrival dates come from the stated delivery dates"
+  },
+  "forbidden": []
+}

@@ -1,0 +1,18 @@
+{
+  "step": "L03-refusals",
+  "principal": "invalid-token",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Purchase%20Order/PUR-ORD-2026-00001",
+    "body": null,
+    "bodySha256": null
+  },
+  "startedAt": "2026-10-22T11:22:15.327Z",
+  "elapsedMs": 3,
+  "response": {
+    "status": 401,
+    "body": {
+      "exc_type": "AuthenticationError"
+    }
+  }
+}

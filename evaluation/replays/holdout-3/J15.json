@@ -1,0 +1,66 @@
+{
+  "scenario": "J15",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Sf3cYRGdq2JHVi9cDHDe6S",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1023
+      }
+    },
+    {
+      "requestDigest": "4e8786414e0a3cda9312538b2b56a3aae20d93dcdad225412a2a1ba1d26f4639",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSlAcKEAgTGAI4AUIIdGhpbmtpbmcSDLgSfm30BNDj3ND51xoMIBIRrKW37YCNTHkKIjDVdG9/I94nWN7bkyIn0SXPDPsmGMeZaoSPLTqaqQUXIPel8ztqnsqWINtq4oMI7H0qsQZitBZ9NyJJ0H3cjgnlXIBE+lTRroJU6YKCyHBn2wa+4v2YyGmpoGFlTklC6AQdyC+jqmJNDa7V+1VfLHC8iqaemVmGZ3OINJdcs+05WXec2tJwlPoVprO7PIxyte3SWGW09uSN/rY0zIwUSUJyYvVD8FI9pmRVaK0ddvxygor5v/MEDCG+dMj8YpfDntvqpGFuagP1yqUk98aXltnmYUQMjgDljgORjh4+80BEiENEblRgSfCzXHYroIfofDw2S0vKYOhbuEQcnetVYr/iGhE2VIk2yiOuWAddxBYT/Wl820pP9kQ1uhSLjeIaq2fbXOVioL9I2QrYz6pAeMYCnchqqdn0WyABzkjJAvuSud2j9uTX50LzOlSiyDJ+kfrGR5uvH2PJJW65kbz96+hX8qa4zwurP9+jmATFN9kuRRs+gttQjHDqe4fAabQ4YV3u7g5R1featXQ0StdhwdELfYpEJ8ukzRpQim3ezgyjon/CdkmHkrfS0gq6X6RFDSrGDp1oXquD8audRi9dk9gsklh4U0YsxSkfEPWw8NOPqgcwPJ0s8LgUXrsfT/sNNJGnut6t2WTgdVpw5cV4mOxmlcFhDKGvvpGLLMS12VckM06ztpvnZBx9SDT4eI7fX6puea07h5tgRBRIyHnCSatrE44BbhrZbZ4hp5037PcUDEmLZGvnVga3xC/Ler5M3C+tDlHORXtIUvGPgyqxRKnQGD9JBUsN36QmxRjaMYbAMNmLci61wtd7Tu51OfMkC+IR4btWJlK+jVf/2yS2QuqLaC3krC1ROYV8tBn4oOeTnoIvn8dxrZLtnTIgbNWJzAsY+oJZCqiVZsK2XBDIKDwc5nRE9n7cl92XJbbH0j5SJYYVt2QzMw5ttwSkK+VJGUk20/WmXCzLoprVyqJ6ntry0wTnRrCnZQgGwcZEAm+HDxbhJg2tK6aBTGsGg1d0bt6jf44RerE/v1K1lQbv9tdjjX6utltT1komfHj28xvr1P7teAJeD/pzSSfyArEo7RsNo/Uj4GACCoTf9D36TsTsTSzZXfekx3Td1cHLSC94sRCgZGfGYrf2hSHHmSxMkTnQspazGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RWFdBQAEuVoV3GZpSnKwXh",
+            "name": "escalate",
+            "input": {
+              "reason": "ambiguous_or_missing_information",
+              "question": "The supplier email for PO-120 (revision 3, line 10, item KF-A-01, 120 EA) says the full 120 EA will arrive at WH-A on 5 November but states no year. The quoted archive dates (18 December 2025 and 8 January 2026) are not stated as the arrival year. Please confirm the arrival year (or the full arrival date) with the supplier before a dated arrival can be proposed."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 306,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 315
+        },
+        "latencyMs": 2127
+      }
+    }
+  ]
+}

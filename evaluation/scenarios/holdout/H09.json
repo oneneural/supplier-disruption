@@ -1,0 +1,40 @@
+{
+  "id": "H09",
+  "family": "Supplier suggests a substitute",
+  "note": "Held-out H09 (de+en): Mixed German and English keeps a clearly optional unregistered substitute outside the primary PART-A schedule.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H09",
+    "text": "Zu PO-120, line 10, base revision 3, Artikel KF-A-01, unit EA: Für den ursprünglichen Artikel erwarten wir die Ankunft in WH-A von 40 EA am 22.10.2026 und 80 EA am 27.10.2026. Optional alternative only: 55 EA of PART-A2 could arrive at WH-A on 22 October 2026. Das ist ein Ersatzangebot, keine Änderung der obigen Mengen und keine Annahme durch Ihren Kunden."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-22"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-27"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; case awaiting_approval (policy_plan_ready_for_approval)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

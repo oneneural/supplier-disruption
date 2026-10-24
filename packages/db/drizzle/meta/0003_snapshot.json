@@ -1,0 +1,3122 @@
+{
+  "id": "2498f381-e14e-41f0-b6bb-1b492fec113c",
+  "prevId": "84af433a-4307-44dd-bf9e-10ea9ff50759",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "auth.account": {
+      "name": "account",
+      "schema": "auth",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "account_id": {
+          "name": "account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider_id": {
+          "name": "provider_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "access_token": {
+          "name": "access_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refresh_token": {
+          "name": "refresh_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_token": {
+          "name": "id_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "access_token_expires_at": {
+          "name": "access_token_expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refresh_token_expires_at": {
+          "name": "refresh_token_expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "scope": {
+          "name": "scope",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "account_user_id_idx": {
+          "name": "account_user_id_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "account_user_id_user_id_fk": {
+          "name": "account_user_id_user_id_fk",
+          "tableFrom": "account",
+          "tableTo": "user",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "auth.session": {
+      "name": "session",
+      "schema": "auth",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "token": {
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ip_address": {
+          "name": "ip_address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_agent": {
+          "name": "user_agent",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "session_user_id_idx": {
+          "name": "session_user_id_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "session_user_id_user_id_fk": {
+          "name": "session_user_id_user_id_fk",
+          "tableFrom": "session",
+          "tableTo": "user",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "session_token_unique": {
+          "name": "session_token_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "token"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "auth.user": {
+      "name": "user",
+      "schema": "auth",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email_verified": {
+          "name": "email_verified",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "user_email_unique": {
+          "name": "user_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "auth.verification": {
+      "name": "verification",
+      "schema": "auth",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "identifier": {
+          "name": "identifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "value": {
+          "name": "value",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "verification_identifier_idx": {
+          "name": "verification_identifier_idx",
+          "columns": [
+            {
+              "expression": "identifier",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "app.membership": {
+      "name": "membership",
+      "schema": "app",
+      "columns": {
+        "organization_id": {
+          "name": "organization_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "membership_user_id_idx": {
+          "name": "membership_user_id_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "membership_organization_id_organization_id_fk": {
+          "name": "membership_organization_id_organization_id_fk",
+          "tableFrom": "membership",
+          "tableTo": "organization",
+          "schemaTo": "app",
+          "columnsFrom": [
+            "organization_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "membership_user_id_user_id_fk": {
+          "name": "membership_user_id_user_id_fk",
+          "tableFrom": "membership",
+          "tableTo": "user",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "membership_organization_id_user_id_pk": {
+          "name": "membership_organization_id_user_id_pk",
+          "columns": [
+            "organization_id",
+            "user_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "membership_role_check": {
+          "name": "membership_role_check",
+          "value": "\"app\".\"membership\".\"role\" in ('buyer', 'manager')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "app.organization": {
+      "name": "organization",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "slug": {
+          "name": "slug",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "organization_slug_unique": {
+          "name": "organization_slug_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "slug"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "app.pilot_handler_attempt": {
+      "name": "pilot_handler_attempt",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "job_id": {
+          "name": "job_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "job_retry_count": {
+          "name": "job_retry_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "worker_boot_id": {
+          "name": "worker_boot_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "started_at": {
+          "name": "started_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "pilot_handler_attempt_operation_id_idx": {
+          "name": "pilot_handler_attempt_operation_id_idx",
+          "columns": [
+            {
+              "expression": "operation_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "pilot_handler_attempt_operation_id_pilot_operation_operation_id_fk": {
+          "name": "pilot_handler_attempt_operation_id_pilot_operation_operation_id_fk",
+          "tableFrom": "pilot_handler_attempt",
+          "tableTo": "pilot_operation",
+          "schemaTo": "app",
+          "columnsFrom": [
+            "operation_id"
+          ],
+          "columnsTo": [
+            "operation_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "app.pilot_operation": {
+      "name": "pilot_operation",
+      "schema": "app",
+      "columns": {
+        "operation_id": {
+          "name": "operation_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization_id": {
+          "name": "organization_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "submitted_by": {
+          "name": "submitted_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "contract_version": {
+          "name": "contract_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "payload": {
+          "name": "payload",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "payload_sha256": {
+          "name": "payload_sha256",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'queued'"
+        },
+        "job_id": {
+          "name": "job_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "receipt_id": {
+          "name": "receipt_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "receipt_recorded_at": {
+          "name": "receipt_recorded_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "receipt_job_id": {
+          "name": "receipt_job_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "pilot_operation_organization_id_idx": {
+          "name": "pilot_operation_organization_id_idx",
+          "columns": [
+            {
+              "expression": "organization_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "pilot_operation_organization_id_organization_id_fk": {
+          "name": "pilot_operation_organization_id_organization_id_fk",
+          "tableFrom": "pilot_operation",
+          "tableTo": "organization",
+          "schemaTo": "app",
+          "columnsFrom": [
+            "organization_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "pilot_operation_submitted_by_user_id_fk": {
+          "name": "pilot_operation_submitted_by_user_id_fk",
+          "tableFrom": "pilot_operation",
+          "tableTo": "user",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "submitted_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "pilot_operation_receipt_id_unique": {
+          "name": "pilot_operation_receipt_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "receipt_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "pilot_operation_state_check": {
+          "name": "pilot_operation_state_check",
+          "value": "\"app\".\"pilot_operation\".\"state\" in ('queued', 'completed')"
+        },
+        "pilot_operation_digest_check": {
+          "name": "pilot_operation_digest_check",
+          "value": "\"app\".\"pilot_operation\".\"payload_sha256\" ~ '^[0-9a-f]{64}$'"
+        },
+        "pilot_operation_receipt_check": {
+          "name": "pilot_operation_receipt_check",
+          "value": "(\"app\".\"pilot_operation\".\"state\" = 'completed') = (\"app\".\"pilot_operation\".\"receipt_id\" is not null and \"app\".\"pilot_operation\".\"receipt_recorded_at\" is not null and \"app\".\"pilot_operation\".\"receipt_job_id\" is not null)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "app.pilot_receipt_attempt": {
+      "name": "pilot_receipt_attempt",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "job_id": {
+          "name": "job_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "job_retry_count": {
+          "name": "job_retry_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "worker_boot_id": {
+          "name": "worker_boot_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "outcome": {
+          "name": "outcome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "receipt_id": {
+          "name": "receipt_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "observed_at": {
+          "name": "observed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "pilot_receipt_attempt_operation_id_idx": {
+          "name": "pilot_receipt_attempt_operation_id_idx",
+          "columns": [
+            {
+              "expression": "operation_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "pilot_receipt_attempt_operation_id_pilot_operation_operation_id_fk": {
+          "name": "pilot_receipt_attempt_operation_id_pilot_operation_operation_id_fk",
+          "tableFrom": "pilot_receipt_attempt",
+          "tableTo": "pilot_operation",
+          "schemaTo": "app",
+          "columnsFrom": [
+            "operation_id"
+          ],
+          "columnsTo": [
+            "operation_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "pilot_receipt_attempt_outcome_check": {
+          "name": "pilot_receipt_attempt_outcome_check",
+          "value": "\"app\".\"pilot_receipt_attempt\".\"outcome\" in ('recorded', 'existing')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "app.schema_tag": {
+      "name": "schema_tag",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "smallint",
+          "primaryKey": true,
+          "notNull": true,
+          "default": 1
+        },
+        "tag": {
+          "name": "tag",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "applied_at": {
+          "name": "applied_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "schema_tag_single_row_check": {
+          "name": "schema_tag_single_row_check",
+          "value": "\"app\".\"schema_tag\".\"id\" = 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "worker.heartbeat": {
+      "name": "heartbeat",
+      "schema": "worker",
+      "columns": {
+        "boot_id": {
+          "name": "boot_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "build_revision": {
+          "name": "build_revision",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "started_at": {
+          "name": "started_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "observed_at": {
+          "name": "observed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_purchasing.operation": {
+      "name": "operation",
+      "schema": "fixture_purchasing",
+      "columns": {
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "kind": {
+          "name": "kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "request_digest": {
+          "name": "request_digest",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "operation_organization_operation_id_pk": {
+          "name": "operation_organization_operation_id_pk",
+          "columns": [
+            "organization",
+            "operation_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "operation_kind_check": {
+          "name": "operation_kind_check",
+          "value": "\"fixture_purchasing\".\"operation\".\"kind\" in ('amend_schedule')"
+        },
+        "operation_digest_check": {
+          "name": "operation_digest_check",
+          "value": "\"fixture_purchasing\".\"operation\".\"request_digest\" ~ '^[0-9a-f]{64}$'"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_purchasing.operation_receipt": {
+      "name": "operation_receipt",
+      "schema": "fixture_purchasing",
+      "columns": {
+        "receipt_id": {
+          "name": "receipt_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "plan_id": {
+          "name": "plan_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "action_id": {
+          "name": "action_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "po_number": {
+          "name": "po_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "line_number": {
+          "name": "line_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "prior_revision": {
+          "name": "prior_revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "successor_revision": {
+          "name": "successor_revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "recorded_at": {
+          "name": "recorded_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "operation_receipt_operation_fk": {
+          "name": "operation_receipt_operation_fk",
+          "tableFrom": "operation_receipt",
+          "tableTo": "operation",
+          "schemaTo": "fixture_purchasing",
+          "columnsFrom": [
+            "organization",
+            "operation_id"
+          ],
+          "columnsTo": [
+            "organization",
+            "operation_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "operation_receipt_successor_fk": {
+          "name": "operation_receipt_successor_fk",
+          "tableFrom": "operation_receipt",
+          "tableTo": "po_line",
+          "schemaTo": "fixture_purchasing",
+          "columnsFrom": [
+            "po_number",
+            "successor_revision",
+            "line_number"
+          ],
+          "columnsTo": [
+            "po_number",
+            "revision",
+            "line_number"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "operation_receipt_operation_unique": {
+          "name": "operation_receipt_operation_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "organization",
+            "operation_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "operation_receipt_successor_check": {
+          "name": "operation_receipt_successor_check",
+          "value": "\"fixture_purchasing\".\"operation_receipt\".\"successor_revision\" = \"fixture_purchasing\".\"operation_receipt\".\"prior_revision\" + 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_purchasing.po_head": {
+      "name": "po_head",
+      "schema": "fixture_purchasing",
+      "columns": {
+        "po_number": {
+          "name": "po_number",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revision": {
+          "name": "revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "po_head_po_revision_fk": {
+          "name": "po_head_po_revision_fk",
+          "tableFrom": "po_head",
+          "tableTo": "po_revision",
+          "schemaTo": "fixture_purchasing",
+          "columnsFrom": [
+            "po_number",
+            "revision"
+          ],
+          "columnsTo": [
+            "po_number",
+            "revision"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_purchasing.po_line": {
+      "name": "po_line",
+      "schema": "fixture_purchasing",
+      "columns": {
+        "po_number": {
+          "name": "po_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revision": {
+          "name": "revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "line_number": {
+          "name": "line_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "uom": {
+          "name": "uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "destination": {
+          "name": "destination",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ordered": {
+          "name": "ordered",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "received": {
+          "name": "received",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "canceled": {
+          "name": "canceled",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "po_line_po_revision_fk": {
+          "name": "po_line_po_revision_fk",
+          "tableFrom": "po_line",
+          "tableTo": "po_revision",
+          "schemaTo": "fixture_purchasing",
+          "columnsFrom": [
+            "po_number",
+            "revision"
+          ],
+          "columnsTo": [
+            "po_number",
+            "revision"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "po_line_po_number_revision_line_number_pk": {
+          "name": "po_line_po_number_revision_line_number_pk",
+          "columns": [
+            "po_number",
+            "revision",
+            "line_number"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "po_line_quantities_check": {
+          "name": "po_line_quantities_check",
+          "value": "\"fixture_purchasing\".\"po_line\".\"ordered\" >= 0 and \"fixture_purchasing\".\"po_line\".\"received\" >= 0 and \"fixture_purchasing\".\"po_line\".\"canceled\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_purchasing.po_line_segment": {
+      "name": "po_line_segment",
+      "schema": "fixture_purchasing",
+      "columns": {
+        "po_number": {
+          "name": "po_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revision": {
+          "name": "revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "line_number": {
+          "name": "line_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sequence": {
+          "name": "sequence",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "arrival_date": {
+          "name": "arrival_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "po_line_segment_po_line_fk": {
+          "name": "po_line_segment_po_line_fk",
+          "tableFrom": "po_line_segment",
+          "tableTo": "po_line",
+          "schemaTo": "fixture_purchasing",
+          "columnsFrom": [
+            "po_number",
+            "revision",
+            "line_number"
+          ],
+          "columnsTo": [
+            "po_number",
+            "revision",
+            "line_number"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "po_line_segment_po_number_revision_line_number_sequence_pk": {
+          "name": "po_line_segment_po_number_revision_line_number_sequence_pk",
+          "columns": [
+            "po_number",
+            "revision",
+            "line_number",
+            "sequence"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "po_line_segment_quantity_check": {
+          "name": "po_line_segment_quantity_check",
+          "value": "\"fixture_purchasing\".\"po_line_segment\".\"quantity\" > 0"
+        },
+        "po_line_segment_sequence_check": {
+          "name": "po_line_segment_sequence_check",
+          "value": "\"fixture_purchasing\".\"po_line_segment\".\"sequence\" >= 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_purchasing.po_revision": {
+      "name": "po_revision",
+      "schema": "fixture_purchasing",
+      "columns": {
+        "po_number": {
+          "name": "po_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revision": {
+          "name": "revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vendor_id": {
+          "name": "vendor_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "observed_at": {
+          "name": "observed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "effective_date": {
+          "name": "effective_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "po_revision_po_number_revision_pk": {
+          "name": "po_revision_po_number_revision_pk",
+          "columns": [
+            "po_number",
+            "revision"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "po_revision_revision_check": {
+          "name": "po_revision_revision_check",
+          "value": "\"fixture_purchasing\".\"po_revision\".\"revision\" >= 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.in_transit": {
+      "name": "in_transit",
+      "schema": "fixture_inventory",
+      "columns": {
+        "transit_id": {
+          "name": "transit_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "uom": {
+          "name": "uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "from_warehouse": {
+          "name": "from_warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "to_warehouse": {
+          "name": "to_warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dispatched_on": {
+          "name": "dispatched_on",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "arrival_date": {
+          "name": "arrival_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "in_transit_quantity_check": {
+          "name": "in_transit_quantity_check",
+          "value": "\"fixture_inventory\".\"in_transit\".\"quantity\" > 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.operation": {
+      "name": "operation",
+      "schema": "fixture_inventory",
+      "columns": {
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "kind": {
+          "name": "kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "request_digest": {
+          "name": "request_digest",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "operation_organization_operation_id_pk": {
+          "name": "operation_organization_operation_id_pk",
+          "columns": [
+            "organization",
+            "operation_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "operation_kind_check": {
+          "name": "operation_kind_check",
+          "value": "\"fixture_inventory\".\"operation\".\"kind\" in ('reserve', 'create_transfer_request')"
+        },
+        "operation_digest_check": {
+          "name": "operation_digest_check",
+          "value": "\"fixture_inventory\".\"operation\".\"request_digest\" ~ '^[0-9a-f]{64}$'"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.operation_receipt": {
+      "name": "operation_receipt",
+      "schema": "fixture_inventory",
+      "columns": {
+        "receipt_id": {
+          "name": "receipt_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "kind": {
+          "name": "kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "plan_id": {
+          "name": "plan_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "action_id": {
+          "name": "action_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "warehouse": {
+          "name": "warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "prior_version": {
+          "name": "prior_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "successor_version": {
+          "name": "successor_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reservation_id": {
+          "name": "reservation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "transfer_request_id": {
+          "name": "transfer_request_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "request_version": {
+          "name": "request_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recorded_at": {
+          "name": "recorded_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "operation_receipt_prior_version_stock_snapshot_version_fk": {
+          "name": "operation_receipt_prior_version_stock_snapshot_version_fk",
+          "tableFrom": "operation_receipt",
+          "tableTo": "stock_snapshot",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "prior_version"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "operation_receipt_successor_version_stock_snapshot_version_fk": {
+          "name": "operation_receipt_successor_version_stock_snapshot_version_fk",
+          "tableFrom": "operation_receipt",
+          "tableTo": "stock_snapshot",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "successor_version"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "operation_receipt_transfer_request_id_transfer_request_request_id_fk": {
+          "name": "operation_receipt_transfer_request_id_transfer_request_request_id_fk",
+          "tableFrom": "operation_receipt",
+          "tableTo": "transfer_request",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "transfer_request_id"
+          ],
+          "columnsTo": [
+            "request_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "operation_receipt_operation_fk": {
+          "name": "operation_receipt_operation_fk",
+          "tableFrom": "operation_receipt",
+          "tableTo": "operation",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "organization",
+            "operation_id"
+          ],
+          "columnsTo": [
+            "organization",
+            "operation_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "operation_receipt_successor_version_unique": {
+          "name": "operation_receipt_successor_version_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "successor_version"
+          ]
+        },
+        "operation_receipt_transfer_request_id_unique": {
+          "name": "operation_receipt_transfer_request_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "transfer_request_id"
+          ]
+        },
+        "operation_receipt_operation_unique": {
+          "name": "operation_receipt_operation_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "organization",
+            "operation_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "operation_receipt_kind_check": {
+          "name": "operation_receipt_kind_check",
+          "value": "(\"fixture_inventory\".\"operation_receipt\".\"kind\" = 'reserve' and \"fixture_inventory\".\"operation_receipt\".\"successor_version\" is not null\n            and \"fixture_inventory\".\"operation_receipt\".\"transfer_request_id\" is null and \"fixture_inventory\".\"operation_receipt\".\"request_version\" is null)\n       or (\"fixture_inventory\".\"operation_receipt\".\"kind\" = 'create_transfer_request' and \"fixture_inventory\".\"operation_receipt\".\"successor_version\" is null\n            and \"fixture_inventory\".\"operation_receipt\".\"transfer_request_id\" is not null and \"fixture_inventory\".\"operation_receipt\".\"request_version\" is not null)"
+        },
+        "operation_receipt_quantity_check": {
+          "name": "operation_receipt_quantity_check",
+          "value": "\"fixture_inventory\".\"operation_receipt\".\"quantity\" > 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.reservation": {
+      "name": "reservation",
+      "schema": "fixture_inventory",
+      "columns": {
+        "snapshot_version": {
+          "name": "snapshot_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reservation_id": {
+          "name": "reservation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "plan_id": {
+          "name": "plan_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "reservation_snapshot_version_stock_snapshot_version_fk": {
+          "name": "reservation_snapshot_version_stock_snapshot_version_fk",
+          "tableFrom": "reservation",
+          "tableTo": "stock_snapshot",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "snapshot_version"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "reservation_snapshot_version_reservation_id_pk": {
+          "name": "reservation_snapshot_version_reservation_id_pk",
+          "columns": [
+            "snapshot_version",
+            "reservation_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "reservation_quantity_check": {
+          "name": "reservation_quantity_check",
+          "value": "\"fixture_inventory\".\"reservation\".\"quantity\" > 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.stock_head": {
+      "name": "stock_head",
+      "schema": "fixture_inventory",
+      "columns": {
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "warehouse": {
+          "name": "warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "stock_head_version_stock_snapshot_version_fk": {
+          "name": "stock_head_version_stock_snapshot_version_fk",
+          "tableFrom": "stock_head",
+          "tableTo": "stock_snapshot",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "version"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "stock_head_organization_sku_warehouse_pk": {
+          "name": "stock_head_organization_sku_warehouse_pk",
+          "columns": [
+            "organization",
+            "sku",
+            "warehouse"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "stock_head_version_unique": {
+          "name": "stock_head_version_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "version"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.stock_snapshot": {
+      "name": "stock_snapshot",
+      "schema": "fixture_inventory",
+      "columns": {
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "warehouse": {
+          "name": "warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "uom": {
+          "name": "uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "observed_at": {
+          "name": "observed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "physical": {
+          "name": "physical",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quality_hold": {
+          "name": "quality_hold",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "safety_stock": {
+          "name": "safety_stock",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "stock_snapshot_quantities_check": {
+          "name": "stock_snapshot_quantities_check",
+          "value": "\"fixture_inventory\".\"stock_snapshot\".\"physical\" >= 0 and \"fixture_inventory\".\"stock_snapshot\".\"quality_hold\" >= 0 and \"fixture_inventory\".\"stock_snapshot\".\"safety_stock\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.transfer_option": {
+      "name": "transfer_option",
+      "schema": "fixture_inventory",
+      "columns": {
+        "option_id": {
+          "name": "option_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "uom": {
+          "name": "uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "from_warehouse": {
+          "name": "from_warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "to_warehouse": {
+          "name": "to_warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dispatch_date": {
+          "name": "dispatch_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "arrival_date": {
+          "name": "arrival_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cost_minor_units": {
+          "name": "cost_minor_units",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "currency": {
+          "name": "currency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "valid_until": {
+          "name": "valid_until",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "based_on": {
+          "name": "based_on",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "owner_role": {
+          "name": "owner_role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "transfer_option_based_on_stock_snapshot_version_fk": {
+          "name": "transfer_option_based_on_stock_snapshot_version_fk",
+          "tableFrom": "transfer_option",
+          "tableTo": "stock_snapshot",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "based_on"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "transfer_option_quantity_check": {
+          "name": "transfer_option_quantity_check",
+          "value": "\"fixture_inventory\".\"transfer_option\".\"quantity\" > 0"
+        },
+        "transfer_option_cost_check": {
+          "name": "transfer_option_cost_check",
+          "value": "\"fixture_inventory\".\"transfer_option\".\"cost_minor_units\" >= 0 AND \"fixture_inventory\".\"transfer_option\".\"cost_minor_units\" <= 9007199254740991"
+        },
+        "transfer_option_dates_check": {
+          "name": "transfer_option_dates_check",
+          "value": "\"fixture_inventory\".\"transfer_option\".\"dispatch_date\" <= \"fixture_inventory\".\"transfer_option\".\"arrival_date\""
+        },
+        "transfer_option_currency_check": {
+          "name": "transfer_option_currency_check",
+          "value": "\"fixture_inventory\".\"transfer_option\".\"currency\" ~ '^[A-Z]{3}$'"
+        },
+        "transfer_option_warehouses_check": {
+          "name": "transfer_option_warehouses_check",
+          "value": "\"fixture_inventory\".\"transfer_option\".\"from_warehouse\" <> \"fixture_inventory\".\"transfer_option\".\"to_warehouse\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_inventory.transfer_request": {
+      "name": "transfer_request",
+      "schema": "fixture_inventory",
+      "columns": {
+        "request_id": {
+          "name": "request_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "option_id": {
+          "name": "option_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "uom": {
+          "name": "uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "from_warehouse": {
+          "name": "from_warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "to_warehouse": {
+          "name": "to_warehouse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dispatch_date": {
+          "name": "dispatch_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "arrival_date": {
+          "name": "arrival_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "stock_version": {
+          "name": "stock_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reservation_id": {
+          "name": "reservation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "plan_id": {
+          "name": "plan_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "transfer_request_option_id_transfer_option_option_id_fk": {
+          "name": "transfer_request_option_id_transfer_option_option_id_fk",
+          "tableFrom": "transfer_request",
+          "tableTo": "transfer_option",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "option_id"
+          ],
+          "columnsTo": [
+            "option_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "transfer_request_reservation_fk": {
+          "name": "transfer_request_reservation_fk",
+          "tableFrom": "transfer_request",
+          "tableTo": "reservation",
+          "schemaTo": "fixture_inventory",
+          "columnsFrom": [
+            "stock_version",
+            "reservation_id"
+          ],
+          "columnsTo": [
+            "snapshot_version",
+            "reservation_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "transfer_request_reservation_unique": {
+          "name": "transfer_request_reservation_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "organization",
+            "sku",
+            "from_warehouse",
+            "reservation_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "transfer_request_version_check": {
+          "name": "transfer_request_version_check",
+          "value": "\"fixture_inventory\".\"transfer_request\".\"version\" >= 1"
+        },
+        "transfer_request_status_check": {
+          "name": "transfer_request_status_check",
+          "value": "\"fixture_inventory\".\"transfer_request\".\"status\" in ('requested')"
+        },
+        "transfer_request_quantity_check": {
+          "name": "transfer_request_quantity_check",
+          "value": "\"fixture_inventory\".\"transfer_request\".\"quantity\" > 0"
+        },
+        "transfer_request_dates_check": {
+          "name": "transfer_request_dates_check",
+          "value": "\"fixture_inventory\".\"transfer_request\".\"dispatch_date\" <= \"fixture_inventory\".\"transfer_request\".\"arrival_date\""
+        },
+        "transfer_request_warehouses_check": {
+          "name": "transfer_request_warehouses_check",
+          "value": "\"fixture_inventory\".\"transfer_request\".\"from_warehouse\" <> \"fixture_inventory\".\"transfer_request\".\"to_warehouse\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_demand.demand_head": {
+      "name": "demand_head",
+      "schema": "fixture_demand",
+      "columns": {
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "demand_head_version_demand_snapshot_version_fk": {
+          "name": "demand_head_version_demand_snapshot_version_fk",
+          "tableFrom": "demand_head",
+          "tableTo": "demand_snapshot",
+          "schemaTo": "fixture_demand",
+          "columnsFrom": [
+            "version"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "demand_head_version_unique": {
+          "name": "demand_head_version_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "version"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_demand.demand_line": {
+      "name": "demand_line",
+      "schema": "fixture_demand",
+      "columns": {
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sales_order": {
+          "name": "sales_order",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "line": {
+          "name": "line",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "uom": {
+          "name": "uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "open_quantity": {
+          "name": "open_quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "delivered_quantity": {
+          "name": "delivered_quantity",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "destination": {
+          "name": "destination",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "receipt_cutoff": {
+          "name": "receipt_cutoff",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "calendar_policy_id": {
+          "name": "calendar_policy_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "calendar_policy_version": {
+          "name": "calendar_policy_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "priority": {
+          "name": "priority",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "demand_line_version_demand_snapshot_version_fk": {
+          "name": "demand_line_version_demand_snapshot_version_fk",
+          "tableFrom": "demand_line",
+          "tableTo": "demand_snapshot",
+          "schemaTo": "fixture_demand",
+          "columnsFrom": [
+            "version"
+          ],
+          "columnsTo": [
+            "version"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "demand_line_version_sales_order_line_pk": {
+          "name": "demand_line_version_sales_order_line_pk",
+          "columns": [
+            "version",
+            "sales_order",
+            "line"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "demand_line_quantities_check": {
+          "name": "demand_line_quantities_check",
+          "value": "\"fixture_demand\".\"demand_line\".\"open_quantity\" >= 0 and (\"fixture_demand\".\"demand_line\".\"delivered_quantity\" is null or \"fixture_demand\".\"demand_line\".\"delivered_quantity\" >= 0)"
+        },
+        "demand_line_priority_check": {
+          "name": "demand_line_priority_check",
+          "value": "\"fixture_demand\".\"demand_line\".\"priority\" >= 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_demand.demand_snapshot": {
+      "name": "demand_snapshot",
+      "schema": "fixture_demand",
+      "columns": {
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization": {
+          "name": "organization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "observed_at": {
+          "name": "observed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_demand.supply_link": {
+      "name": "supply_link",
+      "schema": "fixture_demand",
+      "columns": {
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sales_order": {
+          "name": "sales_order",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "line": {
+          "name": "line",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "po_number": {
+          "name": "po_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "po_line": {
+          "name": "po_line",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "supply_link_demand_line_fk": {
+          "name": "supply_link_demand_line_fk",
+          "tableFrom": "supply_link",
+          "tableTo": "demand_line",
+          "schemaTo": "fixture_demand",
+          "columnsFrom": [
+            "version",
+            "sales_order",
+            "line"
+          ],
+          "columnsTo": [
+            "version",
+            "sales_order",
+            "line"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "supply_link_version_sales_order_line_po_number_po_line_pk": {
+          "name": "supply_link_version_sales_order_line_po_number_po_line_pk",
+          "columns": [
+            "version",
+            "sales_order",
+            "line",
+            "po_number",
+            "po_line"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_reference.actor": {
+      "name": "actor",
+      "schema": "fixture_reference",
+      "columns": {
+        "actor_id": {
+          "name": "actor_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vendor_id": {
+          "name": "vendor_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "simulated": {
+          "name": "simulated",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "actor_vendor_id_vendor_vendor_id_fk": {
+          "name": "actor_vendor_id_vendor_vendor_id_fk",
+          "tableFrom": "actor",
+          "tableTo": "vendor",
+          "schemaTo": "fixture_reference",
+          "columnsFrom": [
+            "vendor_id"
+          ],
+          "columnsTo": [
+            "vendor_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "actor_role_check": {
+          "name": "actor_role_check",
+          "value": "\"fixture_reference\".\"actor\".\"role\" in ('buyer', 'procurement_manager', 'warehouse_planner', 'customer_service_owner', 'supplier_contact')"
+        },
+        "actor_vendor_check": {
+          "name": "actor_vendor_check",
+          "value": "(\"fixture_reference\".\"actor\".\"role\" = 'supplier_contact') = (\"fixture_reference\".\"actor\".\"vendor_id\" is not null)"
+        },
+        "actor_simulated_check": {
+          "name": "actor_simulated_check",
+          "value": "\"fixture_reference\".\"actor\".\"simulated\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.business_clock": {
+      "name": "business_clock",
+      "schema": "fixture_reference",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "smallint",
+          "primaryKey": true,
+          "notNull": true,
+          "default": 1
+        },
+        "instant": {
+          "name": "instant",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "business_clock_single_row_check": {
+          "name": "business_clock_single_row_check",
+          "value": "\"fixture_reference\".\"business_clock\".\"id\" = 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.item": {
+      "name": "item",
+      "schema": "fixture_reference",
+      "columns": {
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "stock_uom": {
+          "name": "stock_uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "integral": {
+          "name": "integral",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "item_integral_check": {
+          "name": "item_integral_check",
+          "value": "\"fixture_reference\".\"item\".\"integral\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.item_mapping": {
+      "name": "item_mapping",
+      "schema": "fixture_reference",
+      "columns": {
+        "mapping_id": {
+          "name": "mapping_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vendor_id": {
+          "name": "vendor_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vendor_item": {
+          "name": "vendor_item",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "source_uom": {
+          "name": "source_uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sku": {
+          "name": "sku",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "stock_uom": {
+          "name": "stock_uom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ratio_numerator": {
+          "name": "ratio_numerator",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ratio_denominator": {
+          "name": "ratio_denominator",
+          "type": "numeric(18, 0)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_from": {
+          "name": "effective_from",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_through": {
+          "name": "effective_through",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "provenance": {
+          "name": "provenance",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "item_mapping_vendor_id_vendor_vendor_id_fk": {
+          "name": "item_mapping_vendor_id_vendor_vendor_id_fk",
+          "tableFrom": "item_mapping",
+          "tableTo": "vendor",
+          "schemaTo": "fixture_reference",
+          "columnsFrom": [
+            "vendor_id"
+          ],
+          "columnsTo": [
+            "vendor_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "item_mapping_sku_item_sku_fk": {
+          "name": "item_mapping_sku_item_sku_fk",
+          "tableFrom": "item_mapping",
+          "tableTo": "item",
+          "schemaTo": "fixture_reference",
+          "columnsFrom": [
+            "sku"
+          ],
+          "columnsTo": [
+            "sku"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "item_mapping_mapping_id_version_pk": {
+          "name": "item_mapping_mapping_id_version_pk",
+          "columns": [
+            "mapping_id",
+            "version"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "item_mapping_ratio_check": {
+          "name": "item_mapping_ratio_check",
+          "value": "\"fixture_reference\".\"item_mapping\".\"ratio_numerator\" > 0 and \"fixture_reference\".\"item_mapping\".\"ratio_denominator\" > 0"
+        },
+        "item_mapping_dates_check": {
+          "name": "item_mapping_dates_check",
+          "value": "\"fixture_reference\".\"item_mapping\".\"effective_through\" is null or \"fixture_reference\".\"item_mapping\".\"effective_through\" >= \"fixture_reference\".\"item_mapping\".\"effective_from\""
+        },
+        "item_mapping_provenance_check": {
+          "name": "item_mapping_provenance_check",
+          "value": "\"fixture_reference\".\"item_mapping\".\"provenance\" in ('item_master')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.organization_alias": {
+      "name": "organization_alias",
+      "schema": "fixture_reference",
+      "columns": {
+        "label": {
+          "name": "label",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "organization_id": {
+          "name": "organization_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "organization_alias_organization_id_unique": {
+          "name": "organization_alias_organization_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "organization_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_reference.policy": {
+      "name": "policy",
+      "schema": "fixture_reference",
+      "columns": {
+        "policy_id": {
+          "name": "policy_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "parameters": {
+          "name": "parameters",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "policy_policy_id_version_pk": {
+          "name": "policy_policy_id_version_pk",
+          "columns": [
+            "policy_id",
+            "version"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "policy_version_check": {
+          "name": "policy_version_check",
+          "value": "\"fixture_reference\".\"policy\".\"version\" >= 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.scenario_timing": {
+      "name": "scenario_timing",
+      "schema": "fixture_reference",
+      "columns": {
+        "scenario": {
+          "name": "scenario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "instant": {
+          "name": "instant",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "scenario_timing_scenario_name_pk": {
+          "name": "scenario_timing_scenario_name_pk",
+          "columns": [
+            "scenario",
+            "name"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_reference.seed_marker": {
+      "name": "seed_marker",
+      "schema": "fixture_reference",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "smallint",
+          "primaryKey": true,
+          "notNull": true,
+          "default": 1
+        },
+        "fixture_version": {
+          "name": "fixture_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "manifest_sha256": {
+          "name": "manifest_sha256",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "oracle_sha256": {
+          "name": "oracle_sha256",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "completed_at": {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "seed_marker_single_row_check": {
+          "name": "seed_marker_single_row_check",
+          "value": "\"fixture_reference\".\"seed_marker\".\"id\" = 1"
+        },
+        "seed_marker_digest_check": {
+          "name": "seed_marker_digest_check",
+          "value": "\"fixture_reference\".\"seed_marker\".\"manifest_sha256\" ~ '^[0-9a-f]{64}$' and \"fixture_reference\".\"seed_marker\".\"oracle_sha256\" ~ '^[0-9a-f]{64}$'"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.supplier_input": {
+      "name": "supplier_input",
+      "schema": "fixture_reference",
+      "columns": {
+        "source_system": {
+          "name": "source_system",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "message_id": {
+          "name": "message_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "input_version": {
+          "name": "input_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "content_sha256": {
+          "name": "content_sha256",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sender": {
+          "name": "sender",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "proposal_id": {
+          "name": "proposal_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "evidence_ref": {
+          "name": "evidence_ref",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "authored_at": {
+          "name": "authored_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "received_at": {
+          "name": "received_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "content": {
+          "name": "content",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "supplier_input_source_system_message_id_input_version_pk": {
+          "name": "supplier_input_source_system_message_id_input_version_pk",
+          "columns": [
+            "source_system",
+            "message_id",
+            "input_version"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "supplier_input_proposal_id_unique": {
+          "name": "supplier_input_proposal_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "proposal_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "supplier_input_digest_check": {
+          "name": "supplier_input_digest_check",
+          "value": "\"fixture_reference\".\"supplier_input\".\"content_sha256\" ~ '^[0-9a-f]{64}$'"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "fixture_reference.vendor": {
+      "name": "vendor",
+      "schema": "fixture_reference",
+      "columns": {
+        "vendor_id": {
+          "name": "vendor_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "fixture_reference.vendor_contact": {
+      "name": "vendor_contact",
+      "schema": "fixture_reference",
+      "columns": {
+        "vendor_id": {
+          "name": "vendor_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "address": {
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "purpose": {
+          "name": "purpose",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "vendor_contact_vendor_id_vendor_vendor_id_fk": {
+          "name": "vendor_contact_vendor_id_vendor_vendor_id_fk",
+          "tableFrom": "vendor_contact",
+          "tableTo": "vendor",
+          "schemaTo": "fixture_reference",
+          "columnsFrom": [
+            "vendor_id"
+          ],
+          "columnsTo": [
+            "vendor_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "vendor_contact_vendor_id_address_pk": {
+          "name": "vendor_contact_vendor_id_address_pk",
+          "columns": [
+            "vendor_id",
+            "address"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "vendor_contact_purpose_check": {
+          "name": "vendor_contact_purpose_check",
+          "value": "\"fixture_reference\".\"vendor_contact\".\"purpose\" in ('registered_sender')"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {
+    "auth": "auth",
+    "app": "app",
+    "worker": "worker",
+    "fixture_purchasing": "fixture_purchasing",
+    "fixture_inventory": "fixture_inventory",
+    "fixture_demand": "fixture_demand",
+    "fixture_reference": "fixture_reference"
+  },
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

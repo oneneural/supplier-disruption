@@ -1,0 +1,171 @@
+{
+  "implementationRevision": "final pre-release implementation revision (private development history)",
+  "capturedAt": "2026-10-23T20:09:33.106Z",
+  "command": "corepack pnpm screenshots",
+  "mode": "Demonstration mode (corepack pnpm demo): synthetic fixtures, simulated actors and fixture source adapters, fixed simulated business clock 2026-10-21 07:00 UTC; the structured C-01 message, so no extraction or model call",
+  "origin": "http://127.0.0.1:3102",
+  "deviceScaleFactor": 2,
+  "colorScheme": "light",
+  "tools": {
+    "node": "v24.22.0",
+    "playwright": "1.64.1",
+    "chromium": "156.0.8078.4",
+    "frameRecipe": {
+      "path": "docs/demo/screenshots/frame.html",
+      "sha256": "143112c426dc115020377ff55539c946fb84b4c9340b74f9c55f793f55c6697a"
+    }
+  },
+  "image": {
+    "tag": "supplier-disruption-app:demo",
+    "id": "sha256:7fda4ad6e4906c12d6121aab68faa87c606681a6bfc8c5827c38f8f236b5f260",
+    "buildRevision": "final pre-release implementation revision"
+  },
+  "framing": "Raw pixels are placed unscaled; the window's 10 px rounded bottom corners mask a few corner pixels",
+  "redactions": "None",
+  "shots": [
+    {
+      "name": "01-exception-queue",
+      "route": "/",
+      "scenario": "C-01 structured message loaded by the buyer; CASE-1 awaiting approval",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 459
+      },
+      "crop": "Page top through the queue panel; the supplier email form below is omitted",
+      "raw": {
+        "path": "docs/demo/screenshots/raw/01-exception-queue.png",
+        "sha256": "74d7fa75a721b73db395351e2b9397e8c9684ca21334f050441d4387d3b170d8"
+      },
+      "framed": {
+        "path": "docs/demo/screenshots/01-exception-queue.png",
+        "sha256": "87486a01521932a2e8caa5553cca355bb028d4d6890c954beab662041de958cf"
+      }
+    },
+    {
+      "name": "02-case-assessment",
+      "route": "/cases/46ceaeef-186a-48a0-8449-c98e9d08e626",
+      "scenario": "CASE-1 before any decision: deterministic coverage, shortage and transfer",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "clip": {
+        "x": 8,
+        "y": 150,
+        "width": 1264,
+        "height": 1246
+      },
+      "crop": "Case summary and demand impact panels with a 16 px margin",
+      "raw": {
+        "path": "docs/demo/screenshots/raw/02-case-assessment.png",
+        "sha256": "4418abc4052a983bfc766c3df93c36dbec91efbd769ea99a3a1b92ed38d33963"
+      },
+      "framed": {
+        "path": "docs/demo/screenshots/02-case-assessment.png",
+        "sha256": "8dd28dc3042ebe2dd7dfb101cbcdc0dda4fd2a620f36e381bcdbad486165d39b"
+      }
+    },
+    {
+      "name": "03-approval-refused",
+      "route": "/cases/46ceaeef-186a-48a0-8449-c98e9d08e626",
+      "scenario": "Buyer approval of the EUR 160 plan refused with over_approval_limit",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "clip": {
+        "x": 8,
+        "y": 1388,
+        "width": 1264,
+        "height": 1000
+      },
+      "crop": "Cited fields beside the review panel, cut 1000 CSS px below their top",
+      "raw": {
+        "path": "docs/demo/screenshots/raw/03-approval-refused.png",
+        "sha256": "db64c7053df6f4785a96225cff33c2ca6101d07360ce98c612ed911b4d328ee5"
+      },
+      "framed": {
+        "path": "docs/demo/screenshots/03-approval-refused.png",
+        "sha256": "1f41b1a266a73ebef92cb95376db3397a90b7df83c3922d004ccea37b828945a"
+      }
+    },
+    {
+      "name": "06-case-narrow",
+      "route": "/cases/46ceaeef-186a-48a0-8449-c98e9d08e626",
+      "scenario": "CASE-1 awaiting approval at phone width: stacked totals, scrolling tables",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "clip": {
+        "x": 0,
+        "y": 904,
+        "width": 390,
+        "height": 844
+      },
+      "crop": "Top 844 CSS px of the demand impact panel with a 16 px margin",
+      "raw": {
+        "path": "docs/demo/screenshots/raw/06-case-narrow.png",
+        "sha256": "e5ddaba6ec9c8850cfbb8b53a463ada2012511570a2c09859e7e88105d08f19f"
+      },
+      "framed": {
+        "path": "docs/demo/screenshots/06-case-narrow.png",
+        "sha256": "b64049c3ecb5aa0d2fcd6633e4ddaef8265fb4a4648035586ab20ea58c2a9921"
+      }
+    },
+    {
+      "name": "04-recovery-verified",
+      "route": "/cases/46ceaeef-186a-48a0-8449-c98e9d08e626",
+      "scenario": "CASE-1 plan_verified after ACT-2's response was lost and reconciled by operation ID",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "clip": {
+        "x": 8,
+        "y": 5686,
+        "width": 1264,
+        "height": 855
+      },
+      "crop": "Action timeline and verification panels with a 16 px margin",
+      "raw": {
+        "path": "docs/demo/screenshots/raw/04-recovery-verified.png",
+        "sha256": "462214d4fdab1584a6af6056d1d6d5b0fe65eaf3bbda3262148ae5c2752d6ce2"
+      },
+      "framed": {
+        "path": "docs/demo/screenshots/04-recovery-verified.png",
+        "sha256": "cae8976a94760643f4864d7af25e647eb260054317d24c46b06d9b4161179a3e"
+      }
+    },
+    {
+      "name": "05-uncertain-write-history",
+      "route": "/cases/46ceaeef-186a-48a0-8449-c98e9d08e626",
+      "scenario": "CASE-1 history from ACT-2's unknown outcome to its reconciliation",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "clip": {
+        "x": 29,
+        "y": 6546,
+        "width": 1222,
+        "height": 982
+      },
+      "crop": "Case history heading through the event after the reconciliation, ending on that row",
+      "raw": {
+        "path": "docs/demo/screenshots/raw/05-uncertain-write-history.png",
+        "sha256": "3bfde9923adb32566d4b39bd32b3dbfcbe83f51fa3776bee5bedf62afce93dfa"
+      },
+      "framed": {
+        "path": "docs/demo/screenshots/05-uncertain-write-history.png",
+        "sha256": "c0c4a8181ebd0844c83aedbac3ab4090702d03476a0e0e83072cacc7f0885959"
+      }
+    }
+  ]
+}

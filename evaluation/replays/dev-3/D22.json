@@ -1,0 +1,151 @@
+{
+  "scenario": "D22",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01QdoEeZqobZrxZr15Gq7CVu",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 2061
+      }
+    },
+    {
+      "requestDigest": "04b653153497bf9bf45e3ae964dc4847f6204b756413e61c4278cc1302bd1b11",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSngkKEAgTGAI4AUIIdGhpbmtpbmcSDPoBS4dO0w8+5Z0ffRoMEQdhZ7hWEr8UlPa4IjBAq8Wj8sbz9bZuRhKwU5OTQ2DJXdwrgPCFS+B2dF8xSaBGR0xyLTvoWEagCnpl8NEquwhn/1rV4hdP1RDeweegZlqYKXKd18V2LNynyilAapbRh4fanwvXMVJI0Cl32DlUaLSsaNVlfMnSOShV8mcrBCx+GPycFaAL7MzWilcYq4QAhZGhxN0h7aGeqs0Fbg3IhZH2VRHMQR9huJXz2WvK+ziatHbcpiWih86VgJ6kLt/p52Tj8H45R5P6vspfdQPRbEhFGb8x2+/WDS+efvCT5wfXyKdbLcOZdBE67fn+yfFrDQ/WLVaWF/GA6iq9IIRHVkCWzOTFueczsAHKDuvY8UigeyF4wswuqbnBOTO0uvJJwmKVMkbi+248znC2wHqAmfq0k3EJGTYw3claxFnE+fHK2vn1/AcDSWims/8XB6e0qbPv1VCkaYaAGZJeOyKXjk5giZU7FYSPWiab+RmPj4SVATntNome3fVHPu9gkhTmzDMTY56xQg0d/JdSwJt5SJjrz/CrhZdjcYe7REycbXDe58bh3d3UxYJHLIQP9ndlqEREx5qQ6xzNpeJvxtbFM+TnfOepAkbhNXi2rNLM2kImd5h4/VkZuNEj/Sr04VY4ObUGCZGtk6QfrJuHjLD0htnNE1kJWlZitHEUvhOuBWOWsCQkhG9kNOzoDQeFXob80Gc3ORRl4zKYeViTaif8qgux1snGqdnWqvF/vTZz83YAxqGogJLNlyFHAFU35F+nW9TWQN0AXAMu5+ecipLvek9GP6VkmjyOu40dk9kMrtSg9rIR+4K/6bcD1IV+n7IkjZPE6vHqt8dvJOhRxOetUw5kSduJbMbP1xtjtnvtR/nKhwLnrzmHC1CZeoAvNw2niutcdQcIe2+IgZ8IWkRYWxjk7Kzj3MVX3WJLXf6JjT6nCysSHXAq/RqDae63kqyyOVsgtw+oZZOB30pyn1u3cM5tkmXwDOkie7dd0JmF3fOwo1MxPYcFphK5jinhbsPHGf5WX0DLihUbNFTy14TyUY0ZU1+BlZUBbOaCBvds2IRoTWoBIwHROwwqMRxFRwKMPr6Sgv5mw0qyjoRNoVAp6WBGFlOtYyGepIBTzoSq9zQjBCOpI4ZI/EU+xaJjLwm7eR3zSOwRavqYPJkSETBCyucW/b1tXMsre0gT5x7+rJmM3YPVIFAPz15uF3Fdfh/DQnQGwAxgNM5NP1cWE+BPuy3M5IJoNbyirLrye8TpNkty7XBx7JlXfL00GN9OoTnuRxf3nqL5W1QqGrz17h/YmbHhAa89r9uD0+bdQ/HnmvXmGRWJnl304C0rK1j/tNRGkwnFAzAgZ4D+KhtdpaUovKRoPxhVEMCrfhtZ84xVn0G6AiBuSYtjpNVOGjX4zQiBlwlGRghmVQcgE7Y9ifF+AxXw4fQPOuxtB4u2mIexdAoS9Gr6RRM52h7dcKA7S4q0GyxhbieSaLEBxacC+ffTf9WcAz5sJudSfDM2RyF6c0HuNATCar/Rcg+RYY0YAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018PpMD4tde5m1F5hJBe1u34",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 295,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 251
+        },
+        "latencyMs": 2985
+      }
+    },
+    {
+      "requestDigest": "7abd25b171cf557bc433504cd4d7000fd410a6cc3fa2313274927a71588e16cf",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Lm4L9M7ntq2SXRfo3CKyxm",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Quick update on PO-120 / rev 3 / line 10 / KF-A-01.",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Quick update on PO-120 / rev 3 / line 10 / KF-A-01."
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 / rev 3 / line 10"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "Quick update on PO-120 / rev 3 / line 10 / KF-A-01.",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "Deliveries to your warehouse: 40 EA on Oct 23rd 2026",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 EA on Oct 23rd 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "Deliveries to your warehouse: 40 EA on Oct 23rd 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 EA on Oct 26th 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "80 EA on Oct 26th 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120, rev 3, line 10 and item KF-A-01, and gives two warehouse deliveries: 40 EA on Oct 23 2026 and 80 EA on Oct 26 2026. The email's rev 3 matches the order's current revision 3. The order's accepted schedule is 120 EA on 2026-10-23; the split is the supplier's proposal and the sum (120) matches the ordered quantity."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 791,
+          "cacheReadTokens": 4107,
+          "cacheWriteTokens": 515
+        },
+        "latencyMs": 4250
+      }
+    }
+  ]
+}

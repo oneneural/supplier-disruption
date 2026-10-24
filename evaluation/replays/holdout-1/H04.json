@@ -1,0 +1,319 @@
+{
+  "scenario": "H04",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01CLFDinV3aQhZKv5mgMjiG8",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1046
+      }
+    },
+    {
+      "requestDigest": "496fff3003001970a56afff99cadab3f43ce12ee60016953a825802c7100ff33",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01KXyzziQ2bq6MpSVppTzGk3",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 292
+        },
+        "latencyMs": 1714
+      }
+    },
+    {
+      "requestDigest": "f55cb2b7cd9e6986ca6e564b5f2d3d75bf5c594db319a2c2c76c6188f53a0cbc",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS5QcKEAgTGAI4AUIIdGhpbmtpbmcSDBTm1hKUNeitEPahdBoMXqooHbtGyjmmLyx/IjBEKNsfIuv/NXYe618IvGaYmbgJ979yUTG99bjGOjwwVx1/FggZ9ZdmI0w1ap3ToMcqggeAOPCe5wOFOqK2sdCaUj/tOmyGapOlBOIkiAWQohw5b4WlohZNoDJRpGZjDT4Qc3atwzyjzaAFvUKZsE8rMjP9f/GP6uqZ/sXkgahfUOdcFu3IBkICDPKh2IKxAEUSPmtAEG3dgpy+q3fH6ixaspkxfziC3rNwcdSqwddkluapJy/FXBNDDv//nYdiD1y26ZJ7W0Zrr3x8rX3KgGT0lyg0isO2gt5ivUhWqhhzyBycGEHKLvsgZO0KJBVnhCFs6adtc3kfSiysDNaLgIbcDVB64Irbpds4m32VrTgz/POk3DCOzhFeG/XTpxhHTFoT1C+Bk04/0SK6tqaw6JzKgYT/yUDSR7+fxb0Ud0Sy/NTbs1abryIL5FJc5H5f0lngWjbUro8//7t9VZ9IbW+NLtGlim77KC8quK+YL34A4xrrort/LCopraHERc9U8F73yS5Ok7F5sD5WQObzlCWgcHLZ0Eh+3XkLVh29OaNG5zBvy+FpRmrsOIHWZDf0QIohGKwPFvWLjsfGBADuNXXoZaAt53u07yuiQpmMGhzlogt6Gam6rRqAlAUGvI9oo1pIwk7S3kXj7RwSe5OJT6pQzrALCwMBDpQTPEbZm2fR3Y11b+gQVPvulN1UXZHnWXrdDcJ1iUCvwCtbP5I/6SuBDbIphQ1X08zJq2Jdx4VLI/5s+zhNhjdCSeEfg1oPRMnnqKO6IIOOsqvtNT2hrwgBrTv3WOVscAnwep+1oyInsoMlu3NWN6IQAFZq3n1Qf80UY7kEk5WRBPinnqB0sXPI8ktYi7ES1Ll+pvuAC/0HgdAg7C4y0fBGw/oCROITkUTE7L9nLTREzKDqRGak7D14kQhWUmcJCTD0iYEuwdrlbDqKmiCwTPTrS/m/C/GX9pMKjJZTt06OL2VrNeiVO2siDMo3zW3UBcgORieDJaMD6FUoVQ93tHaopWJpd0yFt+vhiaUCaL53R7i7lkwF3hl9hwlUk7r5OmIm0lP5wSeBB7bkdq4pH7RWoU33Bes2Fnu8f+gdSLx16wfTl4zHtXDLwEl5eqkrEm1plDQYzgNXELsYhhBwU57aV7YVWYJjeQWyCtj/by5rKLw7dSOKOiWo8SLT+zIGqa3k+iPlyjiloEhaJvTa5haRLQjDtNnGVd6xjH5hZDx1LLS/HEtlL3hvvarZgnOyq5clXPq13eK4mkr0GUIwGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01MkTNzKS2yZcujFjikdyPWg",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Vedrørende PO-120, linje 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "linje 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "basisrevision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vare KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "enhed EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "De første 40 EA afsendes fra os den 23.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "forventet ankomst til WH-A er 26.10.2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "De resterende 80 EA har forventet ankomst til WH-A den 28.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "De resterende 80 EA har forventet ankomst til WH-A den 28.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email gives line 10, base revision 3, item KF-A-01 in EA, and two segments: 40 EA arriving at WH-A on 26.10.2026 and 80 EA arriving at WH-A on 28.10.2026. The 23.10.2026 date is a dispatch date and is not used as arrival."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 864,
+          "cacheReadTokens": 3883,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3911
+      }
+    },
+    {
+      "requestDigest": "464787f58a297ad85956ba0bb6e21e373ec6e84c658d53e27ec43655566eb6a9",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013dD1bu12cXrH1VQyzycD1P",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Vedrørende PO-120, linje 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "linje 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "basisrevision 3, vare KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vare KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "enhed EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "De første 40 EA afsendes fra os den 23.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "forventet ankomst til WH-A er 26.10.2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "De resterende 80 EA har forventet ankomst til WH-A den 28.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "De resterende 80 EA har forventet ankomst til WH-A den 28.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email gives line 10, base revision 3, item KF-A-01 in EA, and two segments: 40 EA arriving at WH-A on 26.10.2026 and 80 EA arriving at WH-A on 28.10.2026. The 23.10.2026 date is a dispatch date and is not used as arrival."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1134,
+          "cacheReadTokens": 4160,
+          "cacheWriteTokens": 950
+        },
+        "latencyMs": 4679
+      }
+    },
+    {
+      "requestDigest": "c1d5e8aa9983979c7bfe47be516d3a622fd6f9a8bcd84890975c306d579d432f",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01T1jBVG6Gs39Der11RTzJyt",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Vedr\near\n",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "linje 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vare KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "enhed EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "De f\np",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "forventet ankomst til WH-A er 26.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "placeholder"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 755,
+          "cacheReadTokens": 5110,
+          "cacheWriteTokens": 1195
+        },
+        "latencyMs": 4236
+      }
+    }
+  ]
+}

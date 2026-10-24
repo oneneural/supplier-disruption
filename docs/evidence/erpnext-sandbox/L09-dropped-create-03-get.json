@@ -1,0 +1,18 @@
+{
+  "step": "L09-dropped-create",
+  "principal": "sd35-prober@example.invalid",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Stock%20Entry?filters=%5B%5B%22remarks%22%2C%22like%22%2C%22%25sd-op%3AL09-09c498e2%25%22%5D%5D&fields=%5B%22name%22%2C%22docstatus%22%2C%22modified%22%2C%22remarks%22%5D&limit_page_length=500&order_by=name+asc",
+    "body": null,
+    "bodySha256": null
+  },
+  "startedAt": "2026-10-22T11:22:15.526Z",
+  "elapsedMs": 4,
+  "response": {
+    "status": 200,
+    "body": {
+      "data": []
+    }
+  }
+}

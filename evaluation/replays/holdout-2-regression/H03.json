@@ -1,0 +1,150 @@
+{
+  "scenario": "H03",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01EuRcsToQQUtNRYEwvvXaqC",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1599
+      }
+    },
+    {
+      "requestDigest": "97740a2942052a185bc2bd7bbed4c42582a91b6b8bfa056c4e988285842772ae",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01JFe59GtYK845osxKg5N1Bp",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3858,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1073
+      }
+    },
+    {
+      "requestDigest": "ad49df1ac09ea2c3840119c562db6600f34d589e800f1805dd8764348db6d425",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS8AkKEAgTGAI4AUIIdGhpbmtpbmcSDEb0LBtZGzZMwK4+YRoMClWmMLEZO+MfNjr5IjA/lpiHVZVytx7+pUyJNt9YR/a+JS0npYsRWBx5WYaaNbXxpBD9wjP+BkX8torqZe4qjQmIlstAD2LyLyhEeFglBmBOsQyj5biTe6x06uup1jVhiKk/8x1AM0jOBK+GCQlEuZrq5JesjUU2g8C/H52qKeUepvLCWU7GSDWtAOUbgtDmqKTWX8XPPP4BMwY0XYWRk7hbnCSvHIDZQPi67ZZjY3C28u/Imh/yjgepZnSrTdmMN6pvIslrOJ63mu/UjCxFko+o/A+GFBrC4NHok5boXbQ0Oa/iG+8J0fvIqdNYSa6UblkIEruJsG65MchCuZMjK57DXfe2HOpXIdkfQjU1Ti79AtrkxL7C+7kImz4nUb1IBnCs4Qkhl53Uz5/uJVUy0gejjPVIJEvPGOUmGazogm+g4alBqdQdRbwKabufl8EuYGcZ7VlNM17sRI/lwuFvhkNgeKtiA1OHndR+ujXJFUZdnwkTnsGZ+HTmTWOLbd5UIcBx/b8Q5ZIfMp6RC0mqy86IUl4d1dKBEQOoJkDqiyvr3wZj9O2WwjtvI+Qke1GRmToHF7Vwo2sIiY/rWKOSAKRhG3HBIR6y3wTBSjtctw72LG1EcgsKYsBraPxFCW2MfcDDluKSVinoblmTYaEfgzBLzlkEFYb+NAbQl0sVL6xZDOB0pscCuQGQMSQoVhOfwz+yiSE5vyb8o1UELFK4cnBA15DOrTl16a+/+99HlOOixjVEODGVesNRJ/pQ8qOpSLYCeXZ66GkWarmiY/7NxJg10slcvgx04eJDe5ZdGwII/lKxMeeHHHutdl5iJ/mpX4CSX7knhF6sQqob6YwCM/WUFTjn6KKGidAbXib/QSokPuyChrtgtg8cH7zR+L7X8iMyw2C6vn8BwgnnbYxHCPvqNukDtfoGp4CDcHlWelaiF+JNWiXJtsXMBkP7fU/+7vGJrjidA50yqcoIRIXjX5ZYwPTYJq6PUucj/ZcsFjFmKSy0hMKNCBXoCGw9nVUyBvIjzq7YW7kO5AzNHjVCtJwyTBt79orR/naB2Z9R68jk+nW/ubTlFOCKRikChtDl+6ELgtiHFGvn99aj2posKRtw9ANthOsCic3jSlXC4LKYrmSLK5b6+hdZaW7YxlNC0dl10leeC6TS2WUChhaqoA1HcS/BGkah0pN7NtYG6I2P2XCT8aZlbCURtKWNMkgr1FmBZJc5kNoA5Ke3LODqlNdZ+fRn0GDeFiBmkZH+o2GITQFTfd2C4vUwKIB+5nFojivr7FXbKYBilc/S092Tg4hEHIJgZMS9DcTaBEvW4gpVnk4SoKWX5vWHejb2QWFGrtc+9fSZjXdBYlqtuJpunTmvI/g0nCTXMZTpjV5MWp5jP0HAREcdggeEqsIoY0quCjunWBzFcpqJbgZ7QcIjo6Dhs9ruusDvo7KgKaVV0JaNpA1OsqsmyVHokbdz2GppuCI8A3VEZywD/VPlSWbKFd32ClBXHfi4bsET1wI0Px7OUJYW1SRZuNNss3G2oZd/N0ou1vrh/IIn4OgN3oOFFFq488lw9P1iGlVvNLc6/bcqMczX1J+Vc1luXtBwAsNxUCFSh8FPd/QPAr064kIGA4jVrsG0NGUKHdg+R9W0GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PbH19aQFuFJdvyKadt4ZTm",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Subject: PO-120 delivery proposal, H03",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Please review PO-120, line 10, base revision 3"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vendor item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "CTN",
+                "quote": "Unit: CTN.",
+                "confidence": "low"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "6",
+                    "quote": "We propose receipt at WH-A of 6 CTN on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "receipt at WH-A of 6 CTN on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "6",
+                    "quote": "then another 6 CTN on 28 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "then another 6 CTN on 28 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email proposes two receipts at WH-A: 6 CTN on 22 October 2026 and 6 CTN on 28 October 2026, for PO-120 line 10 at base revision 3 with vendor item KF-A-01. The PO records the line in EA, and the email states no pack size, so the CTN unit is flagged low confidence for buyer review and not converted."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 964,
+          "cacheReadTokens": 4135,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 4658
+      }
+    }
+  ]
+}

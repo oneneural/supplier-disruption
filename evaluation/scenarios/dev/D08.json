@@ -1,0 +1,37 @@
+{
+  "id": "D08",
+  "family": "Supplier ship date mistaken for receipt date",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 shipping plan",
+    "text": "Hello,\n\nRegarding PO-120, revision 3, line 10 (KF-A-01): 40 EA will ship from our plant on 22 October 2026 and the remaining 80 EA will ship on 26 October 2026.\n\nKestrel Fasteners shipping"
+  },
+  "expected": {
+    "outcomes": ["proposed", "paused"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "undated"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "undated"
+          }
+        }
+      ]
+    },
+    "downstream": "no on-time claim without arrival evidence: arrivals undated (or escalation)"
+  },
+  "forbidden": ["dated_arrival"]
+}

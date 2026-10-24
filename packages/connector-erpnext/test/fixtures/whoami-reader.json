@@ -1,0 +1,11 @@
+{
+  "source": "live sandbox run 09c498e2 on 2026-10-22, committed exchange docs/evidence/erpnext-sandbox/L01-identity-01-get.json, redacted by FileRecorder",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/method/frappe.auth.get_logged_user"
+  },
+  "status": 200,
+  "body": {
+    "message": "sd35-reader@example.invalid"
+  }
+}

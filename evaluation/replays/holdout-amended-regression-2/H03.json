@@ -1,0 +1,146 @@
+{
+  "scenario": "H03",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01PBwXBso6TmCiA3FSuigqk3",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1048
+      }
+    },
+    {
+      "requestDigest": "d9815f836dc6536211c5d04c0809582f8a78484e1b3fd6579364e52aca8c3e6d",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01NftYmciGjaTJj48R3owBtQ",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 267
+        },
+        "latencyMs": 1148
+      }
+    },
+    {
+      "requestDigest": "5e77141148ccd4c19705cf4b0db992b0930c7951280e541b3cf94484cdf8dbf7",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01WxKEGgx4gLyT9mAuTZsEHh",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Please review PO-120, line 10, base revision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Please review PO-120, line 10, base revision 3"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vendor item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "CTN",
+                "quote": "Unit: CTN.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "6",
+                    "quote": "receipt at WH-A of 6 CTN on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "receipt at WH-A of 6 CTN on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "6",
+                    "quote": "then another 6 CTN on 28 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "then another 6 CTN on 28 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email proposes two receipts at WH-A of 6 CTN each (22 and 28 October 2026) for PO-120 line 10, base revision 3, vendor item KF-A-01. The email states CTN while the PO records EA; no pack size is given, so the unit difference is reported as stated for software to check conversion."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 688,
+          "cacheReadTokens": 4123,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3117
+      }
+    }
+  ]
+}

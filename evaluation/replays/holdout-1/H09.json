@@ -1,0 +1,150 @@
+{
+  "scenario": "H09",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01YKKLZT44EgMumLtnD7QYo8",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1940
+      }
+    },
+    {
+      "requestDigest": "df81b97bc5342e4dd4653c19f987654a4d53d8dc2da3aa6c0dfa505a8e0401fa",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_018pRM2hYpHwvydzJjVD83j3",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 340
+        },
+        "latencyMs": 1052
+      }
+    },
+    {
+      "requestDigest": "fa09869751ee375dbca7ba5133659e88028333b2e04e18e4a0febb8362124946",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS+wcKEAgTGAI4AUIIdGhpbmtpbmcSDLDYV+00guLmoiLBeBoMjXJOzxZBwoWKXeN+IjCpo6nyr5SqRfK7r6rX2wF/CyDqJzN+VJpglTfRumaQ4TSEFnOgJo3oa0H9JFKX7r8qmAcpLnQnRUMkpUZ4SM5ltwhGeTWko9kDyWVBvZKlc0+ZEDfIgpjxlF0HygITUSuXHAtWEAaxjp04Sa/olQQGpsdEra6YqWjgHcdMiycIPn6n4N3LbkgS19l+g5BBB55UACjphIOCTJypQIN6Yztv8hlfFI0w2YveCQwSZdpa6Imqa+3+LdBDwZwLAxGPljvS8rAFLxYy3tlPxmQSC7ZJWqz/EJN23y2/i2GDPGnNW8ALbrsWgrAR/WPb+zNSCL83D/B8Z0sq4jLue2iFmyBFl2ynmQkckTKOBllldyyQe16TezCzih2QOLdCZVApGkmtIrXty1MRiB+NDTnekjTeX//wyJ/dqmRoeAfFwONZkeGTkb9xB1KUcZ0LtMhzvjkHw14E2optBHXb6vdAxYTNsebWSvrDpbZm8GB6Vn1T5tKybY8SAr1U8frXcykwRu8LIJZ1ukP3cDEyezWy9sWcZr6N99030Xq3vBsV7+AAp2l8zQy5FEp9T9UxHJZGFPSEqv/JR0TLs3hbCB3b1hPhKqWpMr3JiWR+Z0BbMD6LaplM6TkDxpHb7/mndb/vw7Lw0vDFG865xHj3vUuS6tY//l6+72zsXlYmHSdlQQoyWhf5//5a6HsGhgJ2M0FBVMCV5xV+q4rIHQVoR2W7rtzdhCCLvF7iHuj0/VbD80SO+p3XA6VUm09KDcCVpQNF3QkzJCZqG+yG5Nk6AYUT9vDS/TrcRQq/xqwTxbT/543Z0DoxOX2j/n2HRI8H+Pf2/A4feZO6eyy8tBy3kJ0BD418xOMMmTkZ3WukWJL/6G0wFkQ+PS5OTqPUB4JOyUrZ61iOXp8SCDaVL/2EgrNBmzW4bTw5nEWmvey7gPQ4kEAfMBhEDBGRYmMZmrkLHyV/TYGRB9wvC+rEZhnDmudlsUKbp06WffS8UabGZa9DEKQIX0wq+B6wM8FeKsWZjoJog5Au2cAtrSncdWq8owVNSM1C6cjHjsPBHvta0XgwY7UlITJ2mFQUFsq7hIkHmu7Sg//HzRHNrgWvARRhYhtvIi6+0tF3Lc5nGjCRzO75YBUsgRlC6kDjzDsQGpnCRvdEkrzcCK8Wu4Oiqa4LdIPhRA7Ob3Scm07eZR74qTDOk5n29haoig/itG5fNsBirPLwzEcy/3b/jZyOidJhNnoNRw8pSaQ/TT0D8SJAx1Z8P3LYNRpaoKUr0ss16PUM5mK7Md7/VWJsqQq227DG7xgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017n5ichZrQpTF9zuSpg5Ji9",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Zu PO-120, line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Zu PO-120, line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "Artikel KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "die Ankunft in WH-A von 40 EA am 22.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "am 22.10.2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 EA am 27.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "80 EA am 27.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email gives two arrivals at WH-A for the original article KF-A-01 on line 10: 40 EA on 22.10.2026 and 80 EA on 27.10.2026, totaling the 120 EA ordered. The optional PART-A2 substitute offer (55 EA) is not part of this schedule and was excluded."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 838,
+          "cacheReadTokens": 3931,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3870
+      }
+    }
+  ]
+}

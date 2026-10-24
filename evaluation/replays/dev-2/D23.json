@@ -1,0 +1,151 @@
+{
+  "scenario": "D23",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01JCP3Lx98B9U3wY4HvCXeeW",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1792
+      }
+    },
+    {
+      "requestDigest": "c8fdb356b5a9f7f10763c9408d5f6efd442e9c724cbc589cc49178df97101f98",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01MvLE8z5ajzwkNru1xsKWZR",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 253
+        },
+        "latencyMs": 1083
+      }
+    },
+    {
+      "requestDigest": "975793d1a245f355d2c2baf36be59c43e7bf593f2571fdd4a08f61dfc9eeff0c",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQShAkKEAgTGAI4AUIIdGhpbmtpbmcSDBOubcYW2VLWGwV75hoMeT0GalccEzvMcKEWIjC7lSPW1+fecK2aunbRHyU+Sj28raJFHhJHvESPMYZe4tuf0qUsSt9FuJj/ETVNM2IqoQibFIg8cEWFG0IxNsaeaB5ndsnKoKqllpeEi7oqExLTQDfIicYQ2Q8ojLxhUsikNjtXGydnWetnpgglEfbhC2gH5vsQdVjpSxOPTQZ0tjaz5Wd2madxciEaEKIY2fHQ2Jo7AFjdulqhGWUe+/HlTF7LNX4a/8Nz10zr6gRQVg95ZHwYar3shV+PJSsIA7KXMRA9loWygY71yQzSFv9Snpz4QzMDXIGynQcG8qbw8ssYwtSvFip6vYrLB3nDa9FT0Y2GtiboARlm34JFtO2eZzmqalsPQu9GlN4GmPXht67wC/jWMUlAYNbR0+0jvmcTWvsTRrsPqGD4+oB7F9NKXZ07Rb2E2TSyR5GD/9UHJJzhRLcTNwF41uC/SS6NmGXOpk7Nt1VenwYqrUdGkqP4qJliuRmbz+LoUP8mJ1e3wooSsQk2ZgwQ+SZziNf0SQp5uByMfNFu8+VneLO7xNPchZn5gnuEow0DXLr2klJcz5H3WYRg6w+8Ak+9EGCKnAmff0u6qLxJiuF0uaUZBSTJ+F43iYplH3tPpEHjmP+N+yWAHg8XCKNrTyEqd/v4c4UzF5QMN9y9jfbWHkWWM6hUdTw57Lx95MnWwS7R2k0nr+4GPCWpiJBxFXa9m48Q1kZM2TJxi1TvAXR/5ic6JMBMR3Agm9rwVBYX4kAII/r7MPC6LJ+hKezOVOaUUZ8KvFszuybUDSOOvK81PnFTmKtn9MFGmqERVR4EaKx/TCV1Ash71DxmQTCWtclmRmrqGRq4usJDUpQwgFdiGMDXZIFhPZsNuLU+QqwfWXpxUQcPpOIwjoxJRIkD4MoXOerNwqst89YUsYo5mhoH8Ml7D4wxHI1zQ5EaZtZr8/FnsjU8//owbo4ra2NlNYfxBuezFSZg87FwPXWExfIr6ih65Yb2oHLwi8Ipl8QwDMIzBJ7Ch8iJN+Usm4g0uR04/NR7pAf9IdXPeX3S8iAnFoUrLVCOof89vX72DUexIwfVAD/iMzmAzRrFWtBO5FK7xvEMG/AD5wnh8c2XZxRVpe1Wyhc5a9dX4b7Ds3SfPh6rREZyjEaii7XXCpaN+xMIS2+PuZ211vHdMKYViKEL0bST99szmpq9f1ax9nnAEbJ6etknH7ldSDGWgN2zCANOKE6y/8mIKSRF+bzlTVhPmsgxr6A5ZtDDHorDkdalolxZV2dsAkVPT/Xq9bCwmFYuWsIAF3fmkTIqdU5HIuZMfqz+DkSYn3EoB0BH6+BKFY7F3FGAhxWoIpUix6klUN4WKvZMR84EBSqMQuogYBS3CvJ79uNw8QTkDhn7npVgSZ6o+qIpmTaeJ4BZCi3aRA73oVqgxHNlTXBOAUZ2t32JhXmF8rmiocOaJ6bm2aZ66C+utI37k94xasI5MeqgX0nzGi/m99hIfs+hGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CpTASXT2FiUU2Cuj2cntH7",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "We must revise our schedule again for PO-120 revision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3, line 10, KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3, line 10, KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "40 EA will still be delivered",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 EA will still be delivered to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "40 EA will still be delivered to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA will now arrive on 29 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-29",
+                    "quote": "the remaining 80 EA will now arrive on 29 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10 (KF-A-01): 40 EA arriving at the warehouse on 23 October 2026 and the remaining 80 EA on 29 October 2026, totaling the 120 EA on the order. The email's revision 3 matches the current order revision."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 968,
+          "cacheReadTokens": 3989,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3970
+      }
+    }
+  ]
+}

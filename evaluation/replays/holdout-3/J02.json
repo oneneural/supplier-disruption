@@ -1,0 +1,138 @@
+{
+  "scenario": "J02",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Ez8MhLA2GkyVLqvuGE1GZm",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1530
+      }
+    },
+    {
+      "requestDigest": "62fd043499fe832d134e5e89c68457d1d60f8da36f6a416f290efcb3e7fc916b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01BbSCkzxbDDA97fSoox88oA",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-123"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 283
+        },
+        "latencyMs": 1125
+      }
+    },
+    {
+      "requestDigest": "54db70372d0fd0a0c8d2775f0c14dec711f42164b808f33abc9cbe99a05c1e11",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSrgkKEAgTGAI4AUIIdGhpbmtpbmcSDGJvIzW+n27cadqAeBoMMKp2rP1v/oMlgF3KIjCPtZ3tZi+7e7epZtNh9Q5hy2W63o545DMbVcw4HKr/vruAcSPyElyq0M2WzwcZZL0qywhqcA3eRybi+/nUPL2pMbLSigfK2EZle4wK6ADCGXOHBU2nMb8kJIvkhepJdbXiD6UPKi/2dXDuJ3zU63qVp9G0+wpJNMx7EmUlUlEnUIVMZ+PbaV6Qzght/YFfIePIMGUPpZERhpTN5nu8ykBHIrlJ6jegqStRFljaIc+uhm2H3ydjJK9uQ03Pw2Vgy0nBnwAMZmprqfGHVz94iq18sZYhl4jnIcqKio/GMVlt8d/hxU49QZ4robyAQd3KS+906FB/XrOj2RL2whg4itfTryEDuXVZmvyK0A4Q6Vq8aNEHjBRAjPHcocD2Up/p/aww7qnPSxygN70auYsDx+SUVzqygeh7RNxMMvxL39w4dvsEHRiIKrSAXZWLz2UX9zPcOCra/VY3kbXINceMUq2vX4GP1QmjcF7J6cHlbiFcZuFKfm0S6IeY5bs47MEoWYoDS1+PJNiUBIqKu99+FuS4siHwEXFX7t1VteXNEDX/L8SuiL6FzwVzpXSHZIGaVulqp82Yhr465R+q2Qg1sAvOuTN36g2Cf2mxlFEHc0+2oHynv8o055kSHbq2KUzWF8l9Wlyq+mLaaRqjOkguuv8H2OGy8MF9H2qb5DpittSLMnZGrhLyVc1JchLtuFmdrpHJycfxBw7GE5oXli51D3SzlvIOg0EoPZ5WeXXIjkgoxs5C+LEiEPltgw8kpXCPeY4HliMmDmmx+v8ucgCLw9NXl12XjD7fs3FTgBGn8uC6xDhgJeORmXFeQVVt+YLIIx97qaQb/+HJaz0Z1tyPxXb501DVfzvpazO+h6hw3LxH+eR3wiTgVJDCaOeIAmP4Je2LT0SxdSR0zBu9/5FDuy+rw0VZucCgyKwhWwtRESRDxec9i87eZAZidrYekjF5qtLjjdpdgPWB2R9WbdgjyR7Pz5tCxkzESnbjSdNi6mQzF86HFuWdDUDmQWzhMxWNdrTpsQl3gYzG0oV53+euhb+QiYmUxxDgEdJ2V2LzLaBmo9M7b1zGvL2+Ll7LlOy2p1va2s/GsZ5BuuwVv3dxo5YfzKN78mRNpoNa4pjzPMFen6vYLszQhu/l4pYUge7An6DOcUccgD5lNY3zsqreTlZF51cF5oAuFosAkBr3W7yzKqbIyTxlfJV/jUDKd0SUH7LtxQ1Tj+PWbQ4FYTcG1ZY2upykJqqXAgmHhJvKHQVbgMXE7my+7SnKe+gFjiio0P/hdh0K6+Kda8hNiKCpy0UU7W7ZuGXQSACPyzpKIKD0LUntvSe/NpoHb3QIoaoqocukynVr3zIHScjgdikXA7yMm3oLWe9VbJIcU3ibO/qHbVe14dUCjNr3HsK/i9F05Sa6IzISIwYHx5v471FMVUfZh7jN8IlCZ0ZXJQDOGtykzf5LQDNJKsRJKCqJbvQtnPrJmepFGXVSkONhsNC4nxKphuWu7oeGURcr+ilHLLO1w3U2c0ufpJ9jrgrL0RZeGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01M7PptkuuWLFtKgU7NYqUE6",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-123",
+                "quote": "Subject: Receiving slot for PO-123",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "purchase_order",
+                  "field": "lineNumber"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "4",
+                "cite": {
+                  "source": "purchase_order",
+                  "field": "revision"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-D-12",
+                "quote": "Item KF-D-12 on PO-123",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "240",
+                    "quote": "All 240 EA will arrive at WH-A",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-11-04",
+                    "quote": "will arrive at WH-A on 4 November 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email names PO-123 and item KF-D-12 in unit EA, and states all 240 EA will arrive at WH-A on 4 November 2026. It does not state a line or revision, so line 10 (the single line on the order) and revision 4 are taken from the purchase order record. The 30 October collection and 29 October production date are not arrival dates and are not used."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 786,
+          "cacheReadTokens": 4139,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3878
+      }
+    }
+  ]
+}

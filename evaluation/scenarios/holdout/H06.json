@@ -1,0 +1,40 @@
+{
+  "id": "H06",
+  "family": "Duplicate event or moved-message replay",
+  "note": "Held-out H06 (en): A later delivery after a folder move retains the same stable source identity and terms.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H06",
+    "text": "Schedule proposal for PO-120, line 10, base revision 3, item KF-A-01, unit EA: 40 EA for receipt at WH-A on 22 October 2026, with the balance of 80 EA for receipt on 28 October 2026. Please review these two arrival segments."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-22"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-28"
+          }
+        }
+      ]
+    },
+    "downstream": "intake duplicate; case awaiting_approval (policy_plan_ready_for_approval)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

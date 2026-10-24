@@ -1,0 +1,12 @@
+#!/bin/sh
+# s6-rc down script of the boot-id oneshot. Every essential service depends on
+# boot-id, so this runs last while the container stops. When s6-rc's start
+# transition fails (for example after a startup-timeout), s6-overlay's rc.init
+# writes its own status to the results file after the first failure did; this
+# restores the first failure's container exit code. A normal stop has no record.
+results=${SD_RESULTS_FILE:-/run/s6-linux-init-container-results/exitcode}
+record=${SD_RUN_DIR:-/run/sd}/first-failure/exit
+if [ -f "$record" ]; then
+  cat "$record" >"$results"
+fi
+exit 0

@@ -1,0 +1,854 @@
+{
+  "P01": {
+    "title": "Pin and authenticate both token principals",
+    "expected": "get_logged_user returns each dedicated user; permissions exported",
+    "observed": "reader=(200, 'sd35-reader@example.invalid'), writer=(200, 'sd35-prober@example.invalid'); permissions in evidence/permissions.json",
+    "verdict": "pass",
+    "evidence": [
+      "permissions.json",
+      "probes/P01-01-whoami-reader.json",
+      "probes/P01-02-whoami-writer.json",
+      "probes/P01-03-export-perms-connector.json",
+      "probes/P01-04-export-perms-probe.json",
+      "probes/P01-05-export-user-perms-sd35-reader.json",
+      "probes/P01-06-export-user-sd35-reader.json",
+      "probes/P01-07-export-user-perms-sd35-prober.json",
+      "probes/P01-08-export-user-sd35-prober.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:03.741+00:00"
+  },
+  "P02": {
+    "title": "Reader reads PO/lines, UOM, receipts, demand, Bin and reservations",
+    "expected": "120 EA PO-120 row due 2026-10-23, received 0; Box=10 EA; WH-A 40/10, WH-B 70/20; SRE 10 and 20; receipt 5 on probe PO; native PO->SO peg on probe PO",
+    "observed": {
+      "PO-120": {
+        "name": "PUR-ORD-2026-00001",
+        "modified": "2026-10-22 13:20:55.721729",
+        "docstatus": 1,
+        "status": "To Receive and Bill",
+        "per_received": 0.0,
+        "amended_from": null,
+        "rows": [
+          {
+            "name": "rvcett5qr9",
+            "idx": 1,
+            "item_code": "PART-A",
+            "qty": 120.0,
+            "uom": "EA",
+            "stock_qty": 120.0,
+            "schedule_date": "2026-10-23",
+            "received_qty": 0.0,
+            "sales_order": null,
+            "sales_order_item": null
+          },
+          {
+            "name": "rvcl9nanls",
+            "idx": 2,
+            "item_code": "PART-U",
+            "qty": 6.0,
+            "uom": "Box",
+            "stock_qty": 60.0,
+            "schedule_date": "2026-10-30",
+            "received_qty": 0.0,
+            "sales_order": null,
+            "sales_order_item": null
+          }
+        ],
+        "has_cancelled_qty_field": false
+      },
+      "item_uoms": {
+        "PART-A": [
+          ["EA", 1.0],
+          ["Box", 10.0]
+        ],
+        "PART-U": [
+          ["EA", 1.0],
+          ["Box", 10.0]
+        ],
+        "PART-A supplier_items": [["Kestrel Fasteners ApS (fictional)", "KF-A-01"]],
+        "uom_conversion_detail_has_effective_dates": false
+      },
+      "conversion_helper": {
+        "PART-U/Box": [
+          200,
+          {
+            "conversion_factor": 10.0
+          }
+        ],
+        "PART-A/Box": [
+          200,
+          {
+            "conversion_factor": 10.0
+          }
+        ],
+        "PART-A/Unit": [
+          200,
+          {
+            "conversion_factor": 1.0
+          }
+        ]
+      },
+      "demand": {
+        "SO-201": [
+          {
+            "name": "rv7nn46ukv",
+            "qty": 70.0,
+            "stock_qty": 70.0,
+            "delivered_qty": 0.0,
+            "warehouse": "WH-A - NDL",
+            "delivery_date": "2026-10-23",
+            "ordered_qty": 0.0,
+            "purchase_order": null,
+            "stock_reserved_qty": 0.0
+          }
+        ],
+        "SO-202": [
+          {
+            "name": "rv9brkr19m",
+            "qty": 50.0,
+            "stock_qty": 50.0,
+            "delivered_qty": 0.0,
+            "warehouse": "WH-A - NDL",
+            "delivery_date": "2026-10-23",
+            "ordered_qty": 0.0,
+            "purchase_order": null,
+            "stock_reserved_qty": 0.0
+          }
+        ]
+      },
+      "bins_PART-A": {
+        "WH-A": {
+          "actual_qty": 40.0,
+          "reserved_stock": 10.0,
+          "reserved_qty": 130.0,
+          "ordered_qty": 120.0,
+          "projected_qty": 30.0
+        },
+        "WH-B": {
+          "actual_qty": 70.0,
+          "reserved_stock": 20.0,
+          "reserved_qty": 20.0,
+          "ordered_qty": 0.0,
+          "projected_qty": 50.0
+        }
+      },
+      "reservations_PART-A": [
+        {
+          "name": "MAT-SRE-2026-00001",
+          "voucher_no": "SAL-ORD-2026-00003",
+          "voucher_detail_no": "rvaff1gksp",
+          "warehouse": "WH-A - NDL",
+          "reserved_qty": 10.0,
+          "delivered_qty": 0.0,
+          "status": "Reserved"
+        },
+        {
+          "name": "MAT-SRE-2026-00002",
+          "voucher_no": "SAL-ORD-2026-00004",
+          "voucher_detail_no": "rvb9bmcjao",
+          "warehouse": "WH-B - NDL",
+          "reserved_qty": 20.0,
+          "delivered_qty": 0.0,
+          "status": "Reserved"
+        }
+      ],
+      "receipt_fixture": {
+        "po_rows": [
+          {
+            "name": "rvhj3gfpa2",
+            "idx": 1,
+            "item_code": "PROBE-A",
+            "qty": 20.0,
+            "uom": "EA",
+            "stock_qty": 20.0,
+            "schedule_date": "2026-10-23",
+            "received_qty": 5.0,
+            "sales_order": null,
+            "sales_order_item": null
+          },
+          {
+            "name": "rvhlpof7gr",
+            "idx": 2,
+            "item_code": "PROBE-U",
+            "qty": 1.0,
+            "uom": "Box",
+            "stock_qty": 10.0,
+            "schedule_date": "2026-10-30",
+            "received_qty": 0.0,
+            "sales_order": null,
+            "sales_order_item": null
+          }
+        ],
+        "per_received": 23.809524,
+        "receipt": "MAT-PRE-2026-00001",
+        "receipt_rows": [["PROBE-A", 5.0, "PUR-ORD-2026-00006", "rvhj3gfpa2"]]
+      },
+      "native_peg": {
+        "po_row": {
+          "name": "rvf97l60g7",
+          "idx": 1,
+          "item_code": "PROBE-A",
+          "qty": 120.0,
+          "uom": "EA",
+          "stock_qty": 120.0,
+          "schedule_date": "2026-10-23",
+          "received_qty": 0.0,
+          "sales_order": "SAL-ORD-2026-00005",
+          "sales_order_item": "rvdaeufo5u"
+        },
+        "so_row_ordered_qty": 120.0
+      },
+      "amendment_successors": [],
+      "version_read": [403, "PermissionError"]
+    },
+    "verdict": "pass",
+    "evidence": [
+      "probes/P02-01-read-PO-120.json",
+      "probes/P02-02-read-item-PART-A.json",
+      "probes/P02-03-read-item-PART-U.json",
+      "probes/P02-04-conversion-PART-U-Box.json",
+      "probes/P02-05-conversion-PART-A-Box.json",
+      "probes/P02-06-conversion-PART-A-Unit.json",
+      "probes/P02-07-read-SO-201.json",
+      "probes/P02-08-read-SO-202.json",
+      "probes/P02-09-read-bins.json",
+      "probes/P02-10-list-sre.json",
+      "probes/P02-11-read-sre-1.json",
+      "probes/P02-12-read-sre-2.json",
+      "probes/P02-13-read-PO-P-RECV.json",
+      "probes/P02-14-read-PR-P-RECV.json",
+      "probes/P02-15-read-PO-P-SPLIT-linked.json",
+      "probes/P02-16-read-SO-P1.json",
+      "probes/P02-17-list-amendment-successors.json",
+      "probes/P02-18-read-version-history.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:03.927+00:00"
+  },
+  "P03": {
+    "title": "Unauthenticated, invalid-token and out-of-role requests are refused",
+    "expected": "Every attempt refused (auth or permission); no state change on read-back",
+    "observed": {
+      "no-token-read-PO": [403, "PermissionError"],
+      "invalid-token-read-PO": [401, "AuthenticationError"],
+      "reader-PUT-PO-schedule": [403, "PermissionError"],
+      "reader-update-items": [417, "ValidationError"],
+      "reader-POST-SRE": [403, "PermissionError"],
+      "reader-POST-Stock-Entry": [403, "PermissionError"],
+      "reader-PUT-Item": [403, "PermissionError"],
+      "reader-read-out-of-scope-warehouse": [403, "PermissionError"],
+      "reader-read-out-of-scope-company": [403, "PermissionError"],
+      "reader-read-User": [403, "PermissionError"],
+      "reader-PUT-Stock-Settings": [403, "PermissionError"],
+      "writer-PUT-Item": [403, "PermissionError"],
+      "writer-read-out-of-scope-warehouse": [403, "PermissionError"],
+      "writer-run_doc_method-SO-reserve": [403, "PermissionError"],
+      "readback": {
+        "PO-120 modified unchanged": true,
+        "PART-A SRE count": [2, 2],
+        "PROBE-A SRE count": 0
+      }
+    },
+    "verdict": "refused-as-expected",
+    "evidence": [
+      "probes/P03-01-no-token-read-PO.json",
+      "probes/P03-02-invalid-token-read-PO.json",
+      "probes/P03-03-reader-PUT-PO-schedule.json",
+      "probes/P03-04-reader-update-items.json",
+      "probes/P03-05-reader-POST-SRE.json",
+      "probes/P03-06-reader-POST-Stock-Entry.json",
+      "probes/P03-07-reader-PUT-Item.json",
+      "probes/P03-08-reader-read-out-of-scope-warehouse.json",
+      "probes/P03-09-reader-read-out-of-scope-company.json",
+      "probes/P03-10-reader-read-User.json",
+      "probes/P03-11-reader-PUT-Stock-Settings.json",
+      "probes/P03-12-writer-PUT-Item.json",
+      "probes/P03-13-writer-read-out-of-scope-warehouse.json",
+      "probes/P03-14-writer-run_doc_method-SO-reserve.json",
+      "probes/P03-15-readback-PO-120.json",
+      "probes/P03-16-readback-list-sre.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:04.079+00:00"
+  },
+  "P04": {
+    "title": "Submitted-PO conditional date change; stale modified refused",
+    "expected": "PUT with m0 persists date; PUT with stale m0 -> TimestampMismatchError (417); at most one of two concurrent m1 writers commits; generic REST qty edit refused; tokenless PUT is unprotected",
+    "observed": {
+      "m0": "2026-10-22 13:20:55.890090",
+      "first_put": [200, null],
+      "m1": "2026-10-22 13:21:04.091102",
+      "row1_date_after_first": "2026-10-24",
+      "stale_put": [417, "TimestampMismatchError"],
+      "row1_date_after_stale": "2026-10-24",
+      "modified_after_stale_unchanged": true,
+      "concurrent_same_m1": {
+        "a": [200, null],
+        "b": [500, "QueryDeadlockError"]
+      },
+      "row1_date_after_concurrent": "2026-10-27",
+      "generic_rest_qty_edit": [417, "UpdateAfterSubmitError"],
+      "row1_qty_after": 30.0,
+      "put_without_token_from_m0_snapshot": [200, null],
+      "row1_date_after_no_token": "2026-10-29",
+      "row_ids_stable": true,
+      "received_qty": [0.0, 0.0],
+      "docstatus": 1,
+      "row1": "rvevbfr0jl"
+    },
+    "verdict": "pass",
+    "evidence": [
+      "probes/P04-01-read-m0.json",
+      "probes/P04-02-put-date-with-m0.json",
+      "probes/P04-03-read-m1.json",
+      "probes/P04-04-put-date-with-stale-m0.json",
+      "probes/P04-05-read-after-stale.json",
+      "probes/P04-06-concurrent-a.json",
+      "probes/P04-07-concurrent-b.json",
+      "probes/P04-08-read-after-concurrent.json",
+      "probes/P04-09-put-qty-generic-rest.json",
+      "probes/P04-10-read-after-qty-attempt.json",
+      "probes/P04-11-put-date-without-token.json",
+      "probes/P04-12-read-after-no-token.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:04.260+00:00"
+  },
+  "P05a": {
+    "title": "Update Items refuses PO quantity below received quantity",
+    "expected": "Business refusal; rows, received quantities and other row unchanged",
+    "observed": {
+      "status": [417, "ValidationError"],
+      "message": "frappe.exceptions.ValidationError: Row #None:Cannot set quantity less than received quantity.",
+      "rows_before": [
+        {
+          "name": "rvhj3gfpa2",
+          "idx": 1,
+          "item_code": "PROBE-A",
+          "qty": 20.0,
+          "uom": "EA",
+          "stock_qty": 20.0,
+          "schedule_date": "2026-10-23",
+          "received_qty": 5.0,
+          "sales_order": null,
+          "sales_order_item": null
+        },
+        {
+          "name": "rvhlpof7gr",
+          "idx": 2,
+          "item_code": "PROBE-U",
+          "qty": 1.0,
+          "uom": "Box",
+          "stock_qty": 10.0,
+          "schedule_date": "2026-10-30",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        }
+      ],
+      "rows_after": [
+        {
+          "name": "rvhj3gfpa2",
+          "idx": 1,
+          "item_code": "PROBE-A",
+          "qty": 20.0,
+          "uom": "EA",
+          "stock_qty": 20.0,
+          "schedule_date": "2026-10-23",
+          "received_qty": 5.0,
+          "sales_order": null,
+          "sales_order_item": null
+        },
+        {
+          "name": "rvhlpof7gr",
+          "idx": 2,
+          "item_code": "PROBE-U",
+          "qty": 1.0,
+          "uom": "Box",
+          "stock_qty": 10.0,
+          "schedule_date": "2026-10-30",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        }
+      ],
+      "modified_unchanged": true
+    },
+    "verdict": "refused-as-expected",
+    "evidence": [
+      "probes/P05-01-read-recv-before.json",
+      "probes/P05-02-update-items-below-received.json",
+      "probes/P05-03-read-recv-after.json",
+      "probes/P05-04-read-race-m0.json",
+      "probes/P05-05-second-actor-changes-date.json",
+      "probes/P05-06-read-race-after-second-actor.json",
+      "probes/P05-07-update-items-from-stale-intent.json",
+      "probes/P05-08-read-race-after.json",
+      "probes/P05-09-read-bins.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:04.389+00:00"
+  },
+  "P05b": {
+    "title": "Update Items accepts a request built from a stale snapshot",
+    "expected": "Accepted (no expected-modified parameter): evidence of the missing native caller precondition",
+    "observed": {
+      "second_actor_put": [200, null],
+      "m0": "2026-10-22 13:20:56.060419",
+      "m_after_second_actor": "2026-10-22 13:21:04.290934",
+      "date_after_second_actor": "2026-10-25",
+      "stale_update_items": [200, null],
+      "rows_after": [
+        {
+          "name": "rvg3v3qdiv",
+          "idx": 1,
+          "item_code": "PROBE-A",
+          "qty": 25.0,
+          "uom": "EA",
+          "stock_qty": 25.0,
+          "schedule_date": "2026-10-23",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        },
+        {
+          "name": "rvgdhf0vco",
+          "idx": 2,
+          "item_code": "PROBE-U",
+          "qty": 1.0,
+          "uom": "Box",
+          "stock_qty": 10.0,
+          "schedule_date": "2026-10-30",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        }
+      ],
+      "second_actor_date_overwritten_back_to_m0_value": true,
+      "bin_PROBE-A@WH-A_ordered_before_after": [205.0, 200.0]
+    },
+    "verdict": "characterized",
+    "evidence": [
+      "probes/P05-01-read-recv-before.json",
+      "probes/P05-02-update-items-below-received.json",
+      "probes/P05-03-read-recv-after.json",
+      "probes/P05-04-read-race-m0.json",
+      "probes/P05-05-second-actor-changes-date.json",
+      "probes/P05-06-read-race-after-second-actor.json",
+      "probes/P05-07-update-items-from-stale-intent.json",
+      "probes/P05-08-read-race-after.json",
+      "probes/P05-09-read-bins.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:04.391+00:00"
+  },
+  "P06a": {
+    "title": "Split 120 EA into 40 @ 2026-10-23 and 80 @ 2026-10-26 via Update Items",
+    "expected": "Quantities/dates may persist; new row loses SO lineage -> failed mapping, not a safe split",
+    "observed": {
+      "status": [200, null],
+      "rows_before": [
+        {
+          "name": "rvf97l60g7",
+          "idx": 1,
+          "item_code": "PROBE-A",
+          "qty": 120.0,
+          "uom": "EA",
+          "stock_qty": 120.0,
+          "schedule_date": "2026-10-23",
+          "received_qty": 0.0,
+          "sales_order": "SAL-ORD-2026-00005",
+          "sales_order_item": "rvdaeufo5u"
+        },
+        {
+          "name": "rvfvh4iskd",
+          "idx": 2,
+          "item_code": "PROBE-U",
+          "qty": 6.0,
+          "uom": "Box",
+          "stock_qty": 60.0,
+          "schedule_date": "2026-10-30",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        }
+      ],
+      "rows_after": [
+        {
+          "name": "rvf97l60g7",
+          "idx": 1,
+          "item_code": "PROBE-A",
+          "qty": 40.0,
+          "uom": "EA",
+          "stock_qty": 40.0,
+          "schedule_date": "2026-10-23",
+          "received_qty": 0.0,
+          "sales_order": "SAL-ORD-2026-00005",
+          "sales_order_item": "rvdaeufo5u"
+        },
+        {
+          "name": "rvfvh4iskd",
+          "idx": 2,
+          "item_code": "PROBE-U",
+          "qty": 6.0,
+          "uom": "Box",
+          "stock_qty": 60.0,
+          "schedule_date": "2026-10-30",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        },
+        {
+          "name": "s24g8e2bum",
+          "idx": 3,
+          "item_code": "PROBE-A",
+          "qty": 80.0,
+          "uom": "EA",
+          "stock_qty": 80.0,
+          "schedule_date": "2026-10-26",
+          "received_qty": 0.0,
+          "sales_order": null,
+          "sales_order_item": null
+        }
+      ],
+      "total_PROBE-A_after": 120.0,
+      "new_row_sales_order_item": null,
+      "SO-P1_row_ordered_qty_before_after": [120.0, 40.0],
+      "name_unchanged_no_amended_from": true
+    },
+    "verdict": "characterized",
+    "evidence": [
+      "probes/P06-01-read-split-before.json",
+      "probes/P06-02-read-SO-P1-before.json",
+      "probes/P06-03-update-items-split-40-80.json",
+      "probes/P06-04-read-split-after.json",
+      "probes/P06-05-read-SO-P1-after.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:04.465+00:00"
+  },
+  "P06b": {
+    "title": "Conditional cancellation (stale refused) then manual amend",
+    "expected": "Stale docstatus=2 PUT -> TimestampMismatchError; current PUT cancels; amended draft with amended_from submits; sequence is multi-step and non-atomic",
+    "observed": {
+      "second_actor": [200, null],
+      "stale_cancel": [417, "TimestampMismatchError"],
+      "docstatus_after_stale": 1,
+      "current_cancel": [200, null],
+      "docstatus_after_cancel": 2,
+      "status_after_cancel": "Cancelled",
+      "amended_create": [200, null],
+      "amended_submit": [200, null],
+      "original": {
+        "name": "PUR-ORD-2026-00005",
+        "docstatus": 2
+      },
+      "amended": {
+        "name": "PUR-ORD-2026-00005-1",
+        "docstatus": 1,
+        "amended_from": "PUR-ORD-2026-00005",
+        "rows": [
+          {
+            "name": "s281k4upfd",
+            "idx": 1,
+            "item_code": "PROBE-A",
+            "qty": 10.0,
+            "uom": "EA",
+            "stock_qty": 10.0,
+            "schedule_date": "2026-10-24",
+            "received_qty": 0.0,
+            "sales_order": null,
+            "sales_order_item": null
+          },
+          {
+            "name": "s28vo0d9uu",
+            "idx": 2,
+            "item_code": "PROBE-U",
+            "qty": 1.0,
+            "uom": "Box",
+            "stock_qty": 10.0,
+            "schedule_date": "2026-10-30",
+            "received_qty": 0.0,
+            "sales_order": null,
+            "sales_order_item": null
+          }
+        ]
+      },
+      "note": "Three separate HTTP transactions (cancel, create, submit); not atomic."
+    },
+    "verdict": "pass",
+    "evidence": [
+      "probes/P06b-01-read-cancel-m0.json",
+      "probes/P06b-02-second-actor-bumps-modified.json",
+      "probes/P06b-03-cancel-with-stale-m0.json",
+      "probes/P06b-04-read-after-stale-cancel.json",
+      "probes/P06b-05-cancel-with-current-m1.json",
+      "probes/P06b-06-read-after-cancel.json",
+      "probes/P06b-07-create-amended-draft.json",
+      "probes/P06b-08-submit-amended.json",
+      "probes/P06b-09-readback-original.json",
+      "probes/P06b-10-readback-amended.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:04.985+00:00"
+  },
+  "P07": {
+    "title": "Reserve 50 EA at WH-B for a demand row (ACT-2 shape) with native validation",
+    "expected": "Submitted SRE 50; WH-B physical unchanged, reserved_stock +50; over-capacity request refused; canonical Bins unchanged",
+    "observed": {
+      "create": [200, null],
+      "create_msg": null,
+      "submit": [200, null, "MAT-SRE-2026-00003"],
+      "bins_before": {
+        "PART-A@WH-A - NDL": {
+          "actual_qty": 40.0,
+          "reserved_stock": 10.0,
+          "reserved_qty": 130.0,
+          "ordered_qty": 120.0
+        },
+        "PART-A@WH-B - NDL": {
+          "actual_qty": 70.0,
+          "reserved_stock": 20.0,
+          "reserved_qty": 20.0,
+          "ordered_qty": 0.0
+        },
+        "PROBE-A@WH-A - NDL": {
+          "actual_qty": 5.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 120.0,
+          "ordered_qty": 200.0
+        },
+        "PROBE-A@WH-B - NDL": {
+          "actual_qty": 100.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 0.0,
+          "ordered_qty": 0.0
+        }
+      },
+      "bins_after": {
+        "PART-A@WH-A - NDL": {
+          "actual_qty": 40.0,
+          "reserved_stock": 10.0,
+          "reserved_qty": 130.0,
+          "ordered_qty": 120.0
+        },
+        "PART-A@WH-B - NDL": {
+          "actual_qty": 70.0,
+          "reserved_stock": 20.0,
+          "reserved_qty": 20.0,
+          "ordered_qty": 0.0
+        },
+        "PROBE-A@WH-A - NDL": {
+          "actual_qty": 5.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 120.0,
+          "ordered_qty": 200.0
+        },
+        "PROBE-A@WH-B - NDL": {
+          "actual_qty": 100.0,
+          "reserved_stock": 50.0,
+          "reserved_qty": 0.0,
+          "ordered_qty": 0.0
+        }
+      },
+      "sres": [
+        {
+          "name": "MAT-SRE-2026-00003",
+          "modified": "2026-10-22 13:21:05.011763",
+          "docstatus": 1,
+          "status": "Partially Reserved",
+          "voucher_type": "Sales Order",
+          "voucher_no": "SAL-ORD-2026-00005",
+          "voucher_detail_no": "rvdaeufo5u",
+          "warehouse": "WH-B - NDL",
+          "reserved_qty": 50.0,
+          "delivered_qty": 0.0,
+          "transferred_qty": 0.0,
+          "consumed_qty": 0.0,
+          "stock_uom": "EA"
+        }
+      ],
+      "over_capacity_create": [200, null],
+      "over_capacity_submit": [417, "ValidationError", "\t\t\t"],
+      "bins_after_over_capacity": {
+        "PART-A@WH-A - NDL": {
+          "actual_qty": 40.0,
+          "reserved_stock": 10.0,
+          "reserved_qty": 130.0,
+          "ordered_qty": 120.0
+        },
+        "PART-A@WH-B - NDL": {
+          "actual_qty": 70.0,
+          "reserved_stock": 20.0,
+          "reserved_qty": 20.0,
+          "ordered_qty": 0.0
+        },
+        "PROBE-A@WH-A - NDL": {
+          "actual_qty": 5.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 120.0,
+          "ordered_qty": 200.0
+        },
+        "PROBE-A@WH-B - NDL": {
+          "actual_qty": 100.0,
+          "reserved_stock": 50.0,
+          "reserved_qty": 0.0,
+          "ordered_qty": 0.0
+        }
+      },
+      "canonical_PART-A_bins_unchanged": true
+    },
+    "verdict": "pass",
+    "evidence": [
+      "probes/P07-01-read-bins.json",
+      "probes/P07-02-create-sre-50-draft.json",
+      "probes/P07-03-submit-sre-50.json",
+      "probes/P07-04-read-bins.json",
+      "probes/P07-05-list-sre.json",
+      "probes/P07-06-create-sre-60-over-capacity.json",
+      "probes/P07-07-submit-sre-60-over-capacity.json",
+      "probes/P07-08-read-bins.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:05.055+00:00"
+  },
+  "P08": {
+    "title": "SO reservation helper via run_doc_method (stale parent doc)",
+    "expected": "Probe writer has no SO write: refused before the timestamp guard. Helper route needs a separately authorized SO-write principal; not granted here",
+    "observed": {
+      "status": [417, "TimestampMismatchError"],
+      "sre_count_after": 2
+    },
+    "verdict": "unresolved",
+    "evidence": [
+      "probes/P08-01-read-SO-P1.json",
+      "probes/P08-02-run_doc_method-stale-SO.json",
+      "probes/P08-03-list-sre.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:05.074+00:00"
+  },
+  "P09": {
+    "title": "Duplicate reservation with the same Idempotency-Key; stale SRE submit",
+    "expected": "No native idempotency: two SREs (40 EA) created despite identical key. frappe.client.submit with a stale draft -> TimestampMismatchError",
+    "observed": {
+      "idempotency_header": "sd35-dup-0f294d8f80e7",
+      "attempts": [
+        ["MAT-SRE-2026-00005", 200, null],
+        ["MAT-SRE-2026-00006", 200, null]
+      ],
+      "new_submitted": [
+        ["MAT-SRE-2026-00005", 20.0, 1],
+        ["MAT-SRE-2026-00006", 20.0, 1]
+      ],
+      "total_new_reserved": 40.0,
+      "stale_submit_guard": {
+        "second_actor": [200, null],
+        "stale_submit": [417, "TimestampMismatchError"],
+        "docstatus_after": 0,
+        "reserved_qty_after": 4.0,
+        "draft": "MAT-SRE-2026-00007"
+      }
+    },
+    "verdict": "characterized",
+    "evidence": [
+      "probes/P09-01-list-sre-before.json",
+      "probes/P09-02-create-sre-20-same-key-1.json",
+      "probes/P09-03-submit-sre-20-same-key-1.json",
+      "probes/P09-04-create-sre-20-same-key-2.json",
+      "probes/P09-05-submit-sre-20-same-key-2.json",
+      "probes/P09-06-list-sre-after.json",
+      "probes/P09-07-create-sre-5-draft.json",
+      "probes/P09-08-second-actor-saves-draft.json",
+      "probes/P09-09-submit-stale-draft.json",
+      "probes/P09-10-read-draft-after-stale-submit.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:05.161+00:00"
+  },
+  "P10": {
+    "title": "Lost response after commit, reconciled by native read-back (no second POST)",
+    "expected": "Client sees transport failure -> unknown; one draft found by unique remarks marker and matched; no retry sent",
+    "observed": {
+      "transport_error": "RemoteDisconnected: Remote end closed connection without response",
+      "upstream_bytes_withheld": 2684,
+      "candidates": 1,
+      "linked": {
+        "name": "MAT-STE-2026-00003",
+        "matches_intended": true
+      },
+      "journal_state": "confirmed"
+    },
+    "verdict": "pass",
+    "evidence": [
+      "probes/P10-01-reconcile-search-by-marker.json",
+      "probes/P10-02-reconcile-read-candidate.json",
+      "probes/P10-journal.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:05.197+00:00"
+  },
+  "P11": {
+    "title": "Draft Material Transfer request WH-B -> WH-A (TRO-1 shape) without stock movement",
+    "expected": "Draft docstatus 0, Bins unchanged; stale draft edit -> TimestampMismatchError; probe writer cannot submit (stock movement not authorized)",
+    "observed": {
+      "create": [200, null],
+      "draft": {
+        "name": "MAT-STE-2026-00004",
+        "docstatus": 0,
+        "purpose": "Material Transfer",
+        "add_to_transit": 0
+      },
+      "bins_before": {
+        "PROBE-A@WH-A - NDL": {
+          "actual_qty": 5.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 120.0,
+          "ordered_qty": 200.0
+        },
+        "PROBE-A@WH-B - NDL": {
+          "actual_qty": 100.0,
+          "reserved_stock": 90.0,
+          "reserved_qty": 0.0,
+          "ordered_qty": 0.0
+        }
+      },
+      "bins_after_draft": {
+        "PROBE-A@WH-A - NDL": {
+          "actual_qty": 5.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 120.0,
+          "ordered_qty": 200.0
+        },
+        "PROBE-A@WH-B - NDL": {
+          "actual_qty": 100.0,
+          "reserved_stock": 90.0,
+          "reserved_qty": 0.0,
+          "ordered_qty": 0.0
+        }
+      },
+      "stale_guard_on_draft": {
+        "first": [200, null],
+        "stale": [417, "TimestampMismatchError"],
+        "remarks_after": "SD35-OP-ba40538b4d TRO-1 shape request (rev 2)",
+        "docstatus": 0
+      },
+      "writer_submit_attempt": [403, "PermissionError"],
+      "bins_after_submit_attempt": {
+        "PROBE-A@WH-A - NDL": {
+          "actual_qty": 5.0,
+          "reserved_stock": 0.0,
+          "reserved_qty": 120.0,
+          "ordered_qty": 200.0
+        },
+        "PROBE-A@WH-B - NDL": {
+          "actual_qty": 100.0,
+          "reserved_stock": 90.0,
+          "reserved_qty": 0.0,
+          "ordered_qty": 0.0
+        }
+      }
+    },
+    "verdict": "pass",
+    "evidence": [
+      "probes/P11-01-read-bins.json",
+      "probes/P11-02-create-draft-transfer-50.json",
+      "probes/P11-03-read-bins.json",
+      "probes/P11-04-put-remarks-with-m0.json",
+      "probes/P11-05-put-remarks-with-stale-m0.json",
+      "probes/P11-06-read-draft-after.json",
+      "probes/P11-07-writer-submit-transfer-refused.json",
+      "probes/P11-08-read-bins.json"
+    ],
+    "recorded_at": "2026-10-22T11:21:05.267+00:00"
+  }
+}

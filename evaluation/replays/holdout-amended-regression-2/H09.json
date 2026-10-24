@@ -1,0 +1,151 @@
+{
+  "scenario": "H09",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01RPyMUCjMhu4uvTVq4Z1Zz7",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1162
+      }
+    },
+    {
+      "requestDigest": "e6d3f4892194a7eb5c5f674da740025fd148751ee83882737cc127b02f830dfb",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01WMKxb81s7g7jvjuwA9Pfe4",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 340
+        },
+        "latencyMs": 1323
+      }
+    },
+    {
+      "requestDigest": "b3baa56aeea6e41d78107de3fda7cbeb157f3c8fa1caf84089f04741ad846274",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSowgKEAgTGAI4AUIIdGhpbmtpbmcSDDhWd1B2lP+K7IE1cRoM3lVoivBOT8qVoD8BIjBQRabxPIuPbHO4SgZUPsYMs+honIgErbFsEe2IIzFdhffTqZahRUlS8i3LEfS8Hq4qwAe4qyMMykZ1Y+kqG5eXxNJR3oHsCQW2SiASjSMqB2ConBgQvd/FcCaIo0338WyhLpaQHMl+0+SpmwTbpnC0RNnBOx/Slqo8F6UPL654n9H/PtNmHAQ78zdrfkOov1pGo5ldUL93Wff3qP18kA/ivFWfL9ZYyYWFSgX66Je42zaiWCoi3gyw2qLJxbTSXueFW7H++AfHUUIhGvfgZOYTdiGMIn7PKn4cpKlrKfOviFaJLS5eSmNtvklgDxkEx4tk5mn/ZvzZTObVONN13kr5WyDy54bY9BMHZ7gwHlMfdpaPXcXuTreoY8fKbNsyYm/gCloLqeKabwDh7SVMzibztm5KGT5EDcklg2UZ78M6RTxIMI6f1+sAXfTiMq1dyERgkw+NqRTn1qFYSVxnBR/1+ANKYD9DxMTBxsOZ51hfA1uYeQDIT+PMaGLekba9D3PeKsWcRJnu9RYc6zfdyHddwi+0vq6WgqqVnl74bBpwf00Y5KzVPQ8bL1RWf2V2ov33r7JRO1sZFBH0wHzjd/2VVfydlCqCjj0srhyyv4CVwn/EE68APiG5OtZ73rQOV+Vub1K51wPtsVI3HeBXy7tEHBz/tk0GJsijMDA73v/2CBoK+Ekl2vbCbIEHejXqeJp0o4BK3y+dMjdsF/OZGZZlZKDOpKphOkjAmqXbAOw6FAw0CRElRve9Mx7fkEn7U8nH2KFfZu+IfywNfNN4LMnRqlkpFwBSAfyVJfI/fyWEkTjs6uIfAOdf6VflV2SPcsu/D+Do1MsAXS9IcAIs4HG2OM4PUfk7xbtB/WWzfLNrLZVUHiU6bxMxnUL5DerJDL6vwnU4Ws9rPQqi6DS47Lr1NwwfVba1Gv0bijuj8RFUPJYsELGgTCBNdxyjirZFn4fqbnVJESIfTtkWTRYxBgXg7jRqltt+XsFKZ0KWYOF8wd/R4DN/f2TGew0+a/RpEfaEibUAqh1RyzCk5ueWl0Fq8f8cuDb/WsBy6/yCNB4GA0m8KKhiuz6kZcXC42AsHKLB32k7gJAkWhEmTVNBSP1fkkrmJrnOkaKNY01u0Ivy05gjfOfVLZnJ3aRBuxho1twVh5hH91/CcNdCo0SAd5mfr5GwopdF4Dr+5C7+FF58kEiaSpbO1cIBo62CvgZI2bEERFy8q6ohioO1J8bYE5qb2Tn0qPiGQO0lhUKoijygALkLS1JgEka9mkKq0XAVBygCiFrYyySmTsQQaBbFP4vojloIiLZVLdamuT0rfbDjx2Kla1nnRGI0ZM2rvFPnN1PBayAYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SWdd8upV6n1nygWBAkTpEz",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Zu PO-120, line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Zu PO-120, line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "Artikel KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "von 40 EA am 22.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "40 EA am 22.10.2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 EA am 27.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "80 EA am 27.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 line 10, base revision 3, item KF-A-01 in EA, with 40 EA arriving at WH-A on 22.10.2026 and 80 EA on 27.10.2026. The optional PART-A2 substitute (55 EA) is explicitly not a change to these quantities, so it is excluded; the base revision matches the order's current revision 3."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 867,
+          "cacheReadTokens": 4196,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3612
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "scenario": "J11",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01QBmr3b2GwhjuMYmUPgv5zv",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 968
+      }
+    },
+    {
+      "requestDigest": "d2039c9cf479ab3d61d2bd2c4bc0771fcb046b17903470f4866c818da6e5dabb",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_018U8fXpHc9JKPCV2AsvU2h1",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-121"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 284
+        },
+        "latencyMs": 1655
+      }
+    },
+    {
+      "requestDigest": "10817942022240e2bebcf067da2873759f5840959c6d43ee9200f97fb6665e9a",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSuggKEAgTGAI4AUIIdGhpbmtpbmcSDBMa3134W4LtmHeA3hoMNu2mDwJs/dewX6b2IjDYBXLHTWWxzlySNhybmm4j4LOEzlh2NJUyw1wsTl/UTfcpidRu89HN5ngqimGdLjwq1wdKOMtTFTMndvYocUdaWw4oo5iddKz41Vjj7VdWFhG6L59rSa0QzGGP3DQDRsw11c5YT7GxZwV0M6j+UdjvkrcWKPqT012eOQdA8C38GpNXghKyS+8DfpOPCmH53lUdq5fINcW9Tq+3h9b6vX1/KtCUb4/CwvnuX210wD58wwjxcwdXUKIhXyjLGsIiiyWHxmJtOp11B3snvEQDSPr2DdGAzWyULo7gugAt4mzcruJP/0OPSVzoyoyZiOuFTV8CH78BLNo22n9RckkLw361a8ubTBBFAEWggn6SnAzmsMFcuIPmcGrIMPi62A2WOhWrM+IymmoY6eeFu6DXgKGQIfuIexegg7lI7HQWNghNy703lb6RcV42nH48QgL0r1eefz2VJPseOKi4dAlUTlluksoYKZh2Hcq/8QFyTRD2ydM7klmwGMrR4KnhDRX+y/ib/HpTJk4Ba8B46uU6rNA/5Z+NyRLVgsmFJIFAiHO/ERkVTQLQxxGHdGxA7OblMkOSt7LBEaxfvxpAXanthpaMW3IjhP3cisUJ7ddEJkFJR9kwaHb5yJnpx/ie3XFgD/YsXuVPAsrH/RDa12B8iMVlIze4LQGwLLd0S2/bG/yoiDzNNFGmOG9uu9PE+9sQl1KDUGUdKl/p/50kgAPmrFuqMWYaaYSzilVYeiVLxZfYwn3Djjr3bb9HXRmIJtUqiqrS3ermuOnDyW8xTt+Yr856a53UL4tCQ+Nfa64009VtbfY7vUdd17pQbdwdsxq8ZF+J60j5xJMxEeFKWf1JVb8GqHNQZ0JNkH9VhnFd5pedf5MzuRELsZCiOyLv48tPGQoMjQf1NoxPKl/bYtjT5YOGDSWBh9GU4qzIGuof1F9dSfx7neKXOlo0fQq4pIZagPpXDIbSE3DqHzCnKUoJkO77BjUp07Lq3zWtztk7ctJAvfI5vPqVuaShIxuss6HHtEdldTEBCTOemtFgUv8zinEtJR3J06/yFbf/nopkYeKi4JVq4rlhiGZKkG6X5RChJ4EUQVmzvt/xpBzAf/pmtSYtGxGs+uc2mbKB3uYLChNDs0/xhP31oW95xPAC7TYvRWO3t6Qwi1C73iuaHDg4lx/gbFSITK11L9eUrJPHnx4RKFvnvNN59nnGr5585GoBn+LT0ksebc7wJvGCZ627JkC04CKjCXngiUMLnKh+xaL263ezq7LywFnlqoeiAW/GisNLJOszufUsD8hNtmaJd2WiH317NY3zvSl0F7dCVTl2glHrp2SQW9PR8kOoGbrCpz5bfkGTvLn6LlzXIM7JN0/3yZ5dadHuV5QkMRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013Mu8RGnCdkhspR88U2najj",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-121",
+                "quote": "This proposal is solely for PO-121 revision 2, line 10, item KF-C-07, unit EA.",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, item KF-C-07"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "2",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-121 revision 2"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-C-07",
+                "quote": "item KF-C-07",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "150",
+                    "quote": "All 150 EA outstanding will arrive at WH-A",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-11-06",
+                    "quote": "will arrive at WH-A on 6 November 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-121 revision 2, line 10, item KF-C-07, unit EA, and that all 150 EA outstanding arrive at WH-A on 6 November 2026. The 50 EA already received are unchanged and not included. The email's item KF-C-07 differs from the record's SKU PART-C, which the buyer should confirm as a vendor item mapping."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 807,
+          "cacheReadTokens": 4140,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3543
+      }
+    }
+  ]
+}

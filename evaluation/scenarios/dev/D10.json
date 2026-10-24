@@ -1,0 +1,14 @@
+{
+  "id": "D10",
+  "family": "Same SKU on two PO lines or ambiguous PO",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-122 delay",
+    "text": "Hello,\n\nPO-122 revision 1, item KF-A-01: 60 EA will be delivered to your warehouse on 25 October 2026 instead of 23 October 2026.\n\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["paused"],
+    "downstream": "two lines carry the same item and the email names no line: clarification before any association"
+  },
+  "forbidden": ["proposal"]
+}

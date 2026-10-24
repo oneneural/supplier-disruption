@@ -1,0 +1,150 @@
+{
+  "scenario": "D21",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01YbNCEWwnwgW2H1ubZ3q7Va",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1390
+      }
+    },
+    {
+      "requestDigest": "a37dc2c2b404b2310d9bc73327f639f8779b23b635d381f3ea5508cf961bc7de",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Luss4ijT4zXKUuS4mksnaS",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 260
+        },
+        "latencyMs": 1292
+      }
+    },
+    {
+      "requestDigest": "e0d8bfcfe445b0beb3301f2ed6ec3f5c041a3981a3a97eff935118b3d55d0267",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQStAgKEAgTGAI4AUIIdGhpbmtpbmcSDIhvag3O9KqW4CBkrhoM4SLSPvKcA3a1RMdwIjAPH6/VTwCiFw6pPFh5Gd0friqoc9ml2l66Bo17oMeSfKeYjZFD8+w+8a5bXgisOOwq0Qc6vLXkJMOBXUcOVsw2fbwqsL27G7uH/r0T1PF8I24FaIqGQUqbTYlnFUrds5mxZsZ5HxTUWmJk8k1rc1nbGAPl1+opFewxPLYZYBzAZWn4xNyK2VMkZPxQLIftRuaDLnOzp+GCNl8GnhKHUx5vHt8cR6jCY7x3qhnCq1q56HLa502sEu7J8KBanE59B2H+8bZHnaa9RGE0Zai1MvGRr+Yk7Omym0fU8Ta92I+H3rgd8+9nO9xR1/I7i2hHgTCAdT6EUxE+wC4Ob8slQI/LEPhFe/X3CvdD3qs7Z2HE/QhF4pNFgyi3GhfWBfP7WJnrEglDAE3xmlrLDbjZoJIfQF1vBPHsy3gMHZGw5LfasP6BMKDKT/0XTHjUkhBWgdpkqUWz3ntdZS1XaN+apHC/7WwDHnmVFOJs6dVTcu+m3R4FTPX6lfqFKOIyNP8FVP2aLgGjGsBbWddliKXQ8u9cPIx+hEoeegC1ONDq4P7u9ZbuuOZq2SNHKhd+dfUQvX5wYyAoeqN+OF47Jse/x1pPLDBRohTZGkRPvaOSTE8jDZT9iro42LRVXg93eRhXH3spQV1yXSUTMn5ElTFbdJ0LoxbktfkKPAXV7QhDsw5uw4Ji6G29FVeQjo+3g0LqW9uuGAhGTqSeH62oLv2xetvMii39n9vWT6+9DUqomDOY0lOeYzBruIImWvcRutGZTC6sKwAbeLVUqgAJVtsaeGnXDXzLIkKxJ9yyG1dhVFM6YYxjqb2VmxwPqpIPolhfjslN6pzPnZGps031JY9j5xR0XWTzcFKAXR0BeZrk99R5SpLvLWbHRBm+acmwuU3e6Z/8uHofB+f/wPr6YtQBjHBl1U8HCJVTzyUuXw1TsN/eN0TPCKfRdrSJR8CGxRjJ4/rP6SI5auKZHLHamEGXeB3jlhVthMs6pkzmqjzsN9oumBGUNrjI6HGjK+uiSKzkt7K3ropEPjqagvVEUHA66s0p5NmpygozY0v9atpcw8lsgzpD3LemrAEV7TZ4VuAkJ9rZeR6vKPQouSRaZMNDCVX472S8HfpLityJDAeVPHa4sARw2xbjQcfVqz6qxrUS2CNKuAxUe1svcZNPlaRjX4vEVF8IJxK9vkl60jonAyLmbs+HwGwUIz4dB7nqKw6qBoXY5DrGaY05MOMn4Z4mbbg2AyXkJF2wmZXgW27HYnQk1K3+dV/EXwLZvxLd+RyvCxza/N6J/3yvPflX3d2OYYoGJD/GJDQcl2T+8riQNMlcQphZLeLbMDfMHk/f+FItvnipQ1M/qUxHQAGQVB/WG2ccBpOODBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RziZTQnPwTN9vCPY5hvcbL",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Ny leveringsplan for PO-120, revision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "linje/line 10, vare KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vare KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "40 stk leveres til jeres lager 23.10.2026",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 stk leveres til jeres lager 23.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "40 stk leveres til jeres lager 23.10.2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 stk leveres til jeres lager 26.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "80 stk leveres til jeres lager 26.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email gives revision 3 and line 10 for PO-120, matching the order's current revision. It proposes two deliveries to the customer warehouse: 40 pieces on 23.10.2026 and 80 pieces on 26.10.2026, totalling 120 which matches the ordered quantity. The email's \"stk\" (pieces) is mapped to EA."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 923,
+          "cacheReadTokens": 3851,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4013
+      }
+    }
+  ]
+}

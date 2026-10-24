@@ -1,0 +1,124 @@
+{
+  "scenario": "D21",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01MnEwM9SrY1yY1pGaPbt9f3",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 2011
+      }
+    },
+    {
+      "requestDigest": "ef7e1206dbc3e48c4af6cbbd83cfb009424f9f58556166d1edb9bc853172340f",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSkgoKEAgTGAI4AUIIdGhpbmtpbmcSDPSC4dIeZJV9khEcUBoM67r5ZYAVcPPCVjW0IjDX0GKUVqcJjLjw+dXQO6rKr83uv+pgD5c15i3V1e1mpMDEd5w/ydp6ZVM/RRyxazYqrwlwxAIZA0ewAm+/66Vnq36O5n3HhUO+17ylFQBSgQXeELF8lZHZ3r/Hh1B27YLptLNMrmQYHyNL0XWj6dCnCKh+RqSNmHznZ2WcHxWB9NYllQ/8JwjpwYO6BXnpkEBv9T/VnFLIn+e43qu+bMt5Jhd+7A3FiKcaD9l+t9bezyp4FJ6ZUc6AgqHqcbz3WsXdiYk4nzD1uNc8ReXJoqFki4kjx2y8Nq6vFFGqzVjznMs1GCLsJG+YcENQASA/GBBxb5WNjPSFozvzBjgR+ghXQM/0DMj6gNzDSgla+747f/3aVCcamRWmPD58JIKFFjL+gWZxyCAWXqzlJjDb9+s29WZFAIqPHPTmYQJgccodKafpPmhBlhLHejoHOIkyZNxwWGV6gouao/D3Ql0K4vGQSOCbZoER7RlSHemuE2PYGCHEH8zZm+W75MalInLrs2EV9ixW8AOeJBZdijm43cKkGpZwxS38LJxkRXBdFyhkqrs8SZtO0Gkn8lDMI0QNcX7i+4mG49hyfFGzR/X8dC+xXHk43HFLvtHr7SOgaBU58h2MW+Pek2UevQcv2IQ5aTAmafhFtGESEO0BLn/IBAwm7NvBh6YKfoBio0GsP+3sxjCbtgeLdYHS67hnNgZy3GdV+QgjT+KKTiU3E/a5MgbnZXFOYJHo+UkhIdgjz9kw8JFJzZbE8M5qLRR300XQYc4qUXnpZIROXFIEo/ze6ZrWOP+izliMlpXsFCDBVCwwk9+yVwfXanDIdSN9rMxoSD4wLgTB/C5OWVnw3yBVI4NZdQx4o9Exf3wxu93vF3dPBrQuwgwJFTONdbpRYAAXQjpX5V3wZk2fvUgL5FaS3R5wgMQoa9rc2a78i1k1ZZKgAQaCak0awwVxyoA2n1ZGjayISc+jHik6ckfxruYUBCuZITlxlg5jBZvmOpo3El1YroriBbadwulsfKCsVm8jW0H4gXYF5O/RceUreWXa3BJp2zGoQx4p8Ox6RUDh2NPZ0NlyzkGqp1GILlsDaQqjlx9PVGf8FWGlJymvYe7uchHrR3vQzNJyaMIfRbfFjTAukuSC+xq0+OquPx94sH2W46/RjLGHZi8wOKI5Psm2ZYclSGzANyAZJiGeI6j7O1xF+422A0JM02cFrVnHhJQKB6Yc24Stq46CLFgSx+3YVv4m8vsi/dzMLtk0Yny7bq9Vtww9DZYycmhpXvRF0G29D+pAmiIaS4a+ZcQUQb4HTmUrZ5egzDL0+mxRgGedu7k9IpyIpG9t6c46ZktNsacg0lhCew88WPywNoNwchlsry3KB6wVrUzaz+wtFDYmjG3I4YXlWhs4Y4mGb1jkWpZcsBhNJEO2lzKHqxOUybuSDiXfHaYjsUEFF4RNlFu6pJl4dqq8MiwriOFG/YPm/QYzTwoqHXaPq8ij2/LGyjQEDbYSmPIYipygD2y4JqBMy9z924RuvnlT3PFtj5JFW0t8nl1kEjRWpypt9L15KoMH+4+N0agBlzxaxKrnsTrcGXxdJokC69ac+N62YFOmw/s/q7KvNCpGHSBplN7lmftBladFi7yT6LuUF2YCPPR2nA4O0ZJsXQzFSGeEeL3diGsCdmLlqBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01AH96JkYiqD9j43U4iyLoy2",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Ny leveringsplan for PO-120, revision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "linje/line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "vare KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "40 stk leveres til jeres lager 23.10.2026",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 stk leveres til jeres lager 23.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "40 stk leveres til jeres lager 23.10.2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 stk leveres til jeres lager 26.10.2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "80 stk leveres til jeres lager 26.10.2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The supplier (Kestrel Fasteners) states a revision 3 delivery plan for PO-120 line 10, item KF-A-01: 40 pieces (stk, EA) arriving 23.10.2026 and 80 pieces arriving 26.10.2026. Units are stated as stk (pieces), mapped to EA; the email gives no pack unit."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1035,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 260
+        },
+        "latencyMs": 5700
+      }
+    }
+  ]
+}

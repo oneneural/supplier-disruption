@@ -1,0 +1,150 @@
+{
+  "scenario": "D05",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_0118DRYbj3nZ8iGQ5P4axKKq",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1484
+      }
+    },
+    {
+      "requestDigest": "9e1aa1c77b9b7b35611363374f5a4a3ebcf163f08577f3b5223d405e74e2c9d9",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01KaCQHoHMtiKTZEWWyfXPSM",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 267
+        },
+        "latencyMs": 1786
+      }
+    },
+    {
+      "requestDigest": "16d7c0da28675e3a830c26c21bf610c477c569f8abf1606f44713b32701eab42",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSpAgKEAgTGAI4AUIIdGhpbmtpbmcSDI6Jhv2EFX/H+s0ddBoMuPCwpbxGZwswtMjcIjBRRoQB6VTWQl1LyFx5PXJikZNkvNLffkYGoAP38AfP9KF5WH5dOby1jtG8jVS1UlMqwQe8zgnMLG50JhJ2y+HA5SI64LSpux6RSfyG5lQyJ1eTs8v3f1D9HoH7tuqM0+eTFPK2st2FA/WN1qefWpEyNwiNrEQDxEEtwLyMEn8RPS0SQMawmV3dUliD9NafbvLY9+t156/BeAB+oLwJU/r8h1bqvPX9YHLiQLEXRgpULNRJCW4UG2qVOEXaVvBPObJbVCaMOygFtTmZol6Gu8rxleBAZ2aC5ukhLYUAMlzzQ3F+ON4RsxdoWRqwz9VrX6phJT3Fvb3FIBB1n787T5zWJcy6/i9DaGG1hxv21rk0NEmcU1P6CGKRu6TYchpjoumPLSRuTI1dWbh2oUklIspY2sDySVObgSq3P948a92qvtdzcPZJLNUUUM2vCPuoftHrA0KvQJfTwAbEakPOEa59N8awwZ02+krFqTHVR38d0OYLaAFcmJqLv0RI4hD4E9uV3DlxJcRra3f4NfCWJiape5O4yWmN8LUg08r1fogqwE8GMEaEmTFAHSzAEQvKtqgahCPhyCS2bWXUB1a628sNxS3oEadMvljICxshQTPu8YEnLEl24ZaQzHXQTgXGaVDcKMDwceWGkYy+dyx1sE4thKVczCIBeW+n2uwOCzncxEA4Xm4v0x2RNl/GdS1BmvVFG1iJhlRq2fJYjc4hVCF6wHDbxjQnICmbZYyVbRsGJVCJ43g7DocGXidifWXzAhwCNpXnZ6ixt0ChtvRBiwKOjuQO2O6ETLUggDrTzEBQtP5VsVmuAAzVLoX7sBvRyqaLq+kUunCtuM5DpcRLkMxUoUwFKM/YLF2Sx/IL1K/jC7hYnThrhQJqlIl2zGJVNjf3lQR86kr1t+w54mTdlbo5qeicw6sgInmSCTH3BtnJtcYxaFfMMbU5iZvZbR/vxei9r2fFhPnf4++1b0QYN4eTlD0jFKTZvug05qN/WtpuKRzsfpk458sXPF4mc6yyBOBcaHwYfIDMFurwa15tyq3/vJzW89l+TyRJ92pUd1IV9JZkuNs1spLL6oV75zE/OvPwa4MYea8ZwcfcqGsx9z/inoS9FnGfnBoaMrG+Sf/0OgCR2bU+2nsixtQUr+itBKDGjVYBkMCBA1icpMwzXJklHXFMSP0oxyfRljYNoRGu01EZgOnqOmtZOI0PhCdhz0LO4ZXNUkcqyVqMNzcDkP7xjSOmA4v4Bu9Ow7OKIlR8xJi+wJ7xkcF5eZrv9q9/j7Q13Tf7Sc9GrB3wh5DREjE9ZR2M1ve25wrOo24y6BA1iLbK1grfzML5SNDouHHt+TTbqPd5GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013Uc3k8TyLHowgbsJP7ZQzV",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Subject: PO-120 partial delivery and backorder",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10 (KF-A-01)"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "On PO-120 revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10 (KF-A-01)",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "we can deliver 40 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "we can deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "we can deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "The remaining 80 EA are on backorder",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "we do not have a delivery date yet",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "Supplier confirms 40 EA arriving at the warehouse on 23 October 2026 on PO-120 revision 3, line 10 (KF-A-01), and the remaining 80 EA on backorder with no delivery date. The email's 40 + 80 = 120 matches the ordered quantity; the PO's accepted schedule currently shows one dated segment of 120, so the split is a change for software to validate."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 935,
+          "cacheReadTokens": 4003,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4710
+      }
+    }
+  ]
+}

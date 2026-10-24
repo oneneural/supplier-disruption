@@ -1,0 +1,40 @@
+{
+  "id": "H03",
+  "family": "Missing or expired conversion",
+  "note": "Held-out H03 (en): Clearly stated carton quantities have no matching effective conversion in the unmodified seed.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H03",
+    "text": "Please review PO-120, line 10, base revision 3, vendor item KF-A-01. Unit: CTN. We propose receipt at WH-A of 6 CTN on 22 October 2026, then another 6 CTN on 28 October 2026. The cartons are factory packed; no pack size is stated in this message."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "CTN",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "6",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-22"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "6",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-28"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; case needs_clarification (uom_conversion_unavailable)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

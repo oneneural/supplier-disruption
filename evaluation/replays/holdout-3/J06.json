@@ -1,0 +1,132 @@
+{
+  "scenario": "J06",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01NLY9hbRZAdjScPniBvkffJ",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 975
+      }
+    },
+    {
+      "requestDigest": "7754f54456717b95fbca5afda2f4d29c87d3cd58d86d1ad52fd4d85a51ebce05",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Bbj3KzGEMyjTzCj7vRwy4g",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 293
+        },
+        "latencyMs": 1583
+      }
+    },
+    {
+      "requestDigest": "49ffd680591396dc9e0733b623a8a47a515b44703adc71331e8d20837fe56238",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Jw7MJMpNjxpaMBXNb5GdGQ",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "PO-120 revision 3, line 10, item KF-A-01, unit EA.",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3, line 10, item KF-A-01, unit EA."
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3, line 10, item KF-A-01, unit EA."
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "120",
+                    "quote": "The entire 120 EA remain outstanding.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "no arrival date is available for these 120 EA.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10, item KF-A-01, unit EA, with the full 120 EA outstanding and no arrival date available at WH-A (undated). The 29 October 2026 date is an invoice-processing date, not an arrival date, so it is not used. The vendor item code KF-A-01 differs from the PO record's SKU PART-A; this is noted for software checks."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 627,
+          "cacheReadTokens": 4149,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 2879
+      }
+    }
+  ]
+}

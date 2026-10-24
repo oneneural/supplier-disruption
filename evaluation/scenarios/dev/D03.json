@@ -1,0 +1,39 @@
+{
+  "id": "D03",
+  "family": "Stock mostly reserved to other customers",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "Split shipment PO-120",
+    "text": "Dear buyer,\n\nFor PO-120 rev. 3 line 10, item KF-A-01, we will deliver 60 pcs to your warehouse on 23 October 2026 and the balance of 60 pcs will arrive on 28 October 2026.\n\nRegards,\nKestrel Fasteners logistics"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "60",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "60",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-28"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; unrelated reservations stay excluded; shortage exposed against eligible stock"
+  },
+  "forbidden": []
+}

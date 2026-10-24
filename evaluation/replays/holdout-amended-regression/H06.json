@@ -1,0 +1,151 @@
+{
+  "scenario": "H06",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01JU7ino74mNhQcFxFsHfRov",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 2003
+      }
+    },
+    {
+      "requestDigest": "dd3333e55a2e0b83724d27b697cd68365dd065bc8370cb0daca5bb41d2958806",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_011GNBPvtCi4SNPAKQER4XwA",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 249
+        },
+        "latencyMs": 1265
+      }
+    },
+    {
+      "requestDigest": "60c2c33b5b38f5026542870ddbc95d96653499f326edfac17c1f219d2b707988",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS7AcKEAgTGAI4AUIIdGhpbmtpbmcSDDPwYlVcS4xfi9QsjBoMl5zJfp6c8w+1GSHsIjA6ypiIq6UDTm9OJZd9JUi2fuMTvts3ZO71UZBjkt8W+ONIfH2jsA223eYNtGt5Ap8qiQfz7lsWRjDSDRXdLOITl24urJqIzDjmrgp9d7GWP+Sns8/jq+LeBlDwLCvJpiUmp+zvtRZAf/ibOHG3zdhus+fZr8oazisTSEy83a5kJqQf959Tkaa8rY5AT37DCj5D8S8oqCvCs9Kd8c7bagMUNv+d5s/Rr2dPQcvtjOP1BBmMMuRhrrM5jX6J604xudcNXaOCXA3MeUv87tlrIElKzV8PqPNMT+MYoFmcT5H7eRd4em3DIBAIDAjVWQnRdBaI2onb8ew6W2iQ2CG48yh33/ldWNWEKCdczkaF8gunXJ1AJ8DRYEpK1acxgzmc7FcmmL9xWuPelg/Lxu7JWQs4BDZW363QMyvr1SKAN/J6XSIsQYvnYDS6rpEBduFDU1562g6O9yzxaPZ267qSfSiZenXcctczWXcp36WncJnluv8MO+lxCxiwX71tfLGkZoEWAu/0u2PnOzvKL+OfEY8dUr7hjSi8RlM/Av4FOxo79l+PDx+euYtPDvb3q+CPErvu23iz0XAQwWLfJwnhWZkUByznpUHAVwkL/e6NMKe+atvtkUa8ia2XNu5RT59k1VxQpXseZ0sW9b7W4+dWDKa3XzLA/lFxFGo25c/NKk8GXCzr4uDRXq1oh9FoW9rHCjah0wOJOFVBIt4TkApED77upVcyxIq2CwSjyj8QskoQ0El2vZSN5QWaw2/B+4QDZ7j4aP28zZkQ9ZlDwSsj8gUdqhpUSSkB7m3sYTEWNkfKH7d1KlgDs4VrdAmrTz+8WWz6jPnfb8aTe8CAUdbQrC7eFFrlNZJ/RgSfx9LJJDFU6OmMzur7JOIZ/30qdsPXWPXUDql0/njbY4dGu5PsiVnTyohFw4PdtbNss3O+dqYWdqFxcfTrv/frFkLvj6EeO1iyCir6mLdSiBL8WLvUW/jOlVQ8gjW4xrG6AsCMNIyOV5nA3Ef1o8JoE7iwrEZ0WhOy50KmYt8JsIBxmK+PNcx28YroFBpcMyWmmTrd3KBb9Bah10HZRwysg0tpEn7KScFrE/WERV/HFqCcf3ZOXrfuWE3BuwHYyITrvaVVvqdm6Qr3Ehr3hS2h4LoQt+K8lskbOmwT3zFQW6aNPnGTSv9GZqQbsPn5jJTW1s+LoxJ0mgLJ0L2VMTSaB2FdviMmLAn5aUAh35GTMQFLfItuylSdwHV97MrwlHgJSgwi7Zg783Opt0hdzPpE+/VYZBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UkR1kv8EKvPq6i9VnKv3gC",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Schedule proposal for PO-120, line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Schedule proposal for PO-120, line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "40 EA for receipt at WH-A on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "receipt at WH-A on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the balance of 80 EA for receipt on 28 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "receipt on 28 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email proposes two arrival segments for PO-120 line 10 at base revision 3: 40 EA on 22 October 2026 and the balance of 80 EA on 28 October 2026, totaling the 120 EA ordered. The supplier's item code KF-A-01 differs in label from the PO record's SKU PART-A; reported as stated for software to check."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 856,
+          "cacheReadTokens": 3985,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4170
+      }
+    }
+  ]
+}

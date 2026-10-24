@@ -1,0 +1,39 @@
+{
+  "id": "D22",
+  "family": "Restart during a wait or partial write",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "Re: PO-120",
+    "text": "Hi,\n\nQuick update on PO-120 / rev 3 / line 10 / KF-A-01. Deliveries to your warehouse: 40 EA on Oct 23rd 2026, 80 EA on Oct 26th 2026.\n\nThanks\nKestrel"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-26"
+          }
+        }
+      ]
+    },
+    "downstream": "same terms; a restart resumes the same case, owner and run without duplicate effects"
+  },
+  "forbidden": []
+}

@@ -1,0 +1,65 @@
+{
+  "scenario": "H08",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_0138kb6LoqxUB6wvG7wD6RvC",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1053
+      }
+    },
+    {
+      "requestDigest": "c80e051a8a36957e41b87380c314239d1ee3091a24bd60b76834147ceac1f52d",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSoAYKEAgTGAI4AUIIdGhpbmtpbmcSDI2A22FxGjoBtyKczhoMbFddktsOdbtyHZsiIjBmLoVicyEEqfk+Qn1aQzUSOc5WjSxVV29tDR7PHcR2qRgJ7ABVODNqFXTt942y3VoqvQXTJbqrVczfZ1ZNmXpD8biVhNCk75QgZCrarjz1Z4h8qXAlJIiPelBuXP1q8zSPDH/l5eN1FJltc3MqiBcqQRJF6C5wakqbpvEW8WrvQZ4/HDf71A2veaWIKfs+H3kWRM3O+ffM5kEBOvgJTkEhTj7Xjc4QD8Gg0HCSVONbVyHHmafceOBCU3Zi1Wk0HhpiJuTvCeHNohIUwg6sUZZw+n6k6uu7FnpY49HEbqd+A2kcclqu+8sBKR/4u7RxIzlDsW29UNBhgW0S0q9q2c8jAwIRQ5d5hKiUd1H0U41nM5tQ8nsNSCp3c3nivgKZ37MDTFBlRQ4eKQPvmRgX6aA7IPy21auDrWvIuy05UHuun1X2mvSoKY7qYagO9pn8cazQe2qQuO1uI74lkCYF/ZOphO01jzDUZQ7ca1VCpJ2UhHwswhA7HkdisOEAoWyreD6QIP2HBG0nxRRajX1M7GWTLCuLx+GUkTh05nChnaQy6L0YG0ACDkSCsvTko7tEl44bec9lhxebI+8XqqwUUpYnmAb47vahl5laQTCTO6TGFmTU9KG9PDgDSOWtjNuNEqliSXPh53xKR43VaxvG/1+VLpc8HMPYXtOeJiiu4PL6CAd/Al/UacxMDOBUaJYW4ukY0zSCmpv85OXu9WzMbNjHMyf+bk2SInKTWtCBeZg1cJsvFWZemWc5zV2+kJcqayeAc7jXDWnzH2lzgP0ZWUru9/vtOfqBIuw3xMafaFVYRRms6C3nCxu2qETgZmlL1VmjP+Eyd9qU//2r7DV06x+bqHEhf8wwhHW38dU6F6yjSppwy90iyptD8291YpQF4EbCoB6boh6De6KY1eJxDpsaumhOy6A7VaDqQSjdS+Fl3ylBwE07koxLkK/DG0pMzyBtIPQXw9mI7gWmwxPUhbh5MkHMzPA/WoBDGW3Qw+GATRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01D83274DS9T1JT5UdzCfPeG",
+            "name": "escalate",
+            "input": {
+              "reason": "contradictory_evidence",
+              "question": "The email body and its attachment give different quantities for PO-120 line 10 (base revision 3, KF-A-01, EA, WH-A). Body: 30 EA arriving 22 October 2026 and 90 EA arriving 27 October 2026. Attachment: 50 EA arriving 22 October 2026 and 70 EA arriving 27 October 2026. Which schedule does the supplier confirm?"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 290,
+          "cacheReadTokens": 3953,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 2019
+      }
+    }
+  ]
+}

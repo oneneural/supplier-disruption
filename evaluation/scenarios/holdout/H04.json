@@ -1,0 +1,40 @@
+{
+  "id": "H04",
+  "family": "Supplier ship date mistaken for receipt date",
+  "note": "Held-out H04 (da): Danish dispatch wording places shipment on the cutoff but arrival after it.",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delivery proposal, H04",
+    "text": "Vedrørende PO-120, linje 10, basisrevision 3, vare KF-A-01, enhed EA. De første 40 EA afsendes fra os den 23.10.2026; forventet ankomst til WH-A er 26.10.2026. De resterende 80 EA har forventet ankomst til WH-A den 28.10.2026. Afsendelsesdatoen er ikke ankomstdatoen."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-26"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-28"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; case escalated (unresolved_shortage)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

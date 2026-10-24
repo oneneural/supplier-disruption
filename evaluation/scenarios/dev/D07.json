@@ -1,0 +1,31 @@
+{
+  "id": "D07",
+  "family": "Missing or expired conversion",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 now packed in boxes",
+    "text": "Hello,\n\nPO-120 rev 3, line 10, KF-A-01: please note we now pack this item in boxes. We will deliver 5 boxes to your warehouse on 23 October 2026.\n\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "BOX",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "5",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; assessment blocks uom_conversion_unavailable for BOX; no guessed pack size"
+  },
+  "forbidden": []
+}

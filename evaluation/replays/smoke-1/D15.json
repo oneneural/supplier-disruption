@@ -1,0 +1,65 @@
+{
+  "scenario": "D15",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_0171gAjvDt2i6YdowUnC7wFw",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1126
+      }
+    },
+    {
+      "requestDigest": "ad5caa3ed0fc0013baf695caf98da80b4ccbeeca6bd5dd59b11eb4db9b160c76",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSkQYKEAgTGAI4AUIIdGhpbmtpbmcSDJZrW7ABlbKLehxgZhoMNnfTOLYghbBfp8i4IjBJ5jNeWjA2je85ynzQbxqwFKwDFxWa665itsfxhehbvpoZVxIuUPapCasoO2f6VewqrgUqVDkgoa9C12o57GmDWyySiGrycsPAntnE2PmyPd+e+QIlg2qXhPiwHvSHvy48apN3+SgVCq0i5FtRc54roGKnA5/5nblk16aTN/ItymAglXXDnrP+AHM1IVUue0iAA003e6gGHHG3TAgyQ5VFsk1WP1IJC8tTny52+Gltcio9KdGFhMqObKjnfrXImqsRJXAAp3A/SSguX0AB+2wUBlX/nkEgnXu2GcRUMNblktw9JTf0aYeG3IDw5L7m3rmxBBNzTUN7s2vr0yC6LiLYmMLvFxsLHGmOYLEe/Neow0+1UwCLR3Pb0YYvZZaIY8MWvR9GOXphA99pnTX46vY+LW1m7nSd4gYepk/IvWoo5pV5jbh6BBcao36fpww5NO6eexLEfaSPrVctkknjd3gKdgSlxEsWmR/R1rLV2CulNu98aEZ6hb6tveQI0er85VtOsh2lH4vqrN171BpNatFZFTz6ACKYgGBYyxb7HtCP3sSZqpTsse/v3d5aKqxCvLbdrIt71aWNj1eh3ktZVusSIJe/DkhiCsGwUgCq5j8Cc2SB9z9G2j+ezrZjIvCaFtY2ds8kbfJa8or5QW9I9R9axP+YLC8GiGncufE1pLndBLKHfu5gqkwJF9MEAh6I64HQbPhXPgQH2zIlbyNBFqjkWPnDHYjurMbVIjeDTVAn3oJZCYOm3QRDhY7imdobhhyvKF2pNQJpZZHl9vFkSvalDL2sWeKaLwJIc6WxB/6I8uja8d7UWn6bbKmP0aPvbx1rwyjTyF+QxwxaV+dogkESNeR0tBKiULbyV0iXvXhfDVwDxlLtiYtka+Ty8EdV92V8a9b7NH3vH9uLlCfIRqDimEDclia4AnTntAI0GSm6n0lqXAYQSRM9G9lCSqWStf96ld3U4XtJJuRrDYsyeUE8DRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01HzwWeq8SPLsU9Xd7uKoZU8",
+            "name": "escalate",
+            "input": {
+              "reason": "contradictory_evidence",
+              "question": "The email body and its attachment give different schedules for PO-120 rev 3, line 10 (KF-A-01). The body says 40 EA on 23 October 2026 and 80 EA on 26 October 2026. The attachment says 30 EA on 23 October 2026 and 90 EA on 27 October 2026. Which schedule does the supplier confirm?"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 262,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 328
+        },
+        "latencyMs": 1890
+      }
+    }
+  ]
+}

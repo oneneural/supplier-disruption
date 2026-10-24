@@ -1,0 +1,66 @@
+{
+  "scenario": "J04",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01TMLKLQvSxVEo5PVo4crPhi",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1021
+      }
+    },
+    {
+      "requestDigest": "357575221015a7a316e051a46c27387bba4e26b373ded1353b85d0e94f29056d",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS2wYKEAgTGAI4AUIIdGhpbmtpbmcSDEsh7KzhFT88B/ZsYRoMIqFDuIweug0bH+VhIjB/rmiLb+Gv05tMMDsLsnKydQRAxPzbR1yzK8oRZafxz3o/4tbwfUD+J2HuTGSdcE0q+AXs6Z3nzOJ/pKMgVqHNTP+JIEhOJsBbmW0G5eopeHQWJgkhSq8pCQAJ00XSXYoo1pQakpJYDkdVo7U4820scynqpGQGBGixUk/touwIo8bIB1ukSnJd/nvoD3QMKLGap8L0zlPbtb/Ef4umtslvcRAgCTH7X2K87tKkHbg8uMibz4vUDLhGz2Yu4VKEhKdhxaZL80V1EB6UBa8X8MqqjREVlAfH/5m5W09qYcqSTuReD0SnRGUyO7Vr5ncUc3GBxmzOfUBxH36cZkEJUcwVCnwqVrYcH4mwNtE2Y53wLSaz6E8Dar9mRO1S5zG++tQ3AtkParJEosBLbRN2pYqK9OD658PL9B8akzAoJ+Ua8fvEe59Xokqb+87b+mGxTtCUkPwsSsGEtwKBn/qcXHJ7tZ8zISI1jxw1AFG10vXHvw33hcRhdtPCtNmuKDZE47V4kz1nHqLlMTuXJ+HfpKuRa05lCKxxTNzWzszCTFVMZpZ7JRLaH2vYhMGpZcfDhnMiSwz6sBEKpy2X203ejgb6clJjoewSoh7GninxNY+aM4DBLiCebaaG80tU+SHqJf7APfaLgp4F/6M03HRClwF95Q63sxDC4AzUdTll0JQi3TnevEKcNG2zWEKdh3T27jiEHHkGwNBk8vaUADRKbdnSWb4nDqZ0lwpiMoKlT+PsteJRJqgY6WCJ0CD5q0FoxTrfh2Iy6TYs8L2KQkBZKlOriHOAgIMaOJpl9FHKFyzMiir5s3c4QygSpaduzE7SIkIKhRWEyNe6GwC5wXX9xm9cvPnTstgZO2J173X+zi8TiDGGrkBG7X00tV0LyiHJNowFKwJ410b9Cd6qq8wmBpEAKo2SAm5/H/lEsQ12pcQ2/VWbpG07XLWUzzP5S8INgBWP/M8aQmiK4fPDtUFN0ST+w0283W5iWkFUEKl20Vddz+sdWS9XY8SMpruuDTabxXud1IbCCEitUVW6vT/ihvok00OkolDhiA70yFFDbFhM2i+qCPaA4ZLxMVbkGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01N2BpGFX9ajrVJ3SawPvfhs",
+            "name": "escalate",
+            "input": {
+              "reason": "ambiguous_or_missing_information",
+              "question": "PO-122 (revision 1, item KF-A-01, EA): the supplier says line 10 and line 20 both remain on their screen and only 60 EA total arrive at WH-A on 29 October 2026 as one combined truck. The supplier states they have not decided which PO line this quantity serves and asks for the line allocation before a revised schedule is recorded. Please confirm with the supplier how the 60 EA splits between line 10 and line 20 (and the arrival date for each portion) before a schedule is proposed."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 324,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 301
+        },
+        "latencyMs": 2624
+      }
+    }
+  ]
+}

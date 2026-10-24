@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/*
+ * Semantic tokens for the operator workbench (docs/blueprint/DESIGN.md).
+ * Teal is the procurement accent. Every state pair below is chosen for at
+ * least 4.5:1 contrast in its theme, and no state is shown by color alone:
+ * badges always carry their text.
+ */
+:root {
+  color-scheme: light;
+  --background: #f5f6f7;
+  --surface: #ffffff;
+  --surface-muted: #eef1f3;
+  --foreground: #161b21;
+  --muted: #56606b;
+  --border: #d3d9df;
+  --accent: #0d6b63;
+  --accent-hover: #0a5751;
+  --accent-foreground: #ffffff;
+  --focus: #1f4fd1;
+  --selected: #e4f2f0;
+  --neutral-bg: #e9edf0;
+  --neutral-fg: #2c343c;
+  --info-bg: #e3ecfb;
+  --info-fg: #1c3d86;
+  --warning-bg: #fbefd2;
+  --warning-fg: #634000;
+  --blocked-bg: #fbe2df;
+  --blocked-fg: #8a1d12;
+  --verified-bg: #ddf2e5;
+  --verified-fg: #145230;
+  --suggested-bg: #ece6fb;
+  --suggested-fg: #4a2a8f;
+  --banner-bg: #fff2bf;
+  --banner-fg: #3b3000;
+  --target: #fff3b0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: #0f1317;
+    --surface: #171c21;
+    --surface-muted: #1f262d;
+    --foreground: #e7ebef;
+    --muted: #a4afba;
+    --border: #333d47;
+    --accent: #3fb5a8;
+    --accent-hover: #5cc6ba;
+    --accent-foreground: #04201d;
+    --focus: #8fb0ff;
+    --selected: #173230;
+    --neutral-bg: #262e36;
+    --neutral-fg: #d5dce3;
+    --info-bg: #182b4f;
+    --info-fg: #b9cdf7;
+    --warning-bg: #3d2c05;
+    --warning-fg: #f6d58c;
+    --blocked-bg: #46160f;
+    --blocked-fg: #f7b9ae;
+    --verified-bg: #0f3320;
+    --verified-fg: #a6e2bc;
+    --suggested-bg: #2c1f4f;
+    --suggested-fg: #d2c3fa;
+    --banner-bg: #3a3105;
+    --banner-fg: #f8e7a1;
+    --target: #4a3f0a;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-focus: var(--focus);
+  --color-selected: var(--selected);
+  --color-neutral-bg: var(--neutral-bg);
+  --color-neutral-fg: var(--neutral-fg);
+  --color-info-bg: var(--info-bg);
+  --color-info-fg: var(--info-fg);
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-fg: var(--warning-fg);
+  --color-blocked-bg: var(--blocked-bg);
+  --color-blocked-fg: var(--blocked-fg);
+  --color-verified-bg: var(--verified-bg);
+  --color-verified-fg: var(--verified-fg);
+  --color-suggested-bg: var(--suggested-bg);
+  --color-suggested-fg: var(--suggested-fg);
+  --color-banner-bg: var(--banner-bg);
+  --color-banner-fg: var(--banner-fg);
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --radius-control: 8px;
+  --radius-panel: 12px;
+}
+
+@layer base {
+  html {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  body {
+    @apply font-sans text-base leading-normal antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  /* A followed source locator highlights its evidence row. */
+  :target {
+    background: var(--target);
+    scroll-margin-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "scenario": "J05",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_013EVNqhimw5R92qJjJDn3WT",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 908
+      }
+    },
+    {
+      "requestDigest": "a22158ccd2295bdc427a1b0c6cd4bcc377354089a7c943e83f7fbcf0a5d40fe3",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS3QgKEAgTGAI4AUIIdGhpbmtpbmcSDHlaepmChldTuA5bxRoMWawyubYft3ZKEhZzIjC3vkdsSdAOGmkjMTYzEuVS+TWva7OnAvjq9WU5T3AQeAh+N1nileOQFpbR69UOuooq+gep5XCvo7oFwwxQMmxhIdsEai2xdTZDITfweXXVRwQcsuQve3g33Y2qn56Pg8Hf8a3ifeB61nOTJ0d7xg1eE0dgHokBNy3E/kfgsnnqnMSMOSbsHJ964cy+TSU7J2LLgZfnCly4bw2o98UTfdOZofb2OkhgNcjHvaPMDvwapNMYaOLajvabccstbfTIhzHpZjqplTTh40aO5FCPVJS3bItX9c61DrdRNrHre6W29bhJjAiQn8ol1CSLgJejX5XYXfIPnpGCKuw9sTatXxoOEiDhHlUOgL4YQggp6ko8wR6JNIqJ+raHYsix1C4NllBgR7bZ8xYoKX5RsGQxIeVkgXfPjyVFW3lncllCl53lFrGpOB/Jv1tivXdkfdMswHtlrndAEHcXSODSMq4Q9dotkDRr1m4iQxBQqvrGwhiYP6VuX1AMnjMy93Otn2hySyraoWXmoegxQmHYK7P7RuWMWkQn/u/hePSVTJJId7ggEhMW8rreIKokNwCbEfNbQrcP/fQt3iTnoMkyZJmXq7uo7tCiG2599dzaWM5LItHGw6azig2xo2US7yfGTY9IHyTasMuGJAyBg2SdxQjpTA0Iy8euBgqbgG2AxVVn2CPlYTpDRcERnNuS14pxkdt1jaUmlpy/I6lwfuvZdEukUXR9a9tsU6oiV923xlOaMqEtHT9GlnDUZimk0doz7xSGHh9qcYQnHSYqokUg9bQWIBuLE3aVdwRZxYdTbeeEG/H/BZQ1T5HcF3euFfIflRhuw3KKWA56TN7IdIMM4wXdy6pTQnEp4hZscbJxBc9Si32J5uT+UfE4Z/pfMduD6P0Si9k9EIjfYk4uGbXRK8cfwRoyGCu2ku+unpjGHLsndIpW6C/RuIsxSjb7EiXKJ8TjsxpDVEzDEIuZHmyPQepEKsH5BrZVzDN/99X4O4fUQEMnDCh0+M4qfRVCvPe9pLeMhlQESGAMbtTEgUauN53Hu0lKdIZ+k7SeltFImwWndLyI39gy9aOL1A+0EoGRRNqlLSZIF7DRTSQfp+f9lvA+Kg0VgrJ/CG3Tzx2bIKjEeXTX5xMJQZAcvP6iR3L8HL/qQ6P9lfo3OF+HpiM/hzTK21uLNc4k1kqD8ydLp6axsOjeOoajl7plznIRhj+C6m6R4N9T7VGG9xVoUs80w4ujd5QX1aOO05wOyvF/uOVh/20SOzwjEsN3HQgvcSlVwzqPAoSQYRoKhvVmGBDs3+gpLUYeFWrRlEIKjJT6v9BZVI4NjhdBjSCzvHwGcHmDyHqJEzfmpT2Ibr/6FjTEXeATwpEMn7OkEjvCAD3r6o/0xJqHvWN5RKU1UPZAKA/g2OPP9vxK/yZJTeiZcOzk115MGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GPufLHVGAMuBfo7bBaAbM8",
+            "name": "escalate",
+            "input": {
+              "reason": "ambiguous_or_missing_information",
+              "question": "The supplier email for PO-120 revision 3, line 10 (item KF-A-01, EA) says inspection has cleared \"somewhere between 20 and 30 EA\" for arrival at WH-A on 28 October 2026, and calls this \"a range, not a confirmed count.\" It also says the rest of the order has no arrival date and an exact revised quantity cannot be issued until inspection closes. Please confirm the exact quantity to schedule for line 10 (and whether the 28 October 2026 arrival stands), and the schedule for the remaining quantity, which the email leaves undated."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 433,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 281
+        },
+        "latencyMs": 2621
+      }
+    }
+  ]
+}

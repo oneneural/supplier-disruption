@@ -1,0 +1,16 @@
+#!/command/with-contenv sh
+# pg-boss worker. It reads this boot's ID from /run/sd/boot-id and has no
+# business-table access; it records starts and receipts through the API.
+exec env -i \
+  PATH="$PATH" \
+  NODE_ENV="$NODE_ENV" \
+  APP_ID="$APP_ID" \
+  DATA_MODE="$DATA_MODE" \
+  AGENT_MODE="$AGENT_MODE" \
+  AUTH_MODE="$AUTH_MODE" \
+  LOG_LEVEL="$LOG_LEVEL" \
+  BUILD_REVISION="$BUILD_REVISION" \
+  DATABASE_URL_WORKER_FILE="$DATABASE_URL_WORKER_FILE" \
+  WORKER_SERVICE_TOKEN_FILE="$WORKER_SERVICE_TOKEN_FILE" \
+  BOOT_ID_FILE=/run/sd/boot-id \
+  node /opt/worker/dist/main.js

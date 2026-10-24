@@ -1,0 +1,159 @@
+{
+  "scenario": "J01",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01T97BikZNGFKWQAWhDXEX1g",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 3856
+        },
+        "latencyMs": 1565
+      }
+    },
+    {
+      "requestDigest": "7292536dc6b79bfd845255eeda2caf0ae1354c4da10c021deed3aa1f9a98c1a0",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_013ynW9VxVXk4VXKVhVVSYMz",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-121"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 361
+        },
+        "latencyMs": 1112
+      }
+    },
+    {
+      "requestDigest": "469f23445a9061690850304c98f8478b3322c32753c5fa6d13f5737b61d64df9",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01EzooJN7kuGbTEKqek21PNV",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-121",
+                "quote": "PO-121 revision 2, line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-121 revision 2, line 10, item KF-C-07, unit EA."
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "2",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-121 revision 2, line 10"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-C-07",
+                "quote": "item KF-C-07",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "25",
+                    "quote": "25 EA will arrive at WH-A on 25 October 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-25",
+                    "quote": "25 EA will arrive at WH-A on 25 October 2026.",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "45",
+                    "quote": "45 EA will arrive at WH-A on 28 October 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-28",
+                    "quote": "45 EA will arrive at WH-A on 28 October 2026.",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "80 EA will arrive at WH-A on 2 November 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-11-02",
+                    "quote": "80 EA will arrive at WH-A on 2 November 2026.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-121 revision 2, line 10, item KF-C-07 in EA, with three receiving appointments at WH-A totalling 150 EA (25+45+80), matching the outstanding balance. The PO record shows a single accepted segment of 150 EA dated 2026-10-24, which differs from the email's split schedule; the buyer should review the change."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 826,
+          "cacheReadTokens": 4217,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3978
+      }
+    }
+  ]
+}

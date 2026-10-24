@@ -1,0 +1,48 @@
+{
+  "name": "supplier-disruption",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": "24.22.0"
+  },
+  "scripts": {
+    "build": "tsc -b && pnpm --filter @supplier-disruption/web build",
+    "build:packages": "tsc -b",
+    "typecheck": "tsc -b && pnpm --recursive typecheck",
+    "lint": "tsc -b && eslint --max-warnings 0 .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "pnpm build:packages && pnpm --recursive --workspace-concurrency=1 --filter ./packages/config --filter ./packages/contracts --filter ./packages/domain --filter ./packages/agent --filter ./packages/connector-erpnext --filter ./apps/web test && pnpm test:workspace",
+    "test:integration": "pnpm build:packages && pnpm --recursive --workspace-concurrency=1 --filter ./packages/db --filter ./apps/api --filter ./apps/worker test",
+    "secrets:init": "sh scripts/init-secrets.sh",
+    "db:up": "docker compose -f compose.yaml -f compose.dev.yaml up --detach --wait db",
+    "db:down": "docker compose -f compose.yaml -f compose.dev.yaml down",
+    "db:migrate": "node --env-file-if-exists=.env packages/db/dist/cli/migrate.js",
+    "db:seed": "node --env-file-if-exists=.env apps/api/dist/seed.js",
+    "db:backup": "node scripts/backup-restore.mjs backup",
+    "db:restore": "node scripts/backup-restore.mjs restore",
+    "start:api": "node --env-file-if-exists=.env apps/api/dist/main.js",
+    "start:worker": "node --env-file-if-exists=.env apps/worker/dist/main.js",
+    "test:sandbox": "pnpm build:packages && pnpm --filter ./packages/connector-erpnext test:sandbox",
+    "test:workspace": "vitest run --config scripts/vitest.config.mjs",
+    "test:container": "vitest run --config scripts/container/vitest.config.mjs",
+    "demo": "node scripts/demo/demo.mjs up",
+    "demo:down": "node scripts/demo/demo.mjs down",
+    "screenshots": "node scripts/screenshots/capture.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "@next/eslint-plugin-next": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "globals": "catalog:",
+    "playwright": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vitest": "catalog:"
+  }
+}

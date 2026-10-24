@@ -1,0 +1,333 @@
+{
+  "scenario": "H02",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01RgeAu3uEgvu4SDTihrNRPW",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1141
+      }
+    },
+    {
+      "requestDigest": "b040966a89dd0f0422a63ac590ebd7b4229508b90ce563d8442d7a48764fdb28",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_017teUoAftkMq1KLpiCkoVQn",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 293
+        },
+        "latencyMs": 1081
+      }
+    },
+    {
+      "requestDigest": "c65a611e862b978640b6e8353e9728688062ec69d8443ec87e55af925ee00c95",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSswgKEAgTGAI4AUIIdGhpbmtpbmcSDDJVQo145iakOytOsRoM5+t9vE0jYlnIdgSPIjBWQSOBnowEXUjQhUVRWgew7pYkuaNSSXd//1SF2mOU9IdpF88ACnptxyUp0SY/b/Aq0Af3+Zn4oOuj1aIXE59UYZUgXo+eKq4lSdPGAKBRy8XM8oU6Xtc+XyeRdqnWC4Pry8WOWpkoAw0LJQAOK5IFY/+ghDHAGpTUPrfxbq/yQrcbTlrGhxLprk3hy7r2E3j2q1ho8Y6AC2KZkH3F7ppV8ggVGCj5Qw41uyH37ZHr8u3QP6QaTPDpqWmRFKT7RmlBzwY2ovPzhEhfm3JO8LE8D5RJBG0az3vf18Pi45fHlg+1ytUf7eGwlEbsoKSE8MilpBOMP2PVwS1qq/5ROkezueLMUDdMBKS8waIl3j262sW0xtPSO2IccrCEirZGmvRdaV+UBE0pXxRxUD2XlVafTOE4eKzDkf9/68pbt+HQSdQ2DmWkJAaYgrqmA3U07o+a6Fi233xOCmWPA9ux7ExhLu4ojD4HHi34M4yx9eUh0FzbOcCZmR5jQaNgssvGuRFgsPc+RFnhGyk64s+k5Qa1G6Xm0ghWRK9b/hIYLP0QShqdatIzzEuhrT76iL2vCZMSfx30mYLwmGkDun14J+Srs19ESXv6L0yqRH+HEjXdZJb+zeQUMekiLl+M5fMbMjGE1pdIXbzK9oHUilhZyZO+hHx/zcENB08UHfCKzqHwUhnu9NMLE+z/ceGVytM7/0VPrORK2xDcY4HDE3CI7aAeesffsVGwG1m4vFLAroWFIyC9SYiXIa5ZogBhriopfee++GSh7+LmUHyRHj2FKqA+BJYK/y5r1nXSYYucrCJBniw5S8PMzBnPhbmmLBQe7Q/orDzv6Z60Pw2Z3M/AiiCqt4T5xuOqM7gKbg8p/lFdu8TjvdFjYQbhDpXOFVcIQCSJZxgxPknz+GB840gTVGrAAC28JXKeOfrGJsqviF1LWzeljxl2DWt0qhceKS0PLb5MvE10B7KxGd6PfNvYkrw1hGO9TE8NH5bAhIOxGr5uUHGgwES+6SR+MhIc+ZtjcCg51uQEuHxVDnD8Ebsnf6elhhVeBv2h4z1FIT1Wqb18mLBUREC9seGclza98VXV/Vd0DN/+NpNSz5kZ5+oxAzL/b+HsHzBOWy7qr6+Nj711+9tgmGbnBRV+HDuMc4FhW/qb1T2BGvzJXTz8yYvs0KzB7eS46LU2DIpQDX7xt+phTpjBq4RmP+OrsTs7LGpcbO0CLXKhn0eEgALlGiANZ+8Rr+2BSEnfHi2wweHoNd1UGKj2kaFSMI/XA/W7rU8Uzp8qo1SoJB+g7Whnxl6cT7hitRWZf+R5H/yfrsx9mwXUSfwivojr8J7NwVPBovJBvJYDCOANADOa7MTI9URuo37lyLeDGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018D6UxFbBsRLAo3SUFJUNbE",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Zu PO-120, Position 10, Basisrevision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Position 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "Basisrevision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "Artikel KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "Einheit EA: 30 EA treffen am 23.10.2026 im Lager WH-A ein",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "30",
+                    "quote": "30 EA treffen am 23.10.2026 im Lager WH-A ein",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "treffen am 23.10.2026 im Lager WH-A ein",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "90",
+                    "quote": "Die restlichen 90 EA bleiben im Rückstand",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "Für diese 90 EA ist der Ankunftstermin noch unbekannt; wir haben keinen Liefertermin zugesagt.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The supplier confirms 30 EA of PO-120 position 10 (revision 3) arriving at WH-A on 23.10.2026. The remaining 90 EA are backordered with no arrival date committed, so they are proposed as undated."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 921,
+          "cacheReadTokens": 3884,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4501
+      }
+    },
+    {
+      "requestDigest": "12c0f2330c125c57a6fea67a439c1034dfddc52d101446d6e0ce88157148ffc4",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQStgoKEAgTGAI4AUIIdGhpbmtpbmcSDEDRfLHkIRxjbUINsBoMJzu/WR/fCdKwmYiXIjBt+RNZr3no2Xdyz2OMiR9/I2/Q4lbQachrEEirBALgPEqyo8HJrpVoryKu+hahf/cq0wk1NL1tInzJmtTq0P2x7myNhUrn52S8RUX+Ur6zhk2KPFdkf6fYc10lvL4rZNYP7TJTnPxFgMrvTahlGL4Uga7PwxWH883kqUVxig/wHfPeuKi15U87aT6sgUc1orcH7MniOLRfGwWVyfU31Fqn/QRZ8Y9xYDt7K3YRVnC8Ykmg1tDxKuJw/kW/Gei80TmSxHERpfqGHdD+Ecp5B3B8vEoxuTLJI4oIo2QFdSnGtetrTlJmJh+bB7UHmBbUdynmOFkoTmn0AhfjwBywbJlSmaD8CXbwDXvrd2v/naHfbfB4f650ql6x+REaTh+CyvQgBX3BwWggJo0EfwE8KeLbd5XmVag9VEK9KrzAKHc0mJbeiGtoeH0m81QYMk2wQtR6LG39thsuufM1cQJqUHtLdIkY/EgdsJ7fo9gcIcfid3jik3e50saWWI2vX92PzugR6vT0ZsmNvaDAa1v6QM/HNIiHRy+teE8GqHTzLPnWbEouYXh3aD12lBndyrGohEEacpunhIfCOsLHphzNIxKPcIBmCpHBFQWKN3vM3gLovbGS/v/PRrl4O7XYMtr6RYtLTl+I4AzvQaigCSJlxorDQRr2YUeebuPf0T4XokWNmAbSxsZWz09dX2mxkp7dPj0SOUlkITd+ZaDGPe8pDviLPMMfVEYFiLfJp5V8RSyhgHj07F+cXYPrqaMw7YtpUJwFF5Vvoty0geMjq03Cnwe9Il/EFaimgW7WwF++3jj9ZAYyu27IUXESpEqcVUSUaVT/J3p9aNeWDgbye7a0mP9X33ZVZOt4jnxN57lHQXPCOGJHGmt8O4EIH8aS7vAqEApS9LJAet2fP3z7jax9PIqUdbO53qp7ueLnfGZ8K2XwsajAF5yfrNj2ThsEeuir41uoVAzCUefY0dt17qMp6u6xEQONNVGi6Yfob5xPkKib1RKGVra+q7rsBB1oAqHGuXWLRNAixER78pNBEXQaJRsxY1gnbJ+q2oi4wNadCVPg8FX/ZYZfjOUbYVRnBPEUKNYxcFnkCxzQ8VJqiTttT3XtSgw0HfgNxL9bXwp85Kys1jPFXguuJWbZ6sI6OAlJEknQnpft3RFur00BhE+sZ1FB6PN0nbsrC6rAEbIKdYBkLVnWPPm3WGNEjNNaVCSfVgmpAYaio51pOI/LY46D1seoy/SKS0oA1jw1/qy1erjSoGCTo9kwE6QhsvKvAm+jolko0qE1FtALiwmforG4Kr44T6RnNUrEX2uByf+MCU+PHSTPYHJ6N3rCcTpADkAN0CBASJ2NCMZtGZ7veU1qY2ElambBpOsDwYY2TgvmcU7NKzNTw397ZMiOiqr0OQGa82bbSTiTjjC4rw9ohNHgyA8o1pspwciktJpS7Nruc5yCpoBQitEXuqdEEz3OlZc8J4c0ko3AHQLBW9GD0iqfuCQ7ST9z8z00Ye0xzXBMWbawOPAJPI5vsqIL+snkBJty0Xl0+G9WTN+gGeOG5/y3AN0tgSP9myaHsDRI3OFLf+Twlse5FleeuFN84r2WxG88irsLmlIphu8TmvYDVia31RZ8o4p/YrYLCYFqEp5NNL6HqqNoWqtyy0ZJk0WoVCgHRMTEEFZiKSA1i4lInuo/RgNiTgugt8TaOA+MILbuu0FHNmhAcQp25hgB"
+          },
+          {
+            "type": "text",
+            "text": "The previous call had the citation fields in the wrong shape. Resubmitting with the correct structure."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_015E8EAFdiRnmLgTHpvR2wbi",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Zu PO-120, Position 10, Basisrevision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Position 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "Basisrevision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "Artikel KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "Einheit EA: 30 EA treffen am 23.10.2026 im Lager WH-A ein",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "30",
+                    "quote": "30 EA treffen am 23.10.2026 im Lager WH-A ein",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "treffen am 23.10.2026 im Lager WH-A ein",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "90",
+                    "quote": "Die restlichen 90 EA bleiben im Rückstand",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "Für diese 90 EA ist der Ankunftstermin noch unbekannt; wir haben keinen Liefertermin zugesagt.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The supplier confirms 30 EA of PO-120 position 10 (revision 3) arriving at WH-A on 23.10.2026. The remaining 90 EA are backordered with no arrival date committed, so they are proposed as undated."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 996,
+          "cacheReadTokens": 4161,
+          "cacheWriteTokens": 1001
+        },
+        "latencyMs": 4128
+      }
+    },
+    {
+      "requestDigest": "5be23f6d88bf94cdb6ce31c097eae7da4d96d829404be162ddc9e8b7b7c2db2c",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01ThDHP5ja8ic8b1VEQ9wA8H",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Zu PO-120, Position 10, Basisrevision 3",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "Position 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "Zu PO-120, Position 10, Basisrevision 3, Artikel KF-A-01, Einheit EA"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "Artikel KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "Einheit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "30",
+                    "quote": "30 EA treffen am 23.10.2026 im Lager WH-A ein",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "treffen am 23.10.2026 im Lager WH-A ein",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "90",
+                    "quote": "Die restlichen 90 EA bleiben im Rückstand",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "Für diese 90 EA ist der Ankunftstermin noch unbekannt; wir haben keinen Liefertermin zugesagt.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The supplier confirms 30 EA of PO-120 position 10 (revision 3) arriving at WH-A on 23.10.2026. The remaining 90 EA are backordered with no arrival date committed, so they are proposed as undated."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1102,
+          "cacheReadTokens": 5162,
+          "cacheWriteTokens": 1054
+        },
+        "latencyMs": 4676
+      }
+    }
+  ]
+}

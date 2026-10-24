@@ -1,0 +1,31 @@
+{
+  "id": "D04",
+  "family": "High projected stock but little physical stock",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "PO-120 delayed",
+    "text": "Hello,\n\nUnfortunately PO-120 (revision 3), line 10 for KF-A-01 is delayed. All 120 EA will now be delivered to your warehouse on 30 October 2026.\n\nSorry for the inconvenience,\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "120",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-30"
+          }
+        }
+      ]
+    },
+    "downstream": "intake accept; projected inbound after the cutoff covers nothing; physical availability unchanged"
+  },
+  "forbidden": []
+}

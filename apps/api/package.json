@@ -1,0 +1,35 @@
+{
+  "name": "@supplier-disruption/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node dist/main.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "catalog:",
+    "@langchain/langgraph-checkpoint": "catalog:",
+    "@langchain/langgraph-checkpoint-postgres": "catalog:",
+    "@supplier-disruption/agent": "workspace:*",
+    "@supplier-disruption/config": "workspace:*",
+    "@supplier-disruption/contracts": "workspace:*",
+    "@supplier-disruption/db": "workspace:*",
+    "@supplier-disruption/domain": "workspace:*",
+    "better-auth": "catalog:",
+    "drizzle-orm": "catalog:",
+    "fastify": "catalog:",
+    "pg": "catalog:",
+    "pg-boss": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "catalog:",
+    "vitest": "catalog:"
+  }
+}

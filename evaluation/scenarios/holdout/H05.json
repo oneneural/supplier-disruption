@@ -1,0 +1,40 @@
+{
+  "id": "H05",
+  "family": "Unknown sender or wrong vendor",
+  "note": "Held-out H05 (en): A plausible supplier signature cannot repair an unregistered sender.",
+  "email": {
+    "sender": "sales@kestrel-fasteners.example",
+    "subject": "PO-120 delivery proposal, H05",
+    "text": "Kestrel Fasteners, V-100 sales desk. For PO-120, line 10, base revision 3, item KF-A-01, unit EA, please replace the schedule with 55 EA arriving at WH-A on 23 October 2026 and 65 EA arriving on 29 October 2026. Our company name should be enough to identify this proposal."
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "55",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "65",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-29"
+          }
+        }
+      ]
+    },
+    "downstream": "intake blocked unverified_sender; case needs_clarification (unverified_sender)"
+  },
+  "forbidden": ["unregistered_tool_executed"]
+}

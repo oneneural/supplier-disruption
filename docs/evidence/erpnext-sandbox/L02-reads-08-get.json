@@ -1,0 +1,51 @@
+{
+  "step": "L02-reads",
+  "principal": "sd35-reader@example.invalid",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Stock%20Reservation%20Entry?filters=%5B%5B%22item_code%22%2C%22%3D%22%2C%22PART-A%22%5D%2C%5B%22docstatus%22%2C%22%3D%22%2C1%5D%5D&fields=%5B%22name%22%2C%22modified%22%2C%22docstatus%22%2C%22status%22%2C%22item_code%22%2C%22warehouse%22%2C%22stock_uom%22%2C%22voucher_type%22%2C%22voucher_no%22%2C%22voucher_detail_no%22%2C%22reserved_qty%22%2C%22delivered_qty%22%2C%22transferred_qty%22%2C%22consumed_qty%22%5D&limit_page_length=500&order_by=name+asc",
+    "body": null,
+    "bodySha256": null
+  },
+  "startedAt": "2026-10-22T11:22:15.316Z",
+  "elapsedMs": 4,
+  "response": {
+    "status": 200,
+    "body": {
+      "data": [
+        {
+          "name": "MAT-SRE-2026-00001",
+          "modified": "2026-10-22 13:20:55.592973",
+          "docstatus": 1,
+          "status": "Reserved",
+          "item_code": "PART-A",
+          "warehouse": "WH-A - NDL",
+          "stock_uom": "EA",
+          "voucher_type": "Sales Order",
+          "voucher_no": "SAL-ORD-2026-00003",
+          "voucher_detail_no": "rvaff1gksp",
+          "reserved_qty": 10,
+          "delivered_qty": 0,
+          "transferred_qty": 0,
+          "consumed_qty": 0
+        },
+        {
+          "name": "MAT-SRE-2026-00002",
+          "modified": "2026-10-22 13:20:55.612823",
+          "docstatus": 1,
+          "status": "Reserved",
+          "item_code": "PART-A",
+          "warehouse": "WH-B - NDL",
+          "stock_uom": "EA",
+          "voucher_type": "Sales Order",
+          "voucher_no": "SAL-ORD-2026-00004",
+          "voucher_detail_no": "rvb9bmcjao",
+          "reserved_qty": 20,
+          "delivered_qty": 0,
+          "transferred_qty": 0,
+          "consumed_qty": 0
+        }
+      ]
+    }
+  }
+}

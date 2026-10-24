@@ -1,0 +1,287 @@
+{
+  "STOCK-PART-A": {
+    "doctype": "Stock Entry",
+    "name": "MAT-STE-2026-00001",
+    "modified": "2026-10-22 13:20:54.774328",
+    "docstatus": 1,
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rv2va2js9v",
+        "item_code": "PART-A",
+        "qty": 40.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rv2j840mf2",
+        "item_code": "PART-A",
+        "qty": 70.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "STOCK-PROBE-A": {
+    "doctype": "Stock Entry",
+    "name": "MAT-STE-2026-00002",
+    "modified": "2026-10-22 13:20:55.089984",
+    "docstatus": 1,
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rv6kvm7top",
+        "item_code": "PROBE-A",
+        "qty": 100.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "SO-201": {
+    "doctype": "Sales Order",
+    "name": "SAL-ORD-2026-00001",
+    "modified": "2026-10-22 13:20:55.314076",
+    "docstatus": 1,
+    "fixture_label": "SO-201",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rv7nn46ukv",
+        "item_code": "PART-A",
+        "qty": 70.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "SO-202": {
+    "doctype": "Sales Order",
+    "name": "SAL-ORD-2026-00002",
+    "modified": "2026-10-22 13:20:55.400483",
+    "docstatus": 1,
+    "fixture_label": "SO-202",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rv9brkr19m",
+        "item_code": "PART-A",
+        "qty": 50.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "SO-UA-OWNER-RES-A-77": {
+    "doctype": "Sales Order",
+    "name": "SAL-ORD-2026-00003",
+    "modified": "2026-10-22 13:20:55.471325",
+    "docstatus": 1,
+    "fixture_label": "SO-UA-OWNER-RES-A-77",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvaff1gksp",
+        "item_code": "PART-A",
+        "qty": 10.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "SO-UB-OWNER-RES-B-31": {
+    "doctype": "Sales Order",
+    "name": "SAL-ORD-2026-00004",
+    "modified": "2026-10-22 13:20:55.537982",
+    "docstatus": 1,
+    "fixture_label": "SO-UB-OWNER-RES-B-31",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvb9bmcjao",
+        "item_code": "PART-A",
+        "qty": 20.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "RES-A-77": {
+    "doctype": "Stock Reservation Entry",
+    "name": "MAT-SRE-2026-00001",
+    "modified": "2026-10-22 13:20:55.587559",
+    "docstatus": 1,
+    "owner": "SO-UA-OWNER-RES-A-77"
+  },
+  "RES-B-31": {
+    "doctype": "Stock Reservation Entry",
+    "name": "MAT-SRE-2026-00002",
+    "modified": "2026-10-22 13:20:55.606297",
+    "docstatus": 1,
+    "owner": "SO-UB-OWNER-RES-B-31"
+  },
+  "PO-120": {
+    "doctype": "Purchase Order",
+    "name": "PUR-ORD-2026-00001",
+    "modified": "2026-10-22 13:20:55.721729",
+    "docstatus": 1,
+    "fixture_label": "PO-120",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvcett5qr9",
+        "item_code": "PART-A",
+        "qty": 120.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rvcl9nanls",
+        "item_code": "PART-U",
+        "qty": 6.0,
+        "uom": "Box"
+      }
+    ]
+  },
+  "SO-P1": {
+    "doctype": "Sales Order",
+    "name": "SAL-ORD-2026-00005",
+    "modified": "2026-10-22 13:20:55.810151",
+    "docstatus": 1,
+    "fixture_label": "SO-P1",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvdaeufo5u",
+        "item_code": "PROBE-A",
+        "qty": 120.0,
+        "uom": "EA"
+      }
+    ]
+  },
+  "PO-P-STALE": {
+    "doctype": "Purchase Order",
+    "name": "PUR-ORD-2026-00002",
+    "modified": "2026-10-22 13:20:55.890090",
+    "docstatus": 1,
+    "fixture_label": "PO-P-STALE",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvevbfr0jl",
+        "item_code": "PROBE-A",
+        "qty": 30.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rveuu8hn7k",
+        "item_code": "PROBE-U",
+        "qty": 2.0,
+        "uom": "Box"
+      }
+    ]
+  },
+  "PO-P-SPLIT": {
+    "doctype": "Purchase Order",
+    "name": "PUR-ORD-2026-00003",
+    "modified": "2026-10-22 13:20:55.974694",
+    "docstatus": 1,
+    "fixture_label": "PO-P-SPLIT",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvf97l60g7",
+        "item_code": "PROBE-A",
+        "qty": 120.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rvfvh4iskd",
+        "item_code": "PROBE-U",
+        "qty": 6.0,
+        "uom": "Box"
+      }
+    ]
+  },
+  "PO-P-RACE": {
+    "doctype": "Purchase Order",
+    "name": "PUR-ORD-2026-00004",
+    "modified": "2026-10-22 13:20:56.060419",
+    "docstatus": 1,
+    "fixture_label": "PO-P-RACE",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvg3v3qdiv",
+        "item_code": "PROBE-A",
+        "qty": 30.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rvgdhf0vco",
+        "item_code": "PROBE-U",
+        "qty": 1.0,
+        "uom": "Box"
+      }
+    ]
+  },
+  "PO-P-CANCEL": {
+    "doctype": "Purchase Order",
+    "name": "PUR-ORD-2026-00005",
+    "modified": "2026-10-22 13:20:56.143852",
+    "docstatus": 1,
+    "fixture_label": "PO-P-CANCEL",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvhd33pklh",
+        "item_code": "PROBE-A",
+        "qty": 10.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rvh60l7aog",
+        "item_code": "PROBE-U",
+        "qty": 1.0,
+        "uom": "Box"
+      }
+    ]
+  },
+  "PO-P-RECV": {
+    "doctype": "Purchase Order",
+    "name": "PUR-ORD-2026-00006",
+    "modified": "2026-10-22 13:20:56.222250",
+    "docstatus": 1,
+    "fixture_label": "PO-P-RECV",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvhj3gfpa2",
+        "item_code": "PROBE-A",
+        "qty": 20.0,
+        "uom": "EA"
+      },
+      {
+        "idx": 2,
+        "name": "rvhlpof7gr",
+        "item_code": "PROBE-U",
+        "qty": 1.0,
+        "uom": "Box"
+      }
+    ]
+  },
+  "PR-P-RECV": {
+    "doctype": "Purchase Receipt",
+    "name": "MAT-PRE-2026-00001",
+    "modified": "2026-10-22 13:20:56.367092",
+    "docstatus": 1,
+    "against": "PO-P-RECV",
+    "rows": [
+      {
+        "idx": 1,
+        "name": "rvj6nvuoco",
+        "item_code": "PROBE-A",
+        "qty": 5.0,
+        "uom": "EA"
+      }
+    ]
+  }
+}

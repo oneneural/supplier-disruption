@@ -1,0 +1,151 @@
+{
+  "scenario": "D11",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01A8SZkWLNJ5gznp8MrRPPeh",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1862
+      }
+    },
+    {
+      "requestDigest": "ba7f298a11b4485a33ecba5f88bb774e5837c6b40d73a97a6091374e0b6a9868",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01DYseVkDoAiy7GRbUcKA1pw",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 311
+        },
+        "latencyMs": 1353
+      }
+    },
+    {
+      "requestDigest": "0f3d68d0b51ee3880d0423da41205714763695635aa61fbedaddcaaa5612e3fb",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSiAkKEAgTGAI4AUIIdGhpbmtpbmcSDMNwGNjhvZMfm/O0ghoMArTgg5Uzl2j9E6B/IjCAjmXp+cXkEU/ndRsTYzIVDaRYP94xKrMMGbmlAJlS8K3HMMjgXVOhRTNAlUiALN4qpQgVXqt3+KIZR47pOh6+A22gM5zYkHSnrP8GjjaHFuhae0f3iPVPgHSdLz8rGSPoEokk04XnLDrSU7xJwOun6baDY8GxM1D8H0gfDiCjTt0p3e3i8bdVtxwPLZHS5x8x/8fMOOEQtuQN34/IHP+eymBzCRzXoeFu5gy/Ce9S6iRkv/zZmLCqj8V5s2YeWqwvXqNsCKLUKdG8sF1ffawH+574iqQPV+mb7T249itc8SI4xM52ehyeJiqBSZ0e91gmX1sgyP9k6C3wyMBgR0lTCrtcHmPk6ysbQn51qIe9RvJe+YxRVU3GJtGD1Chy2ofgVD8U03GiAIkirsAVlKYGtYLlbZ3Q5LvpxFgPpGIOp43r0eK5/15Q6TTvfyDoWqZVfbCw1ouL/YEWb3+Orpalt5c+jbTrHQyJc6LBvT9/qzpDH4I1U0DT5nxnL3Tpm/ihOeZ3JcLFPA+csxFMHWac9oUA3ifvaz1NwNkFaL43b+ebdjzNyStzdCLXqkbxD7G4JrWbLXxPlhy6jFO12IVNjljF1HY2jJ74dqnb5VpOVwJyjtYlGi0wmJFITvZYd13w2BvMYof+sC7Wp200sisX6fG+KxsCosrknFZR9hMKlO+viE5OvZIlD7+sXr3XkH7SvPWfZYPpqYmQRAiW3dm/NUQNcjqoB1xSfqQBSxD/T93MMfnuObzM49p1+MG7qMUt/HKIHwWzmx1LqJ7IGrwqV8M5jjVrqi93MW0jWpGDhyPsKJ7XevaXQHcDzzPfVIIC3u4cQXdKVy5bRNM3RSXECOoZRuXTjLtGDV4x0B5Ntk2rS4cPYj23ArbtoKqs7spNGtVNFWrSbwIIfSL7ohQs9MOqFjUdBHZHptLeg/SS4ZsSiHD34Sxm84EJ1gZDHmCAvdqxN5FeRNR1zj1sWEcvqaOhihA1oZcgKZY2ToPfUX/jkI38J8eI9+5Ey+CtAK51ZMVw9u5i+X0RRwpToUfGd4vVL3qhGgq6dUHSfZxVlhlmA+WJbi9L8D+eB9pTACiAgPbUIvj++MpH9UzDkPLOpmk7x89FCbd/IoXKF1O0TlPp01o+AfArTGm0Z3/aTySYn+DgJ8SJ/Ze5iylN07iY+oUdNqfb1XVaMTNFD2C15jvCkfRhSM+/LPjjzwr0qj2RPDxfiXGL9xug1qhnz+RokvGZ65JLJUmYThr77nuVhtH6a7djxnMW/CICE0QM9Xa7hk5va+vfpwkNPQfhcSYzYdfc3T0/lLHoBrYMBbWZyEb5QpCxq1IgLONbK4HKuB2DShSk5V/Suoo1JstiGgch9Dcj+QofaWzlMr3uFunVCA2dCTAuuAX0bHO6rnvE8gIyXeuVpcpoNY56oUkRD//q9BAlXF4J9KfvTeRakq/fow3ATbjRTm1Rm+kXru5vCE9LecH1Sl8pnBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01C3zuDg6HTWeScmLbJ9DGmT",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Regarding your purchase order PO-120 (revision 3)",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "our item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "We can deliver 40 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "We can deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "We can deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA will arrive on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "the remaining 80 EA will arrive on 26 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10, item KF-A-01 with a split delivery: 40 EA arriving 23 October 2026 and the remaining 80 EA arriving 26 October 2026. The read of PO-120 returned not_permitted because the sender is not a registered vendor contact; the proposal relies on the email's stated identifiers and leaves permission to software."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 933,
+          "cacheReadTokens": 4167,
+          "cacheWriteTokens": 92
+        },
+        "latencyMs": 4771
+      }
+    }
+  ]
+}

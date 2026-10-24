@@ -1,0 +1,151 @@
+{
+  "scenario": "H07",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01GvcQB85oqMpX14GwXsqhsd",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1112
+      }
+    },
+    {
+      "requestDigest": "8c8ead1835aff8c1d8547cb0946de91bbd504933eb002cb97e6a847e8e70957f",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01TP5kQyKzjMzshqNYozekig",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 259
+        },
+        "latencyMs": 1209
+      }
+    },
+    {
+      "requestDigest": "119864c781a2edb53eec4becac4d8e7e3e71de028e36341212b84e36c36809ef",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSgggKEAgTGAI4AUIIdGhpbmtpbmcSDO6GLUn5XvU/AaDOYxoMHOMthyQD9+es/7q/IjDeHWSc46TUXrVWRrW0+FERAfArdwEAiJcEZi+iUcYAZCyZgpRcGjfzhn3gZXddqtEqnwf0OTojty3Vb2vSfBLGRDLnjCEnUOUx2rPzCpz0JMspaqKXSiSkYzAXYGewYIhP1fkVUt10Lyc6Sm9TnVIXTJds1ekYtokr8skdWVgcKGlzBYJh4K3isxVcKPnOGq0seji9Ava83Tnhc+q+xy4QsfpBEWEEkSarBbNFOxylOzjeYUZs4lufNcp2lqzO34mOvN06IGX9nqlfkYdne+KT1IM42ZW1DsCdbYkQFH5z7iQ2NiqcYQxsFn9na+xnevI8q31rilDtbQHHy0ASWNgWHGLB3/occBfwKlTTFdgItL4M4ynI5/l4J3DI2Cx5ZPvFbWwRZmPQicjym0Q3YBN2lbn0SdMh4om3WwQU4ORtrvf36fVvnPW9X8xSATS6vwb7yXVK56HVZA4HV8vJhN0qYLwrYcY8Fwcwtsi+MEnwaatSLXmbd5z2ym+zF9O5aYrJQy1T1lyz9iF+SWzeTssD7MQrd+ugfsIRbIUlVeag0e+02WmcnqY9UXCDHIGHCfOA30eohVTVF0L0VVKql9rRMVkCm+2w/LxXQaSSdb7rUnGBQDH/ggPu5dFOCwqgFw+eJv97BrFY5wz8MKt2RkKdBIkC29a6Lgfk9Ioh1KDW4oKZ3cZwCQYFn2HLIGv+GHBvzimBsCRmAvr1tUU7s/TIyub4Cqy0PZgv3yT2VVZ4S8Xsu6NVJda2Gv0KLdMFjVAX08EKtG2ysay5I+3Swc+G/V7Qd5XmDI4FDSSFaDFNBTdkyxcHaaWuJzCezkcQsqgDSRGrEQ4b2vDyzU2WPH6Nu9KnuWy4Xzl0bWM3zcxWzxDAegeOUAFt3g1IdsJ28tdqeARQZcg1dlykXke9D5QGJ+Sb8eTZmN0csmY5qrJLck0GAy9oaEGHn6/3mIYMowA1CfOUwfu9Sb3SBYliTctsdEsyVnutWlzu2DY3i2KDFmNDS5AQbwV7/1cW62kgnGIXXdXeU3563myIf4U+lRMcrOsIFLeukfZvSb8zMIpRBMekvmjh+Mw6DFEG6KuFMTZKjU2pNbO8cWK4u1FbYt8PPwIbP+WU/k1PRQ+Zakk3fQ1I4PzRYSYLpshnUi19y4Jjt2jgQhNZn9gIhZs5T8tmWP18Q6NlSRW7cWyKglh0k4XlDAXdR7nRpOEQalVUjtjWZYsrgU5BtCzWQ3d1PPshUmvsZWWZcML7C+ZvrqkAZghoWnS/q/sc3H0ZTSsQR8y93AR5fBdXqaiUJyHXzeriRsoYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01XLsmkVA3sz43otYxunSJBr",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "This note was prepared against PO-120, line 10",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120, line 10"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "2",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 2"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "70",
+                    "quote": "70 EA on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "Proposed receipt at WH-A: 70 EA on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "50",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 line 10, item KF-A-01 in EA, with two receipts at WH-A: 70 EA on 22 October 2026 and 50 EA on 27 October 2026. The email states base revision 2 and asks that it be used; the order's current revision is 3, so this difference is for software to check. Revision 2 is taken as stated."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 830,
+          "cacheReadTokens": 4115,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3643
+      }
+    }
+  ]
+}

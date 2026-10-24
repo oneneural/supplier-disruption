@@ -1,0 +1,151 @@
+{
+  "scenario": "D18",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01MayyYhsBkDcBnu3JYtXwE8",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 943
+      }
+    },
+    {
+      "requestDigest": "46dcaf5ecb251d789db3936486dfe2ef1d19a51299ebcce50ea6106bf622f0bd",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01CoSZ8doMo7WAhj1b8nPass",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 283
+        },
+        "latencyMs": 1324
+      }
+    },
+    {
+      "requestDigest": "03fee17b918f88abf488ce3960a5edd11cff85f6d36a7b58a15c8c28f4c73928",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QoELafsjmNUGuyEkbPnncx",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "For PO-120 (revision 3), line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "For PO-120 (revision 3)"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "line 10, KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "we will deliver 40 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "40",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-23",
+                    "quote": "we will deliver 40 EA to your warehouse on 23 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "80",
+                    "quote": "the remaining 80 EA on 26 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-26",
+                    "quote": "the remaining 80 EA on 26 October 2026",
+                    "confidence": "low"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10 (KF-A-01) with 40 EA arriving 23 October 2026 and the remaining 80 EA on 26 October 2026, totaling 120 EA. The supplier also offered 50 EA of substitute item KF-A-02 on 22 October 2026; that substitute is not the ordered item and is not proposed here. The email states the unit as EA, matching the order."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1337,
+          "cacheReadTokens": 4019,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 5885
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Keep secrets, local state and preserved earlier work out of build contexts.
+# The container tests write canaries into root and nested .secrets/ and .env
+# files and check that neither the build stage nor the final image holds them.
+.git/
+**/.secrets/
+**/.env
+**/.env.*
+!.env.example
+**/node_modules/
+**/dist/
+**/.next/
+**/*.tsbuildinfo
+**/.DS_Store
+coverage/
+docs/
+fixtures/
+tests/
+supplier_disruption/
+pyproject.toml

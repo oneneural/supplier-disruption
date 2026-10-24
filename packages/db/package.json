@@ -1,0 +1,56 @@
+{
+  "name": "@supplier-disruption/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./worker": {
+      "types": "./dist/worker.d.ts",
+      "default": "./dist/worker.js"
+    },
+    "./purchasing": {
+      "types": "./dist/authorities/purchasing/index.d.ts",
+      "default": "./dist/authorities/purchasing/index.js"
+    },
+    "./inventory": {
+      "types": "./dist/authorities/inventory/index.d.ts",
+      "default": "./dist/authorities/inventory/index.js"
+    },
+    "./demand": {
+      "types": "./dist/authorities/demand/index.d.ts",
+      "default": "./dist/authorities/demand/index.js"
+    },
+    "./reference": {
+      "types": "./dist/authorities/reference/index.d.ts",
+      "default": "./dist/authorities/reference/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "drizzle",
+    "sql"
+  ],
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supplier-disruption/config": "workspace:*",
+    "@supplier-disruption/contracts": "workspace:*",
+    "drizzle-orm": "catalog:",
+    "pg": "catalog:",
+    "pg-boss": "catalog:"
+  },
+  "devDependencies": {
+    "@supplier-disruption/domain": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/pg": "catalog:",
+    "drizzle-kit": "catalog:",
+    "vitest": "catalog:"
+  }
+}

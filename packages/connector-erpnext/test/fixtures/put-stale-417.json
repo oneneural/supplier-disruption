@@ -1,0 +1,14 @@
+{
+  "source": "live sandbox run 09c498e2 on 2026-10-22, committed exchange docs/evidence/erpnext-sandbox/L04-conditional-06-put.json, redacted by FileRecorder",
+  "request": {
+    "method": "PUT",
+    "url": "http://127.0.0.1:18082/api/resource/Purchase%20Order/PUR-ORD-2026-00002"
+  },
+  "status": 417,
+  "body": {
+    "exception": "frappe.exceptions.TimestampMismatchError: Error: PUR-ORD-2026-00002 (Purchase Order) has been modified after you have opened it (2026-10-22 13:22:15.379126, 2026-10-22 13:22:15.408221). Please refresh to get the latest document.",
+    "exc_type": "TimestampMismatchError",
+    "exc": "[traceback omitted by the recorder]",
+    "_server_messages": "[\"{\\\"message\\\":\\\"Error: PUR-ORD-2026-00002 (Purchase Order) has been modified after you have opened it (2026-10-22 13:22:15.379126, 2026-10-22 13:22:15.408221). Please refresh to get the latest document.\\\",\\\"as_table\\\":false,\\\"title\\\":\\\"Message\\\",\\\"indicator\\\":\\\"red\\\",\\\"raise_exception\\\":1,\\\"__frappe_exc_id\\\":\\\"db49f608f54ae957722b2a1e2d4a536bbe3d51a4b789bf8e97affe97\\\"}\"]"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source": "live sandbox run 09c498e2 on 2026-10-22, committed exchange docs/evidence/erpnext-sandbox/L10-concurrent-04-put.json, redacted by FileRecorder",
+  "request": {
+    "method": "PUT",
+    "url": "http://127.0.0.1:18082/api/resource/Purchase%20Order/PUR-ORD-2026-00002"
+  },
+  "status": 500,
+  "body": {
+    "exception": "frappe.exceptions.QueryDeadlockError: (1020, \"Record has changed since last read in table 'tabPurchase Order'; try restarting transaction\")",
+    "exc_type": "QueryDeadlockError",
+    "_exc_source": "erpnext (app)",
+    "exc": "[traceback omitted by the recorder]"
+  }
+}

@@ -1,0 +1,23 @@
+#!/command/with-contenv sh
+# Fastify API on 127.0.0.1:3001. S6_KEEP_ENV=0, so the container environment
+# arrives through with-contenv and only the variables below reach the process.
+# s6-notifyoncheck signals readiness on fd 3 once API readiness holds (database
+# reachable with the API role, schema tag compatible); worker and web wait for it.
+# DOMAIN_CLOCK_MODE is forwarded only when the container sets it (the W1 test
+# project does); config still refuses `controlled` outside NODE_ENV=test.
+exec env -i \
+  PATH="$PATH" \
+  NODE_ENV="$NODE_ENV" \
+  APP_ID="$APP_ID" \
+  APP_ORIGIN="$APP_ORIGIN" \
+  DATA_MODE="$DATA_MODE" \
+  AGENT_MODE="$AGENT_MODE" \
+  AUTH_MODE="$AUTH_MODE" \
+  LOG_LEVEL="$LOG_LEVEL" \
+  DATABASE_URL_API_FILE="$DATABASE_URL_API_FILE" \
+  BETTER_AUTH_SECRET_FILE="$BETTER_AUTH_SECRET_FILE" \
+  WORKER_SERVICE_TOKEN_FILE="$WORKER_SERVICE_TOKEN_FILE" \
+  BOOT_ID_FILE=/run/sd/boot-id \
+  ${DOMAIN_CLOCK_MODE:+"DOMAIN_CLOCK_MODE=$DOMAIN_CLOCK_MODE"} \
+  s6-notifyoncheck -d -n 0 -s 250 -w 250 -t 3000 -c "/opt/sd/bin/probe.mjs api --log-changes" \
+  node /opt/api/dist/main.js

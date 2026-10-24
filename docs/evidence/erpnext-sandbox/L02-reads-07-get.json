@@ -1,0 +1,45 @@
+{
+  "step": "L02-reads",
+  "principal": "sd35-reader@example.invalid",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Bin?filters=%5B%5B%22item_code%22%2C%22%3D%22%2C%22PART-A%22%5D%5D&fields=%5B%22name%22%2C%22modified%22%2C%22docstatus%22%2C%22item_code%22%2C%22warehouse%22%2C%22stock_uom%22%2C%22actual_qty%22%2C%22reserved_stock%22%2C%22reserved_qty%22%2C%22ordered_qty%22%2C%22projected_qty%22%5D&limit_page_length=500&order_by=name+asc",
+    "body": null,
+    "bodySha256": null
+  },
+  "startedAt": "2026-10-22T11:22:15.310Z",
+  "elapsedMs": 5,
+  "response": {
+    "status": 200,
+    "body": {
+      "data": [
+        {
+          "name": "rv5h2vhl5u",
+          "modified": "2026-10-22 13:20:55.613724",
+          "docstatus": 0,
+          "item_code": "PART-A",
+          "warehouse": "WH-B - NDL",
+          "stock_uom": "EA",
+          "actual_qty": 70,
+          "reserved_stock": 20,
+          "reserved_qty": 20,
+          "ordered_qty": 0,
+          "projected_qty": 50
+        },
+        {
+          "name": "rv5uuqr4pl",
+          "modified": "2026-10-22 13:20:55.761685",
+          "docstatus": 0,
+          "item_code": "PART-A",
+          "warehouse": "WH-A - NDL",
+          "stock_uom": "EA",
+          "actual_qty": 40,
+          "reserved_stock": 10,
+          "reserved_qty": 130,
+          "ordered_qty": 120,
+          "projected_qty": 30
+        }
+      ]
+    }
+  }
+}

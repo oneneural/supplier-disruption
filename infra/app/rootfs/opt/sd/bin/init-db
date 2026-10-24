@@ -1,0 +1,7 @@
+#!/bin/sh
+# One-off initialization from the app image, run by the Compose "init" service:
+# migrations, pg-boss schema, queue, grants and schema tag, then the synthetic
+# fixture seed. Both steps are idempotent; each is bounded by a timeout.
+set -eu
+timeout 120 node /opt/api/node_modules/@supplier-disruption/db/dist/cli/migrate.js
+timeout 120 node /opt/api/dist/seed.js

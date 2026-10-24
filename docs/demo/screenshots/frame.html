@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+  Editable frame recipe for the README screenshots. scripts/screenshots/capture.mjs
+  loads this page in Chromium, fills the title, address and raw capture, and
+  screenshots #frame at the capture's device pixel ratio. The raw pixels are
+  shown unscaled; only the window chrome, padding and shadow are added.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --backdrop: #e8ebef;
+        --chrome: #f6f7f9;
+        --chrome-border: #d5dae1;
+        --address: #ffffff;
+        --text: #4a5260;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--backdrop);
+        font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+      }
+      #frame {
+        display: inline-block;
+        padding: 28px;
+        background: var(--backdrop);
+      }
+      .window {
+        box-sizing: content-box;
+        overflow: hidden;
+        border: 1px solid var(--chrome-border);
+        border-radius: 10px;
+        background: var(--chrome);
+        box-shadow:
+          0 1px 2px rgb(15 23 42 / 8%),
+          0 8px 24px rgb(15 23 42 / 10%);
+      }
+      .bar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        height: 36px;
+        padding: 0 12px;
+        border-bottom: 1px solid var(--chrome-border);
+      }
+      .dots {
+        display: flex;
+        flex: none;
+        gap: 6px;
+      }
+      .dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #c9ced6;
+      }
+      .address {
+        overflow: hidden;
+        flex: 1;
+        height: 22px;
+        padding: 0 10px;
+        border: 1px solid var(--chrome-border);
+        border-radius: 6px;
+        background: var(--address);
+        color: var(--text);
+        font-size: 12px;
+        line-height: 22px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .shot {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame">
+      <div class="window">
+        <div class="bar">
+          <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="address" id="address"></div>
+        </div>
+        <img class="shot" id="shot" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "step": "L08-lost-create",
+  "principal": "sd35-prober@example.invalid",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Bin?filters=%5B%5B%22item_code%22%2C%22%3D%22%2C%22PROBE-A%22%5D%5D&fields=%5B%22name%22%2C%22modified%22%2C%22docstatus%22%2C%22item_code%22%2C%22warehouse%22%2C%22stock_uom%22%2C%22actual_qty%22%2C%22reserved_stock%22%2C%22reserved_qty%22%2C%22ordered_qty%22%2C%22projected_qty%22%5D&limit_page_length=500&order_by=name+asc",
+    "body": null,
+    "bodySha256": null
+  },
+  "startedAt": "2026-10-22T11:22:15.475Z",
+  "elapsedMs": 4,
+  "response": {
+    "status": 200,
+    "body": {
+      "data": [
+        {
+          "name": "rv7lefpi2u",
+          "modified": "2026-10-22 13:21:05.122079",
+          "docstatus": 0,
+          "item_code": "PROBE-A",
+          "warehouse": "WH-B - NDL",
+          "stock_uom": "EA",
+          "actual_qty": 100,
+          "reserved_stock": 90,
+          "reserved_qty": 0,
+          "ordered_qty": 0,
+          "projected_qty": 100
+        },
+        {
+          "name": "rveta9sd2q",
+          "modified": "2026-10-22 13:21:04.964559",
+          "docstatus": 0,
+          "item_code": "PROBE-A",
+          "warehouse": "WH-A - NDL",
+          "stock_uom": "EA",
+          "actual_qty": 5,
+          "reserved_stock": 0,
+          "reserved_qty": 120,
+          "ordered_qty": 200,
+          "projected_qty": 85
+        }
+      ]
+    }
+  }
+}

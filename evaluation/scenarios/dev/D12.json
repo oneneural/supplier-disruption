@@ -1,0 +1,39 @@
+{
+  "id": "D12",
+  "family": "Unknown sender or wrong vendor",
+  "email": {
+    "sender": "sales@harbor-supply.test",
+    "subject": "Your order PO-120",
+    "text": "Hello,\n\nRegarding purchase order PO-120 (revision 3), line 10, our item KF-A-01: we will deliver 40 EA to your warehouse on 23 October 2026 and the remaining 80 EA will arrive on 26 October 2026.\n\nHarbor Supply"
+  },
+  "expected": {
+    "outcomes": ["proposed", "paused"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-26"
+          }
+        }
+      ]
+    },
+    "downstream": "intake blocks vendor_mismatch (the sender belongs to V-200, the order to V-100); no plan"
+  },
+  "forbidden": []
+}

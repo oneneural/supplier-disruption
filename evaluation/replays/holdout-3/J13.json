@@ -1,0 +1,66 @@
+{
+  "scenario": "J13",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01V6UtUnbXgFABrJ4GR16PJ4",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1564
+      }
+    },
+    {
+      "requestDigest": "ea4355d34d89682b260e831c19599e938b2a0f1856dc150b993afa54ffb13280",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS4AYKEAgTGAI4AUIIdGhpbmtpbmcSDHvWZQS6J1IA23GbzRoMkKconBG680gDAEzdIjAJ2eH8kjICsHYnyTf017o0wnSomX21M/imrhLvnvEZiL7f/Zm7OK7m+L4JtQPlMm0q/QWQ2aWuCPY+boLz4TQp+HBUPHa4ESAvezHeoTAhEWHspqLeHR8Nlh/3bBZqJE6F2H27HJNNn/Moi/ZSe80zQEaYJ1Tn/jN8h910IrZbxTyLfFhfy6F+KMOEEEqWmvMLuyF1Ns15DCAFonxqMnFToczFjvUU+ZfF6j7tZgdmU4+rZ7Rcy8oESzEVdp/+e8YosBSZE5nvarrey4nIsbPRuOsLyGc2vEHkeEtHEqlOfWvFkNma4c5BlVGdPZk+UoC1NaJWzvKBVkAMR1fY2KkXc/gLIVz20osUus5vaZ2mXZH/2AbBjz0SJHUm3Z+0Nj0Q+mvWlcpPvJXumU4fhMup1/VDu8RBU33j7dJLqR2nZWiLbagAkyx9m09NmhD870qRWYpafRxh+xFnIoz7/baUMiSrxQZ9TyIugoQsSIACeENKCIJ2Ol5f5k6xrruoMLOvX3I+rj5R72p1iy7HF+gut16UKCEQOzN0FcNMgmkngZ7ytrtHEjXuuXGGWRL09gnbyXT2b4z/9WveBKyiDhA/eqfiW2wmf5Aj4auKIaeBcHAxK91tO56giu/xbQLqhiMcEpm+8MW6otWBf5FnqRZjaG0CaQ254rQd8o++zcBZgQ87xdyIqF/PIYnkvdNqqWOXrAUVaVJzRghAoFt/rCr2w9cuVGSHfloLIthAfs37vDtHlNjpQuz0gnFkz+F8QOsBSu8y80cY6e6tCHMmGd+Slbp5E5q78cpJvveX1owHpSvIuz5KMItUxLcnod9mKvVN5LN+8nF6s4c3CK/S1bSMxyMS1ctXsxDbdwcRZlkrjbu45JvaZDxK9WyMZVBuGLVzF/YdFZkoJZalH3r/+/97NlX++dVL2BtO0y3Ac7TYOGb0/ept2Dyp/ewxlE/NCDJklfFJSYWGcnC4D8yPuS6jtkFeFbbKIWG79RSdDRulFf0y2FkHyrdPjBQ+gnkW5GBB2z6JIDwarXCuI32CYsEUPbQM8FHMD/fIeMhYx/ZUOrw+4e+seg1tcZaGGI3h6kQYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017QGGiB2aMp4SKPb2fxuUMm",
+            "name": "escalate",
+            "input": {
+              "reason": "ambiguous_or_missing_information",
+              "question": "The supplier email (PO-120 revision 3, line 10, item KF-A-01, unit EA) is only a transmission receipt. It states no delivery quantity and no arrival date, and says the order desk has not accepted or reviewed any schedule and that a separate business response will follow. Please confirm whether to wait for that response; no schedule proposal can be made from this email."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 274,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 288
+        },
+        "latencyMs": 1935
+      }
+    }
+  ]
+}

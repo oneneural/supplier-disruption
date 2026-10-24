@@ -1,0 +1,19 @@
+# Generated output and dependencies
+node_modules/
+dist/
+.next/
+pnpm-lock.yaml
+apps/web/next-env.d.ts
+packages/db/drizzle/meta/
+
+# Historical source snapshots, the frozen oracle and preserved local reference files
+docs/blueprint/
+docs/oracles/
+docs/research.md
+fixtures/
+tests/
+supplier_disruption/
+pyproject.toml
+AGENTS.md
+ARCHITECTURE.md
+SPEC.md

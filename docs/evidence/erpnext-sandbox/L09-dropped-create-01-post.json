@@ -1,0 +1,32 @@
+{
+  "step": "L09-dropped-create",
+  "principal": "sd35-prober@example.invalid",
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:49653/api/resource/Stock%20Entry",
+    "body": {
+      "docstatus": 0,
+      "stock_entry_type": "Material Transfer",
+      "company": "Nordlund Distribution (fictional)",
+      "remarks": "sd-op:L09-09c498e2 transfer request draft; not a dispatch or receipt",
+      "items": [
+        {
+          "item_code": "PROBE-A",
+          "qty": 7,
+          "uom": "EA",
+          "stock_uom": "EA",
+          "conversion_factor": 1,
+          "s_warehouse": "WH-B - NDL",
+          "t_warehouse": "WH-A - NDL"
+        }
+      ]
+    },
+    "bodySha256": "169e8faa90d64b7a90a3fa577619150f7f96f1c5dbab2114fa34c3cd0b46fbab"
+  },
+  "startedAt": "2026-10-22T11:22:15.519Z",
+  "elapsedMs": 1,
+  "response": {
+    "transportError": "TypeError: fetch failed; cause UND_ERR_SOCKET",
+    "timedOut": false
+  }
+}

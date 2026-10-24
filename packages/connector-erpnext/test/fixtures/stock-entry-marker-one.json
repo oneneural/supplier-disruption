@@ -1,0 +1,18 @@
+{
+  "source": "live sandbox run 09c498e2 on 2026-10-22, committed exchange docs/evidence/erpnext-sandbox/L08-lost-create-03-get.json, redacted by FileRecorder",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Stock%20Entry?filters=%5B%5B%22remarks%22%2C%22like%22%2C%22%25sd-op%3AL08-09c498e2%25%22%5D%5D&fields=%5B%22name%22%2C%22docstatus%22%2C%22modified%22%2C%22remarks%22%5D&limit_page_length=500&order_by=name+asc"
+  },
+  "status": 200,
+  "body": {
+    "data": [
+      {
+        "name": "MAT-STE-2026-00005",
+        "docstatus": 0,
+        "modified": "2026-10-22 13:22:15.484826",
+        "remarks": "sd-op:L08-09c498e2 transfer request draft; not a dispatch or receipt"
+      }
+    ]
+  }
+}

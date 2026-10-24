@@ -1,0 +1,133 @@
+{
+  "scenario": "D06",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01P53xd8Bs3KydmnxFxBWwJi",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 2474
+      }
+    },
+    {
+      "requestDigest": "bad3d1a9cf5d7b6b6f48b11051810265088343a5852ee4bb699b5f957bd5d715",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01H9W3mr3pRiy7tJF6SNGn42",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-123"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 237
+        },
+        "latencyMs": 1728
+      }
+    },
+    {
+      "requestDigest": "15d3f5fdd98ff56954f16ce0ecab1f522fe7227ca7b896f921a8542a149e47a9",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_014buR4rno7Q8btgYub24ez4",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-123",
+                "quote": "For PO-123 revision 4, line 10, item KF-D-12",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, item KF-D-12"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "4",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-123 revision 4"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-D-12",
+                "quote": "item KF-D-12",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "CTN",
+                "quote": "we will deliver 10 cartons",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "10",
+                    "quote": "we will deliver 10 cartons",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-24",
+                    "quote": "to your warehouse on 24 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-123 revision 4, line 10, item KF-D-12, and a delivery of 10 cartons to the warehouse on 24 October 2026. The email's unit is cartons, while the PO record shows EA; I did not convert it, so the unit mismatch is left for software to check."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 567,
+          "cacheReadTokens": 4093,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3592
+      }
+    }
+  ]
+}

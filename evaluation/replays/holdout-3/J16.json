@@ -1,0 +1,150 @@
+{
+  "scenario": "J16",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "0f2fa624d9ae438b119729b66527e1db79098efd2960990cabb6c5f0da53ad8f",
+  "exchanges": [
+    {
+      "requestDigest": "bd219cea07aae2b0ea7f4b0c5470b9282e9b52e05ff7124ee448550d06176f4b",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_0176aR8ZEeod7jZ7E2i4iMDb",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1080
+      }
+    },
+    {
+      "requestDigest": "c97144715d87d31e62e25b23794326f840a2b3108f3592a258052ab30b7b8bb3",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS3QgKEAgTGAI4AUIIdGhpbmtpbmcSDLJhAklmiX0U1qu52BoMz21KmepOV4J81/8CIjDImnL5G38Vp7VfMSELWAo8sM9z+/k00UsmqKvWIpF3JrOqGzn/5XJTyulIK7yEwDYq+gfvAhAqw+ixXmIbNfS6a52ZiSqpAf9Ywb16kBHIVYPO9jeTHB7FMWKhczj7smam4iDIF5xorkkQqIKu7cZYQtIHLwG474NOTOvz6CNZMlslZa/381+Rf/TdjrA/O+Jjag1xzRYrpzQkBInfYGMXjz/zba8Rv+95GoMbMG6/wrOIcTsrSFtrLwxQ6PYlC/swRxKRfsLUf+FRRn42K86vcArYVJuInbbx6T9b2S58PW/IeqORAgvHeqH9jOwFiUikRAe3zfcyY+bfjdt3wbbCy/NFzZLELZjkVHCFqA0qLxTORz+BFh79gJpkcJyr//c9ayJ32cpY0I0NGAuBMnm+bRNB4Z/Xz3axwcarPRDWZvgKjCGyu2fwWAdQScbE3t8ox4MtqRDS3WE+GeAbR48gG4kJXmjBGXKwO/Xf6XsM/zJsieZpcXCH21xPLAxA+W/bnedrYUojLFtucKe5rd0Yt/XVrYxIjfG4+GH6PmSwzHZRon5qa8pcV/cW808bSV8+kNLQ5cs2bzAEDQImYml0RO9VdxDdPzxRe6hvbqH2QsQZDyow3z1QJADUPurBiVrfKXhSy2CwZPO85ND/AYLtOBQZmrfq+dyZ4XG5k2fNQZlAxJ+I5auLM/ywrRJSp0YKFhrp0apT6YFCE8YexrUuT67ngj5400tAs/j69HHV0XbGheF6FEpFuYuoV286xmKIYlONbz2sUk2dT862GYao2OeJ0I3kZKCkIFgvlVHK+XLLTDSB1MkZqeEAV/Tm1MWdRE2X1NxaJ5Ds7ZCsgKzMd9UftGc5vYWAGpmd/vDoqXuFOr+GvoF5+P2n/svv/6/upMIS1/YnRVmzZ4SITel2XnYUCE2/sU55Lo76mGRfc+6LzHaVmql6piORYvZY7CM/XO0OgAVNpIqgcdV602dOU2iOCCx/ZQp5BsXCJXASHRDo1Zrwv7Vj3hpEnMLjYogOiSmIkYpI3L11iBHMopj8hOZDFmHJ9dbiYVunlilLu2+2B7WQLotEXRd85SQ1gHBONw4Eokzy+LctnTvDH0vYZVC+B+nqPxE9BUjSLl2yyqEMEp5/P7TXdrjRwu5LAwzcp/0bqlHswPkI9kJRLF0RdYHVAVvd+bB9G/US1fRcWmj8oILLJ7zHUP2rxA0FCbKBYOCPQaKCM9BpwtX92uyETeFVZXLuStScMfdJK42QtoLpla9lLhV08XwzO9ppO2hUr/yxqsR/A0C8wuMKD7teHg/2SoL0AWPEJMyjtPVWCQHIozWQj/PegjSn57wtwiUcWM17KbY3EGND+4WF0U2YUpA4nARM9ogJdbTxHYr6H/HF1EYDbTVq6+hBH+1zzXdmrRbk7zdHc5fWy09mGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016XBaMQ1iUjESYcwB9vuLs3",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 250,
+          "cacheReadTokens": 3856,
+          "cacheWriteTokens": 382
+        },
+        "latencyMs": 1887
+      }
+    },
+    {
+      "requestDigest": "56e13cf8771a31a41a0049952e170a5c668ba3832b79e8d70512fb991ded6ff8",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01JTxbqqjpktjLCD2dpYoPed",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "PO-120 revision 3, line 10, item KF-A-01, unit EA.",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, item KF-A-01"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "3",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120 revision 3"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01, unit EA.",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA.",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "20",
+                    "quote": "20 EA will arrive at WH-A on 27 October 2026.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "20 EA will arrive at WH-A on 27 October 2026.",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "100",
+                    "quote": "100 EA remain backordered; arrival at WH-A is undated and no delivery date is promised.",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "undated",
+                    "quote": "arrival at WH-A is undated and no delivery date is promised.",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email states PO-120 revision 3, line 10, item KF-A-01 in EA. It proposes 20 EA arriving at WH-A on 27 October 2026, and 100 EA backordered with no arrival date. The review reminder of 10 November 2026 is not an arrival date and was not used. The order record shows revision 3 and line 10 with item PART-A; the supplier's item code KF-A-01 differs from the record's SKU and is reported as stated."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 751,
+          "cacheReadTokens": 4238,
+          "cacheWriteTokens": 470
+        },
+        "latencyMs": 3124
+      }
+    }
+  ]
+}

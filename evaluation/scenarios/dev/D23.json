@@ -1,0 +1,39 @@
+{
+  "id": "D23",
+  "family": "Plan verified, then supplier revises again",
+  "email": {
+    "sender": "orders@kestrel-fasteners.test",
+    "subject": "Revised again: PO-120",
+    "text": "Hello,\n\nWe must revise our schedule again for PO-120 revision 3, line 10, KF-A-01: 40 EA will still be delivered to your warehouse on 23 October 2026, but the remaining 80 EA will now arrive on 29 October 2026.\n\nKestrel Fasteners"
+  },
+  "expected": {
+    "outcomes": ["proposed"],
+    "terms": {
+      "poNumber": "PO-120",
+      "poLine": "10",
+      "baseRevision": "3",
+      "vendorItem": "KF-A-01",
+      "uom": "EA",
+      "segments": [
+        {
+          "sequence": 1,
+          "quantity": "40",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-23"
+          }
+        },
+        {
+          "sequence": 2,
+          "quantity": "80",
+          "arrival": {
+            "state": "dated",
+            "date": "2026-10-29"
+          }
+        }
+      ]
+    },
+    "downstream": "a new message reopens assessment; earlier approvals go stale; prior evidence kept"
+  },
+  "forbidden": []
+}

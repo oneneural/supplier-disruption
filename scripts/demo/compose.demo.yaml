@@ -1,0 +1,8 @@
+# Demonstration override (ADR 0012). Used only by `corepack pnpm demo`, with
+# the Compose project supplier-disruption-demo; the documented stack never
+# reads it. The image keeps NODE_ENV=production; the API refuses this mode
+# without fixture data.
+services:
+  app:
+    environment:
+      DOMAIN_CLOCK_MODE: demonstration

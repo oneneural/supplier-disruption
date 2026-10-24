@@ -1,0 +1,11 @@
+#!/command/with-contenv sh
+# Next.js standalone server on port 3000, the only published port. It holds no
+# secrets: it reaches the API on loopback with the caller's own cookie.
+cd /opt/web/apps/web || exit 1
+exec env -i \
+  PATH="$PATH" \
+  NODE_ENV="$NODE_ENV" \
+  NEXT_TELEMETRY_DISABLED=1 \
+  HOSTNAME=0.0.0.0 \
+  PORT=3000 \
+  node server.js

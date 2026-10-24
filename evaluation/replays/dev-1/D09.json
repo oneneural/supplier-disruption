@@ -1,0 +1,150 @@
+{
+  "scenario": "D09",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "exchanges": [
+    {
+      "requestDigest": "1c5553b7c99df9289d2569d424b1f1bb4867173c388cbce469ba534c94a52171",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_0169yEZhK39rYcC9MV4FLTNd",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1070
+      }
+    },
+    {
+      "requestDigest": "d2700207a46901728978bb20044f65a8eab1015788730fa7967e596f4941d060",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01TXov3HQ1tmH9s3ZGshXWU3",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-121"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3591,
+          "cacheWriteTokens": 263
+        },
+        "latencyMs": 1288
+      }
+    },
+    {
+      "requestDigest": "e55a45fb64905eb5a8db6bff7c8b48c6c368561902fb8112fa8e6d3ae9fcd049",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS9QoKEAgTGAI4AUIIdGhpbmtpbmcSDCm8+vXO80U8qikp/hoMGVp63ZHr/VIpgBN8IjCAB5+c7A1umztrdPxk5ke7XN1Chbza40nWdHWWOR+sTcBqtpICfy9iTDYOoEltzccqkgrjuxW1aRD3q6kfazctCgUBE1X04EGesFBsCQp02b6LjkYRGAPP/R5mUiY13BSLydItLHsH+Ts4sDuU4p9r62/NZtZ+Gsn3BQ7Pf+GI/XPJqO8uyfBs4RTMPcpfH0oBOJXkOu3ZD/11NI7ZpkYegtmyzMnBTQNarIgdybzWwb6lKpD1VzYSaB1TNw/hzpYEow2j+7BIPSeUJTlUJA0tj7QqyW7Q0FADLtVT/QmucRTPBdJuv+thnVsTZ7MgEovZRpzEJw2Zi0TmWvmiXLhqck7VtXk46THbeKZ9Lj7lDySGIacTNauz5vsR73z2qH/EL+oSpljdSCY3b1ANtnmggGDsYaVeqbSJt1yNCPegYPABXsk4gkW9VYcKJdNQIfeq07rrwagMen2fdmLD2DMyrGC0L6+ucKJC7fr1qmvgc7wPI3cgjeTtgbjtYaLug5xy8zusTkq+d7zFxu8X7TkIldE3lUiYpWc4wuh0/OPlVbT6X0X7ouXgxt9MABOEVZ8OIRagFeJfurkz2dSWmPFSRgOZQxWcm8B2BP+fUB0iAP+Ac4QrvsmJOguhDz2o8BYtknhlE8Gtg2Sh7mCHJVUi85WBu1DTkkh6Da0LQRVuKj/zof4vDXpGyePKAoKq1qFjA6NNf6tFNg9G3S/4QD+oe6Re06gaoBO6NjgpdhrYpdTQV0dXV2e/PcYsIgCo4eRDcd3p7Ie8bWCRxq2OM0QRoePriXaXfP3+14xfGz5kVJFM0d7NRJ/NfXTdSH3fYU9l8p9J4qf8rG4Afao1Dpm/pbEytRAiMeIhTUTquxu6aH/bY0klsitwKxDHVsSuzMlGtUU4VY2aw3KRBcX9m6DBKAKq3ucNjjQaY4vrzqo3raEqSZGM3hhIYmDiuptYTbRptoaJ/8DYidg1hFOqmBMt4zWx9pVVs9HZdYrh6PN3sBHYnRmNByq/3MTqQ2bKnJ27PM9QB7uy4gpoOf5iZud2o8r/+DHLOjgUonvOwCQX1J7ZWWHhU3i8UKWFi7YNufv59EtxQwWpp5x2OEIjFsGhG8an5wX1lOVyjfTA8emg7p/KA0SsdWC921coRqpd08QKwrKO9F25z/HUi5O+asmceIdG8//Jhy/TvjdbT7IbW6CxU2DOLwfoBcZ/0GH0aJLM3R+md3kyL1vs3lFcQNsx6dygw0H8x206Ec0ZD5Ri9S/seLo/nP6kZnYqyPhnSZY7ZzX6x5k0VGiWIbPLm7zZ3D2JCvQeV3B0xe5k+GwSkD5Mkchxihkb/E/7AN4Gz3zCcOPbF2QsdhGqK7rpF+PFvZT8R5SssoLCEv9LXDfcK2oOkS1VoGb/XfInpzBr7OqZsUj006JidtpSe+AxYNf2zNW+DaOBzRb7hquoMebwB4Ofj9mQwbumCNoIjpj2yGYzLkCvHbWPEz11m0r14soxn+uOX213yeSh5QJYaR+Y3j1WipB4qpiZMZqqMQaWm1haOgvGtHxrYj0Mu+Y+2ETKPZTDn/axC6bzxAXXeduCeu4J47GGUXCou1BvvI+pdoztAo/9JQZeef3UkPg1BPlvb6Ifj/QbO7mrcijbCmzHyDBrOJnBvksY5fOOEzrfO3FGWTWaEn7UXqePGOCEUfXuhYUDC6u54Cc10gWqxfQDintzd4QXmcERs98wIS0UI4XdfeoNSnutE2EltNIVsATuIgsflaDFGC9mbakVPj95sJqpPWW24plGqAvut5WHA/TiaPrTrhgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Jw84cpEWJ74aHKmuBqWsyy",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-121",
+                "quote": "Remaining quantity on PO-121",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "line 10, item KF-C-07"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "2",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-121 (revision 2)"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-C-07",
+                "quote": "item KF-C-07",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "we will deliver 100 EA to your warehouse",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "100",
+                    "quote": "we will deliver 100 EA to your warehouse on 24 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-24",
+                    "quote": "we will deliver 100 EA to your warehouse on 24 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "50",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The supplier states two deliveries to the warehouse for the remaining 150 EA on PO-121 revision 2, line 10, item KF-C-07: 100 EA on 24 October 2026 and 50 EA on 27 October 2026. The total matches the 150 EA open quantity."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 1017,
+          "cacheReadTokens": 3854,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 4884
+      }
+    }
+  ]
+}

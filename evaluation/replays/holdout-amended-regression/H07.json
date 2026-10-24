@@ -1,0 +1,237 @@
+{
+  "scenario": "H07",
+  "model": "claude-haiku-5-5",
+  "revision": "unpublished development revision",
+  "systemPromptSha256": "8fff5b1292fa14d108e3633fcee6d97f28beae554602e5210da08f912ee6ed53",
+  "exchanges": [
+    {
+      "requestDigest": "dcf0221a7587089c503004d04eaff0f82f3506f87dc68fb11cd4a7e75e351131",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01158ek9Ciz6FgbDFYxTqAyP",
+            "name": "read_case_evidence",
+            "input": {},
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 4,
+          "outputTokens": 30,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 0
+        },
+        "latencyMs": 1101
+      }
+    },
+    {
+      "requestDigest": "f89ac81e4a3e2b301ae5f0d035f3a48882f0e46ec8611470a0a7cf8278f51eeb",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01DQneWxzZDpuwW22Wa62tCC",
+            "name": "read_purchase_order",
+            "input": {
+              "poNumber": "PO-120"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "cacheReadTokens": 3736,
+          "cacheWriteTokens": 259
+        },
+        "latencyMs": 1438
+      }
+    },
+    {
+      "requestDigest": "4bdb8826e49d2e2d83568400770b38739299a4f7346a2e7bd98237f7fe72d5a0",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSgwgKEAgTGAI4AUIIdGhpbmtpbmcSDDoxI/3l6jsld/X7cRoMSCB6MudCUPBktvzcIjC5FCipdOvouB86fbJc2TLTyhwXRR1/yrLRFLaFX1AD1GDJLgktaFjrPzVltrI4/c4qoAeTMyf6mYgMRAx4NHHlmo1YB/CszRXpgDXOySXWHR8LcOImEmkw1u9gCX+ogvFZPBF7wzL0OV4kGTyTI3NVJbCSVjV5cAQK5GQuRa2os6jNcT8gTeKDPuzDsMQag5qci2hqn7yFiYpRB0aJQbMIsxsmk3NuYIXfskudKzifbsz0Rj7aX2ws3qjnDSo6y7AEX1HHD2xqc3SLlgiAPwvTsiCDriDt9Ta6fQL2rYD9sSGe3uLZfDz1WJ+dNdc0/7aV8FOwCNPhJ2ypRCm6nlJXzeMhZo1HSsg6Db0zxdHZpFpojShRKZcO1rptDbRRnvlRNUKGDK00WLtHFpnghhRbwLvZxqrPV0teKAqI2X16PKyYCHu4Dhsy4tNlFixydu0qK5KKxfSMGycJcVoczf28EenM4EvXw/4ighmlL2/zpF0MjAlhiz25coIRdCEfWoMyskHnbjr70XskcKfzmrj0GZt4YMhLpRNh5A0IXZKxhVgYqMH0mbsdNuq0knLZEg9hRpbOYo/w4aLk7TQ0I9ZPbmQ27c09ywwKcZvgHYeby3cYmrGa0S+vSXnM0NeFawuAJER5NL3IGxir+q2KZ3Rn9vxWIKTk53DFuO2xZRU7kp7Kp9zJxnC/8+87QaBFllliQr+eQbGlAHp21LDZVQ4UOX4dS5CovKYZ90rPa+pn25BWZxKrUtboW6wIO56pMhVfU6BnUEwNS4krpXjv7+doLBvWZz1rv2IaJoVDhtx5xeW+75RTRDY0g6d3YK4FdAfF+Y7XgKc9blvK6a41TpPuO6JEH7xzqhGpyus+L+H2nq4j9S0LX5uzoGqILLzUGJ5OYtbU4X3RDpx0h0Xd4hzXhmCp4EwV4tM4wlPMXZIUDd57Tk18nKMBduJeA9E2pR8Zky/soYDPnk+q/Kr2pvoAqWMtrCJckoLIqNTtF1N9u6vmnjDQc1iju+bj4Np+BJxjJklZGDwCvtdmLXMOygZTMp/X6DkIJY4dhzgAcPdeS62ZvRAHaTdgitoFyHetbIihfKlOIbhltDXiNB7xR6u5XbofCY5CH48Sp/AHxiFrGaGWfC//86VaCGnfpZGicbQIeKFUrFgaQGxkAJXzAaRxdKTUKAenTdGXwitIgT57F7k8B3SMGxyWBKzWrObaAYqxz1NC8ow7JY7nc3t6MDfYyx7A22rHh3iA6pkF+eQFa2RxAJ1GDQP7OQoduS+wl3v3NMWo2ljZvN+fE4sZe6euHnX3GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01AAhXrvMEKZz3EKqtZK54Xr",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "Proposed receipt at WH-A: 70 EA on 22 October 2026",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120, line 10, base revision 2"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "2",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 2"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "70",
+                    "quote": "70 EA on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "Proposed receipt at WH-A: 70 EA on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "50",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email proposes two receipts at WH-A for PO-120 line 10 (item KF-A-01, EA): 70 EA on 22 October 2026 and 50 EA on 27 October 2026. It states base revision 2, while the order's current revision is 3; I propose revision 2 as the email states and flag that difference for software's currency check."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 847,
+          "cacheReadTokens": 3995,
+          "cacheWriteTokens": 277
+        },
+        "latencyMs": 3795
+      }
+    },
+    {
+      "requestDigest": "5fa20c595162b07572314249598c14f1ea4ca63bfd589b1eb0a18bc69091dae9",
+      "response": {
+        "model": "claude-haiku-5-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_016EYcL23YnkxhD9sGVDGLLZ",
+            "name": "propose_supplier_terms",
+            "input": {
+              "poNumber": {
+                "value": "PO-120",
+                "quote": "PO-120 delivery proposal, H07",
+                "confidence": "high"
+              },
+              "poLine": {
+                "value": "10",
+                "cite": {
+                  "source": "email",
+                  "quote": "PO-120, line 10, base revision 2"
+                },
+                "confidence": "high"
+              },
+              "baseRevision": {
+                "value": "2",
+                "cite": {
+                  "source": "email",
+                  "quote": "base revision 2"
+                },
+                "confidence": "high"
+              },
+              "vendorItem": {
+                "value": "KF-A-01",
+                "quote": "item KF-A-01",
+                "confidence": "high"
+              },
+              "uom": {
+                "value": "EA",
+                "quote": "unit EA",
+                "confidence": "high"
+              },
+              "segments": [
+                {
+                  "quantity": {
+                    "value": "70",
+                    "quote": "70 EA on 22 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-22",
+                    "quote": "Proposed receipt at WH-A: 70 EA on 22 October 2026",
+                    "confidence": "high"
+                  }
+                },
+                {
+                  "quantity": {
+                    "value": "50",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  },
+                  "arrival": {
+                    "state": "dated",
+                    "date": "2026-10-27",
+                    "quote": "50 EA on 27 October 2026",
+                    "confidence": "high"
+                  }
+                }
+              ],
+              "rationale": "The email proposes two receipts at WH-A for PO-120 line 10 (item KF-A-01, EA): 70 EA on 22 October 2026 and 50 EA on 27 October 2026. It states base revision 2, while the order's current revision is 3; I propose revision 2 as the email states and flag that difference for software's currency check."
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stopReason": "tool_use",
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 690,
+          "cacheReadTokens": 4272,
+          "cacheWriteTokens": 917
+        },
+        "latencyMs": 2926
+      }
+    }
+  ]
+}

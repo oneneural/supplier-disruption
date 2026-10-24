@@ -1,0 +1,64 @@
+#!/bin/sh
+# Shared finish script for the essential services: api, worker, web, watchdog.
+#
+# Usage: finish-essential SERVICE EXIT SIGNAL
+# EXIT and SIGNAL are s6-supervise's first two finish arguments: the exit code
+# (256 when a signal killed the process) and the signal number. The working
+# directory is the service directory, as s6-supervise runs finish scripts.
+#
+# Every finish prints one sd-lifecycle line. A service that exited while still
+# wanted up, with any exit code including 0, is an essential failure: the first
+# such finish claims /run/sd/first-failure, sets the container exit code and
+# halts the container. Later finishes never overwrite that record.
+set -u
+
+service=$1
+code=${2:-}
+sig=${3:-}
+# Overridable only so the host unit test can run this script outside s6.
+run_dir=${SD_RUN_DIR:-/run/sd}
+results=${SD_RESULTS_FILE:-/run/s6-linux-init-container-results/exitcode}
+halt=${SD_HALT:-/run/s6/basedir/bin/halt}
+svstat=${SD_SVSTAT:-s6-svstat}
+
+if [ "$code" = 256 ]; then
+  signal=$sig
+else
+  signal=none
+fi
+
+# An operator's s6-svc -d, or the container stopping, clears "wanted up". Any
+# answer other than an explicit false counts as up, so a crash is never hidden.
+case $("$svstat" -o wantedup . 2>/dev/null) in
+  false) wanted=down ;;
+  true) wanted=up ;;
+  *) wanted=unknown ;;
+esac
+
+echo "sd-lifecycle service=$service exit=$code signal=$signal wanted=$wanted"
+
+if [ "$wanted" = down ]; then
+  exit 0
+fi
+
+if [ "$code" = 256 ]; then
+  status=$((128 + sig))
+elif [ "$code" -ne 0 ] 2>/dev/null; then
+  status=$code
+else
+  status=1
+fi
+
+mkdir -p "$run_dir"
+# mkdir is atomic: exactly one finish (or the watchdog) creates the record.
+if mkdir "$run_dir/first-failure" 2>/dev/null; then
+  record="reason=exit service=$service exit=$code signal=$signal"
+  printf '%s\n' "$record" >"$run_dir/first-failure/record"
+  printf '%s\n' "$status" >"$run_dir/first-failure/exit"
+  printf '%s\n' "$status" >"$results"
+  echo "sd-first-failure $record container-exit=$status"
+  "$halt"
+fi
+
+# 125 tells s6-supervise not to restart this service while the container halts.
+exit 125

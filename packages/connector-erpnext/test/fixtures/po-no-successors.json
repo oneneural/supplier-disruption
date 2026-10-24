@@ -1,0 +1,11 @@
+{
+  "source": "live sandbox run 09c498e2 on 2026-10-22, committed exchange docs/evidence/erpnext-sandbox/L02-reads-02-get.json, redacted by FileRecorder",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:18082/api/resource/Purchase%20Order?filters=%5B%5B%22amended_from%22%2C%22%3D%22%2C%22PUR-ORD-2026-00001%22%5D%5D&fields=%5B%22name%22%5D&limit_page_length=500&order_by=name+asc"
+  },
+  "status": 200,
+  "body": {
+    "data": []
+  }
+}
